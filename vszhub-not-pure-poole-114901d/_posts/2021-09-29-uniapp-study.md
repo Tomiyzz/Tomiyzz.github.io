@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Welcome to 记录学习历程
-date: 2020-09-29 23:18 +0800
-last_modified_at: 2020-10-01 01:08:25 +0800
-tags: [jekyll theme, jekyll, tutorial]
-toc: true
+title: Uniapp Study
+tags: mathjax
+math: true
+date: 2021-09-29 12:00 +0800
 ---
 
 Welcome to **Not Pure Poole**! This is an example post to show the layout layout layout.
