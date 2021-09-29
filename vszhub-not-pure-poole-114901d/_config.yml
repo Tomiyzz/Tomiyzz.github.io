@@ -33,7 +33,7 @@ twitter:
   card: summary
 logo: logo.png
 social:
-  name: Songzi Vong
+  name: Tomiyzz Zhou
   links:
     - https://twitter.com/vszhub
     - https://github.com/vszhub
@@ -54,6 +54,6 @@ sass:
 
 # Specify the author for blog posts
 author:
-  name: Songzi Vong
-  url: https://github.com/vszhub/
-  email: vszhub@gmail.com
+  name: Tomiyzz Zhou
+  url: https://github.com/Tomiyzz/
+  email: zzl180520@163.com

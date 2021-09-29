@@ -1,13 +1,13 @@
 {%- if site.data.archive -%}
-  {%- for item in site.data.archive -%}
-    {%- if item.type == "tags" -%}
-      {% assign tags_archive_page = item.url %}
-      {% break %}
-    {%- endif -%}
-  {%- endfor -%}
+{%- for item in site.data.archive -%}
+{%- if item.type == "tags" -%}
+{% assign tags_archive_page = item.url %}
+{% break %}
+{%- endif -%}
+{%- endfor -%}
 {%- endif -%}
 
-<div class="post-tags-section">
+<!-- <div class="post-tags-section">
   <i class="post-tags-icon fas fa-tags"></i>
   <ul class="post-tags">
     {%- for tag in page.tags -%}
@@ -21,4 +21,4 @@
       </li>
     {%- endfor -%}
   </ul>
-</div>
+</div> -->
