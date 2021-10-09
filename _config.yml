@@ -1,7 +1,7 @@
 # Setup
-title: 记录学习历程
-description: 记录每次学到的新知识
-url: https://vszhub.github.io
+title: 记录学习历程 Tomiyzz
+description: 记录每次学到的新知识,希望能有所收获!!!
+url: https://tomiyzz.github.io
 avatar: /avatar.jpeg
 paginate: 5
 permalink: pretty
@@ -33,10 +33,10 @@ twitter:
   card: summary
 logo: logo.png
 social:
-  name: Songzi Vong
+  name: Tomiyzz Zhou
   links:
-    - https://twitter.com/vszhub
-    - https://github.com/vszhub
+    - https://tomiyzz.github.io
+    - https://tomiyzz.github.io
 google_site_verification: xxxxx
 lang: en
 
@@ -54,6 +54,6 @@ sass:
 
 # Specify the author for blog posts
 author:
-  name: Songzi Vong
-  url: https://github.com/vszhub/
-  email: vszhub@gmail.com
+  name: Tomiyzz Zhou
+  url: https://github.com/Tomiyzz/
+  email: zzl180520@163.com
