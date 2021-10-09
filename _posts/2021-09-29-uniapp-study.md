@@ -29,3 +29,64 @@ uni-app 是一个使用 Vue.js 开发所有前端应用的框架,开发者便携
 ## 运行到手机模拟器
 
 - 1.手机数据线和电脑连接,下载包
+
+## 为了实现多端兼容,综合考虑编译速度,uni-app 约定了如下开发规范
+
+- 1.页面文件遵循 **Vue 单文件组建(SFC)规范**
+- 2.组件标签靠近小程序规范
+- 3.接口能力(JS API)靠近微信小程序规范,但需要将前缀 **wx** 替换成 **uni**
+- 4.数据绑定及事件处理同 **Vue.js** 规范,同时补充了 App 及页面的生命周期
+- 5.为兼容多端运行,建议使用 **flex 布局** 进行开发
+
+## uni-app 全局配置
+
+- 1.在文件**_pages.json_**
+<table>
+  <thead>
+    <tr>
+      <th>属性</th>
+      <th>类型</th>
+      <th>默认值</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>navigationBarBackgroundColor</td>
+      <td>HexColor</td>
+      <td>#F7F7F7</td>
+      <td>导航栏背景颜色</td>
+    </tr>
+    <tr>
+      <td>navigationBarTextStyle</td>
+      <td>String</td>
+      <td>white</td>
+      <td>导航栏标题颜色及状态栏前景颜色 仅支持black/white</td>
+    </tr>
+    <tr>
+      <td>navigationBarTitleText</td>
+      <td>String</td>
+      <td></td>
+      <td>导航栏标题文字内容</td>
+    </tr>
+    <tr>
+      <td>backgroundColor</td>
+      <td>HexColor</td>
+      <td>#ffffff</td>
+      <td>窗口背景颜色(需要在微信开发者工具中查看)</td>
+    </tr>
+    <tr>
+      <td>backgroundTextStyle</td>
+      <td>String</td>
+      <td>dark</td>
+      <td>下拉loading的样式,仅支持dark/light</td>
+    </tr>
+    <tr>
+      <td>onReachBottomDistance</td>
+      <td>Number</td>
+      <td>50</td>
+      <td>页面上拉触底事件触发时距页面底部距离,单位只支持px(距离底部多少的时候,加载下一页的数据)</td>
+    </tr>
+    
+  </tbody>
+</table>
