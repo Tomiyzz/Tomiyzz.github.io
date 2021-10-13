@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-10-09T15:12:58+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">记录学习历程 Tomiyzz</title><subtitle>记录每次学到的新知识,希望能有所收获!!!</subtitle><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><entry><title type="html">Uniapp Study</title><link href="http://localhost:4000/2021/09/29/uniapp-study/" rel="alternate" type="text/html" title="Uniapp Study" /><published>2021-09-29T12:00:00+08:00</published><updated>2021-09-29T12:00:00+08:00</updated><id>http://localhost:4000/2021/09/29/uniapp-study</id><content type="html" xml:base="http://localhost:4000/2021/09/29/uniapp-study/">&lt;p class=&quot;message&quot;&gt;学习 UniApp 的历程&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-10-12T17:56:24+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">记录学习历程 Tomiyzz</title><subtitle>记录每次学到的新知识,希望能有所收获!!!</subtitle><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><entry><title type="html">Uniapp Study</title><link href="http://localhost:4000/2021/09/29/uniapp-study/" rel="alternate" type="text/html" title="Uniapp Study" /><published>2021-09-29T12:00:00+08:00</published><updated>2021-09-29T12:00:00+08:00</updated><id>http://localhost:4000/2021/09/29/uniapp-study</id><content type="html" xml:base="http://localhost:4000/2021/09/29/uniapp-study/">&lt;p class=&quot;message&quot;&gt;学习 UniApp 的历程&lt;/p&gt;
 
 &lt;h2 id=&quot;uni-app-介绍&quot;&gt;uni-app 介绍&lt;/h2&gt;
 
@@ -42,9 +42,8 @@
 &lt;h2 id=&quot;uni-app-全局配置&quot;&gt;uni-app 全局配置&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;1.在文件&lt;strong&gt;&lt;em&gt;pages.json&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;table&gt;
+  &lt;li&gt;1.在文件&lt;strong&gt;&lt;em&gt;pages.json&lt;/em&gt;&lt;/strong&gt;
+    &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;属性&lt;/th&gt;
@@ -90,9 +89,208 @@
       &lt;td&gt;50&lt;/td&gt;
       &lt;td&gt;页面上拉触底事件触发时距页面底部距离,单位只支持px(距离底部多少的时候,加载下一页的数据)&lt;/td&gt;
     &lt;/tr&gt;
-    
   &lt;/tbody&gt;
-&lt;/table&gt;</content><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><category term="mathjax" /><summary type="html">学习 UniApp 的历程</summary></entry><entry><title type="html">Testing MathJax</title><link href="http://localhost:4000/2020/10/02/testing-mathjax/" rel="alternate" type="text/html" title="Testing MathJax" /><published>2020-10-02T15:32:00+08:00</published><updated>2020-10-02T15:32:00+08:00</updated><id>http://localhost:4000/2020/10/02/testing-mathjax</id><content type="html" xml:base="http://localhost:4000/2020/10/02/testing-mathjax/">Not Pure Poole supports [MathJax](https://www.mathjax.org/). You can enable it on a page by setting `math: true` in the front matter.
+&lt;/table&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;通过-pages-来配置页面&quot;&gt;通过 pages 来配置页面&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;pages 的第一个对象就是初始页面&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;pages 的内部样式会覆盖全局样式&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;属性&lt;/th&gt;
+        &lt;th&gt;类型&lt;/th&gt;
+        &lt;th&gt;默认值&lt;/th&gt;
+        &lt;th&gt;描述&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;path&lt;/td&gt;
+        &lt;td&gt;String&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+        &lt;td&gt;配置页面路径&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;style&lt;/td&gt;
+        &lt;td&gt;Object&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+        &lt;td&gt;配置页面窗口表现&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;在 pages 中,可以给 h5 或者 app-plus 单独设置样式&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;配置-tabbar-详情&quot;&gt;配置 tabbar (&lt;a href=&quot;https://uniapp.dcloud.io/collocation/pages?id=tabbar&quot;&gt;详情&lt;/a&gt;)&lt;/h2&gt;
+
+&lt;p&gt;&lt;abbr&gt;如果应用是一个多 tab 应用,可以通过 tabBar 配置项指定 tab 栏的表现,以及 tab 切换时小时的对应项&lt;abbr&gt;&lt;/abbr&gt;&lt;/abbr&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;tips&quot;&gt;Tips&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;1.当设置 position 为 top 时,将不会显示 icon (浏览器中不可以,只能在小程序中)&lt;/li&gt;
+  &lt;li&gt;2.tabBar 中的 list 是一个数组,只能配置最少 2 个,最多 5 个 tab,tab 按数组的顺序排序&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;通过-condition-配置微信小程序详情页的启动模式&quot;&gt;通过 condition 配置微信小程序详情页的启动模式&lt;/h3&gt;
+
+&lt;h1 id=&quot;组件的基本使用&quot;&gt;组件的基本使用&lt;/h1&gt;
+
+&lt;h2 id=&quot;text-文本组件-行内元素&quot;&gt;text 文本组件 (行内元素)&lt;/h2&gt;
+
+&lt;p&gt;属性:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;selectable :控制文本是否可选 默认 false&lt;/li&gt;
+  &lt;li&gt;space :显示连续空格,可选参数:ensp,emsp,nbsp&lt;/li&gt;
+  &lt;li&gt;decode :默认解码&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;view-组件-容器组件-相当于-html-中的-div&quot;&gt;view 组件 容器组件 (相当于 html 中的 div)&lt;/h2&gt;
+
+&lt;p&gt;属性:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;hover-class :指定按下去的样式类&lt;/li&gt;
+  &lt;li&gt;hover-stop-propagation :是否阻止本节点的祖先节点出现点击状态 (类似于阻止冒泡的效果)&lt;/li&gt;
+  &lt;li&gt;hover-start-time :按住后多久出现点击状态 单位毫秒 默认值:50&lt;/li&gt;
+  &lt;li&gt;hover-stay-time :手指松开后点击状态保留时间 单位毫秒&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;button-组件&quot;&gt;button 组件&lt;/h2&gt;
+
+&lt;p&gt;属性&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;size&lt;/li&gt;
+  &lt;li&gt;type :primary default warn&lt;/li&gt;
+  &lt;li&gt;plain :镂空&lt;/li&gt;
+  &lt;li&gt;disabled :禁用&lt;/li&gt;
+  &lt;li&gt;loading : loading 效果&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;image-组件-图片组件&quot;&gt;image 组件 图片组件&lt;/h2&gt;
+
+&lt;p&gt;属性&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;src 图片资源路径&lt;/li&gt;
+  &lt;li&gt;mode :
+    &lt;blockquote&gt;
+      &lt;p&gt;aspectFit 保持纵横比缩放图片,使图片的长边完全显示出来
+aspectFill 保持纵横比缩放图片,使图片的短边完全显示出来&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;uni-app-中的样式&quot;&gt;uni-app 中的样式&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;1.rpx 即响应式 px,一种根据屏幕宽度自适应的动态单位,以 750 宽的屏幕为基准,750rpx 恰好为屏幕宽度,屏幕变宽,rpx 实际显示效果会等比放大.&lt;/li&gt;
+  &lt;li&gt;2.使用 &lt;strong&gt;&lt;em&gt;@import&lt;/em&gt;&lt;/strong&gt; 语句可以倒入外链样式表&lt;/li&gt;
+  &lt;li&gt;3.在 uni-app 中可以使用基本的选择器&lt;/li&gt;
+  &lt;li&gt;4.在 uni-app 中不能使用 &lt;strong&gt;*&lt;/strong&gt; 选择器&lt;/li&gt;
+  &lt;li&gt;5.&lt;strong&gt;&lt;em&gt;page&lt;/em&gt;&lt;/strong&gt;相当于&lt;strong&gt;&lt;em&gt;body&lt;/em&gt;&lt;/strong&gt;节点&lt;/li&gt;
+  &lt;li&gt;6.在 App.vue 中的样式为全局样式,作用于每一个页面,在 pages 目录下的 vue 文件中定义的样式为局部样式,只作用在对用的页面,会覆盖 App,vue 中相同的选择器&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;7.在 uni-app 中使用字体图标,使用方式和普通的 web 项目相同,需要注意:&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;字体文件小于 40kb,uni-app 会自动将其转化为 base64 格式&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;字体文件大于 40kb,需开发者自己转换,否则使用将不生效&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;字体文件的引用路径推荐使用以 &lt;strong&gt;&lt;em&gt;-@&lt;/em&gt;&lt;/strong&gt; 开头的绝对路径 (src:url(‘-@/static/….’))&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;uni-app-数据绑定-和-vue-的数据绑定相同&quot;&gt;uni-app 数据绑定 和 Vue 的数据绑定相同&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;在点击事件中传递事件对象,在方法中传入 $event&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;uni-app-中的生命生命周期&quot;&gt;uni-app 中的生命生命周期&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;应用的声明周期:&lt;/p&gt;
+
+    &lt;p&gt;onLaunch: 全局只会触发一次&lt;/p&gt;
+
+    &lt;p&gt;onShow:从后台进入前台显示&lt;/p&gt;
+
+    &lt;p&gt;onHide:从前台进入后台&lt;/p&gt;
+
+    &lt;p&gt;onError:报错时触发&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;页面的生命周期:&lt;/p&gt;
+
+    &lt;p&gt;onLoad:监听页面加载,其参数为上个页面传递的数据,参数类型为 Object&lt;/p&gt;
+
+    &lt;p&gt;onShow:监听页面显示,页面每次出现在屏幕上都触发,包括从下级页面返回&lt;/p&gt;
+
+    &lt;p&gt;onReady:监听页面初次渲染完成&lt;/p&gt;
+
+    &lt;p&gt;onHide:监听页面隐藏&lt;/p&gt;
+
+    &lt;p&gt;onUnload:监听页面卸载&lt;/p&gt;
+
+    &lt;p&gt;onPullDownRefresh:监听用户下拉动作，一般用于下拉刷新&lt;/p&gt;
+
+    &lt;p&gt;onReachBottom:页面滚动到底部的事件（不是 scroll-view 滚到底），常用于下拉下一页数据。具体见下方注意事项&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;uni-app-发送网络请求&quot;&gt;uni-app 发送网络请求&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;uni.request(Object)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;object&quot;&gt;Object:&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;url: 开发者服务器接口地址 String 类型&lt;/li&gt;
+  &lt;li&gt;data: 请求的参数 Object/String/ArraryBuffer&lt;/li&gt;
+  &lt;li&gt;header: 设置请求的 header,header 中不能设置 Referer Object 类型&lt;/li&gt;
+  &lt;li&gt;method: 请求的方法 String 类型 默认 GET&lt;/li&gt;
+  &lt;li&gt;timeout: 超市时间,单位是 ms Number 类型&lt;/li&gt;
+  &lt;li&gt;dataType: 如果设为 json,会尝试对返回的数据做一次 JSON.parse String 类型&lt;/li&gt;
+  &lt;li&gt;success: 成功之后返回的回调函数&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;uni-app-数据缓存&quot;&gt;uni-app 数据缓存&lt;/h2&gt;
+
+&lt;p&gt;设置缓存: uni.setStorage(Object)&lt;/p&gt;
+
+&lt;p&gt;Object:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;key:本地缓存中的指定的 key String 类型&lt;/li&gt;
+  &lt;li&gt;data:需要存储的内容&lt;/li&gt;
+  &lt;li&gt;success:接口调用成功的回调函数&lt;/li&gt;
+  &lt;li&gt;fail:接口调用失败的回调函数&lt;/li&gt;
+  &lt;li&gt;complete:接口调用结束的回调函数(调用成功,失败都会执行)&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><category term="mathjax" /><summary type="html">学习 UniApp 的历程</summary></entry><entry><title type="html">Testing MathJax</title><link href="http://localhost:4000/2020/10/02/testing-mathjax/" rel="alternate" type="text/html" title="Testing MathJax" /><published>2020-10-02T15:32:00+08:00</published><updated>2020-10-02T15:32:00+08:00</updated><id>http://localhost:4000/2020/10/02/testing-mathjax</id><content type="html" xml:base="http://localhost:4000/2020/10/02/testing-mathjax/">Not Pure Poole supports [MathJax](https://www.mathjax.org/). You can enable it on a page by setting `math: true` in the front matter.
 
 An inline math: \\\(E=mc^2\\\).
 
