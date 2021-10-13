@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-10-12T17:56:24+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">记录学习历程 Tomiyzz</title><subtitle>记录每次学到的新知识,希望能有所收获!!!</subtitle><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><entry><title type="html">Uniapp Study</title><link href="http://localhost:4000/2021/09/29/uniapp-study/" rel="alternate" type="text/html" title="Uniapp Study" /><published>2021-09-29T12:00:00+08:00</published><updated>2021-09-29T12:00:00+08:00</updated><id>http://localhost:4000/2021/09/29/uniapp-study</id><content type="html" xml:base="http://localhost:4000/2021/09/29/uniapp-study/">&lt;p class=&quot;message&quot;&gt;学习 UniApp 的历程&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-10-13T16:14:14+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">记录学习历程 Tomiyzz</title><subtitle>记录每次学到的新知识,希望能有所收获!!!</subtitle><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><entry><title type="html">Uniapp Study</title><link href="http://localhost:4000/2021/09/29/uniapp-study/" rel="alternate" type="text/html" title="Uniapp Study" /><published>2021-09-29T12:00:00+08:00</published><updated>2021-09-29T12:00:00+08:00</updated><id>http://localhost:4000/2021/09/29/uniapp-study</id><content type="html" xml:base="http://localhost:4000/2021/09/29/uniapp-study/">&lt;p class=&quot;message&quot;&gt;学习 UniApp 的历程&lt;/p&gt;
 
 &lt;h2 id=&quot;uni-app-介绍&quot;&gt;uni-app 介绍&lt;/h2&gt;
 
@@ -278,7 +278,7 @@ aspectFill 保持纵横比缩放图片,使图片的短边完全显示出来&lt;/
   &lt;li&gt;success: 成功之后返回的回调函数&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;uni-app-数据缓存&quot;&gt;uni-app 数据缓存&lt;/h2&gt;
+&lt;h2 id=&quot;uni-app-异步数据缓存&quot;&gt;uni-app 异步数据缓存&lt;/h2&gt;
 
 &lt;p&gt;设置缓存: uni.setStorage(Object)&lt;/p&gt;
 
@@ -290,7 +290,298 @@ aspectFill 保持纵横比缩放图片,使图片的短边完全显示出来&lt;/
   &lt;li&gt;success:接口调用成功的回调函数&lt;/li&gt;
   &lt;li&gt;fail:接口调用失败的回调函数&lt;/li&gt;
   &lt;li&gt;complete:接口调用结束的回调函数(调用成功,失败都会执行)&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><category term="mathjax" /><summary type="html">学习 UniApp 的历程</summary></entry><entry><title type="html">Testing MathJax</title><link href="http://localhost:4000/2020/10/02/testing-mathjax/" rel="alternate" type="text/html" title="Testing MathJax" /><published>2020-10-02T15:32:00+08:00</published><updated>2020-10-02T15:32:00+08:00</updated><id>http://localhost:4000/2020/10/02/testing-mathjax</id><content type="html" xml:base="http://localhost:4000/2020/10/02/testing-mathjax/">Not Pure Poole supports [MathJax](https://www.mathjax.org/). You can enable it on a page by setting `math: true` in the front matter.
+&lt;/ul&gt;
+
+&lt;p&gt;获取缓存: uni.getStorage(Object)&lt;/p&gt;
+
+&lt;p&gt;Object:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;key:本地缓存中的指定的 key String 类型&lt;/li&gt;
+  &lt;li&gt;success:接口调用成功的回调函数&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;成功的数据在返回的 res 里&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;fail:接口调用失败的回调函数&lt;/li&gt;
+  &lt;li&gt;complete:接口调用结束的回调函数(调用成功,失败都会执行)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;移除缓存: uni.removeStorage(Object)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;key:本地缓存中指定的 key&lt;/li&gt;
+  &lt;li&gt;success:接口调用成功的回调函数&lt;/li&gt;
+  &lt;li&gt;fail:接口调用失败的回调函数&lt;/li&gt;
+  &lt;li&gt;complete:接口调用结束的回调函数(调用成功,失败都会执行)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;uni-app-同步数据缓存&quot;&gt;uni-app 同步数据缓存&lt;/h2&gt;
+
+&lt;p&gt;设置缓存: uni.setStorageSync(key,data))&lt;/p&gt;
+
+&lt;p&gt;获取缓存: uni.getStorageSync(key)&lt;/p&gt;
+
+&lt;p&gt;移除缓存: uni.removeStorageSync(key)&lt;/p&gt;
+
+&lt;h2 id=&quot;uni-app-图片上传和预览&quot;&gt;uni-app 图片上传和预览&lt;/h2&gt;
+
+&lt;h3 id=&quot;unichooseimageobject&quot;&gt;uni.chooseImage(Object)&lt;/h3&gt;
+
+&lt;p&gt;从本地相册选择图片或使用相机拍照&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;参数名&lt;/th&gt;
+        &lt;th&gt;类型&lt;/th&gt;
+        &lt;th&gt;说明&lt;/th&gt;
+        &lt;th&gt;差异&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;count&lt;/td&gt;
+        &lt;td&gt;Number&lt;/td&gt;
+        &lt;td&gt;最多可以选择图片的数量,默认9&lt;/td&gt;
+        &lt;td&gt;count 值在 H5 平台的表现，基于浏览器本身的规范。目前测试的结果来看，只能限制单选/多选，并不能限制数量。并且，在实际的手机浏览器很少有能够支持多选的。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;sizeType&lt;/td&gt;
+        &lt;td&gt;Array&amp;lt;\String&amp;gt;	&lt;/td&gt;
+        &lt;td&gt;original 原图，compressed 压缩图，默认二者都有&lt;/td&gt;
+        &lt;td&gt;App、微信小程序、支付宝小程序、百度小程序&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;extension&lt;/td&gt;
+        &lt;td&gt;Array&amp;lt;\String&amp;gt;	&lt;/td&gt;
+        &lt;td&gt;根据文件拓展名过滤，每一项都不能是空字符串。默认不过滤。&lt;/td&gt;
+        &lt;td&gt;H5(HBuilder X2.9.9+)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;sourceType&lt;/td&gt;
+        &lt;td&gt;Array&amp;lt;\String&amp;gt;	&lt;/td&gt;
+        &lt;td&gt;album 从相册选图，camera 使用相机，默认二者都有。如需直接开相机或直接选相册，请只使用一个选项&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;crop&lt;/td&gt;
+        &lt;td&gt;Object&lt;/td&gt;
+        &lt;td&gt;图像裁剪参数，设置后 sizeType 失效&lt;/td&gt;
+        &lt;td&gt;App 3.1.19+&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;success&lt;/td&gt;
+        &lt;td&gt;Function&lt;/td&gt;
+        &lt;td&gt;成功则返回图片的本地文件路径列表 tempFilePaths&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;fail&lt;/td&gt;
+        &lt;td&gt;Function&lt;/td&gt;
+        &lt;td&gt;接口调用失败的回调函数&lt;/td&gt;
+        &lt;td&gt;小程序、App&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;complete&lt;/td&gt;
+        &lt;td&gt;Function&lt;/td&gt;
+        &lt;td&gt;接口调用结束的回调函数（调用成功、失败都会执行）&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;unipreviewimageobject&quot;&gt;uni.previewImage(OBJECT)&lt;/h2&gt;
+
+&lt;p&gt;图片预览&lt;/p&gt;
+
+&lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;参数名&lt;/th&gt;
+        &lt;th&gt;类型&lt;/th&gt;
+        &lt;th&gt;说明&lt;/th&gt;
+        &lt;th&gt;差异&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;current&lt;/td&gt;
+        &lt;td&gt;String/Number&lt;/td&gt;
+        &lt;td&gt;为当前显示图片的链接/索引值，不填或填写的值无效则为 urls 的第一张&lt;/td&gt;
+        &lt;td&gt;App平台在 1.9.5至1.9.8之间，current为必填。不填会报错&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;urls&lt;/td&gt;
+        &lt;td&gt;Array&amp;lt;\String&amp;gt;&lt;/td&gt;
+        &lt;td&gt;需要预览的图片链接列表&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;indicator&lt;/td&gt;
+        &lt;td&gt;String&lt;/td&gt;
+        &lt;td&gt;图片指示器样式，可取值：&quot;default&quot; - 底部圆点指示器； &quot;number&quot; - 顶部数字指示器； &quot;none&quot; - 不显示指示器。&lt;/td&gt;
+        &lt;td&gt;App&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;loop&lt;/td&gt;
+        &lt;td&gt;Boolean&lt;/td&gt;
+        &lt;td&gt;是否可循环预览，默认值为 false&lt;/td&gt;
+        &lt;td&gt;App&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;longPressActions&lt;/td&gt;
+        &lt;td&gt;Object&lt;/td&gt;
+        &lt;td&gt;长按图片显示操作菜单，如不填默认为保存相册&lt;/td&gt;
+        &lt;td&gt;App 1.9.5+&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;success&lt;/td&gt;
+        &lt;td&gt;Function&lt;/td&gt;
+        &lt;td&gt;接口调用成功的回调函数&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;fail&lt;/td&gt;
+        &lt;td&gt;Function&lt;/td&gt;
+        &lt;td&gt;接口调用失败的回调函数	&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;complete&lt;/td&gt;
+        &lt;td&gt;Function&lt;/td&gt;
+        &lt;td&gt;接口调用结束的回调函数（调用成功、失败都会执行）&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;条件注释实现跨段兼容&quot;&gt;条件注释实现跨段兼容&lt;/h2&gt;
+
+&lt;p&gt;条件编译使用特殊的注释作为标记,在编译时根据这些特殊的注释,将注释里面的代码编译到不同平台&lt;/p&gt;
+
+&lt;p&gt;写法:以 &lt;strong&gt;#ifdef&lt;/strong&gt; 或 &lt;strong&gt;#inndef&lt;/strong&gt; 加 &lt;strong&gt;%PLATFORM&lt;/strong&gt; 开头,以&lt;strong&gt;#endif&lt;/strong&gt; 结尾&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;#ifdef: if defined 仅在某平台存在&lt;/li&gt;
+  &lt;li&gt;#inndef: if not defined 除了某平台均存在&lt;/li&gt;
+  &lt;li&gt;%PLATFORM: 平台名称&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;条件编译写法&lt;/th&gt;
+        &lt;th&gt;说明&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;
+          #ifdef APP-PLUS &lt;br /&gt;
+          需要条件编译的代码 &lt;br /&gt;
+          #endif
+        &lt;/td&gt;
+        &lt;td&gt;仅出现在 App 平台下的代码&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;
+          #ifndef H5 &lt;br /&gt;
+          需要条件编译的代码 &lt;br /&gt;
+          #endif
+        &lt;/td&gt;
+        &lt;td&gt;除了H5平台,其他平台均存在的代码&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;
+          #ifdef H5 || MP-WEIXIN &lt;br /&gt;
+          需要条件编译的代码 &lt;br /&gt;
+          #endif
+        &lt;/td&gt;
+        &lt;td&gt;除了H5平台或微信小程序平台存在的代码(这里只有 || ,不可能出现&amp;amp;&amp;amp;,因为没有交集)&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;%PLATFORM% 可取值如下：&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;值&lt;/th&gt;
+        &lt;th&gt;生效条件&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;VUE3&lt;/td&gt;
+        &lt;td&gt;HBuilderX 3.2.0+ &lt;a href=&quot;https://ask.dcloud.net.cn/article/37834&quot;&gt;详情&lt;/a&gt; &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;APP-PLUS&lt;/td&gt;
+        &lt;td&gt;App&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;APP-PLUS-NVUE或APP-NVUE&lt;/td&gt;
+        &lt;td&gt;App nvue&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;H5&lt;/td&gt;
+        &lt;td&gt;H5&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;MP-WEIXIN&lt;/td&gt;
+        &lt;td&gt;微信小程序&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;MP-ALIPAY&lt;/td&gt;
+        &lt;td&gt;支付宝小程序&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;MP-BAIDU&lt;/td&gt;
+        &lt;td&gt;百度小程序&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;MP-TOUTIAO&lt;/td&gt;
+        &lt;td&gt;字节跳动小程序&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;MP-QQ&lt;/td&gt;
+        &lt;td&gt;QQ小程序&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;MP-KUAISHOU&lt;/td&gt;
+        &lt;td&gt;快手小程序&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;H5&lt;/td&gt;
+        &lt;td&gt;H5&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;MP-360&lt;/td&gt;
+        &lt;td&gt;360小程序&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;MP&lt;/td&gt;
+        &lt;td&gt;微信小程序/支付宝小程序/百度小程序/字节跳动小程序/QQ小程序/360小程序&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;QUICKAPP-WEBVIEW&lt;/td&gt;
+        &lt;td&gt;快应用通用(包含联盟、华为)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;QUICKAPP-WEBVIEW-UNION&lt;/td&gt;
+        &lt;td&gt;快应用联盟&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;QUICKAPP-WEBVIEW-HUAWEI	&lt;/td&gt;
+        &lt;td&gt;快应用华为&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><category term="mathjax" /><summary type="html">学习 UniApp 的历程</summary></entry><entry><title type="html">Testing MathJax</title><link href="http://localhost:4000/2020/10/02/testing-mathjax/" rel="alternate" type="text/html" title="Testing MathJax" /><published>2020-10-02T15:32:00+08:00</published><updated>2020-10-02T15:32:00+08:00</updated><id>http://localhost:4000/2020/10/02/testing-mathjax</id><content type="html" xml:base="http://localhost:4000/2020/10/02/testing-mathjax/">Not Pure Poole supports [MathJax](https://www.mathjax.org/). You can enable it on a page by setting `math: true` in the front matter.
 
 An inline math: \\\(E=mc^2\\\).
 

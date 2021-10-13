@@ -335,7 +335,7 @@ aspectFill 保持纵横比缩放图片,使图片的短边完全显示出来</p>
   <li>success: 成功之后返回的回调函数</li>
 </ul>
 
-<h2 id="uni-app-数据缓存">uni-app 数据缓存</h2>
+<h2 id="uni-app-异步数据缓存">uni-app 异步数据缓存</h2>
 
 <p>设置缓存: uni.setStorage(Object)</p>
 
@@ -348,6 +348,297 @@ aspectFill 保持纵横比缩放图片,使图片的短边完全显示出来</p>
   <li>fail:接口调用失败的回调函数</li>
   <li>complete:接口调用结束的回调函数(调用成功,失败都会执行)</li>
 </ul>
+
+<p>获取缓存: uni.getStorage(Object)</p>
+
+<p>Object:</p>
+
+<ul>
+  <li>key:本地缓存中的指定的 key String 类型</li>
+  <li>success:接口调用成功的回调函数</li>
+</ul>
+
+<blockquote>
+  <p>成功的数据在返回的 res 里</p>
+</blockquote>
+
+<ul>
+  <li>fail:接口调用失败的回调函数</li>
+  <li>complete:接口调用结束的回调函数(调用成功,失败都会执行)</li>
+</ul>
+
+<p>移除缓存: uni.removeStorage(Object)</p>
+
+<ul>
+  <li>key:本地缓存中指定的 key</li>
+  <li>success:接口调用成功的回调函数</li>
+  <li>fail:接口调用失败的回调函数</li>
+  <li>complete:接口调用结束的回调函数(调用成功,失败都会执行)</li>
+</ul>
+
+<h2 id="uni-app-同步数据缓存">uni-app 同步数据缓存</h2>
+
+<p>设置缓存: uni.setStorageSync(key,data))</p>
+
+<p>获取缓存: uni.getStorageSync(key)</p>
+
+<p>移除缓存: uni.removeStorageSync(key)</p>
+
+<h2 id="uni-app-图片上传和预览">uni-app 图片上传和预览</h2>
+
+<h3 id="unichooseimageobject">uni.chooseImage(Object)</h3>
+
+<p>从本地相册选择图片或使用相机拍照</p>
+
+<table>
+  <thead>
+      <tr>
+        <th>参数名</th>
+        <th>类型</th>
+        <th>说明</th>
+        <th>差异</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>count</td>
+        <td>Number</td>
+        <td>最多可以选择图片的数量,默认9</td>
+        <td>count 值在 H5 平台的表现，基于浏览器本身的规范。目前测试的结果来看，只能限制单选/多选，并不能限制数量。并且，在实际的手机浏览器很少有能够支持多选的。</td>
+      </tr>
+      <tr>
+        <td>sizeType</td>
+        <td>Array&lt;\String&gt;	</td>
+        <td>original 原图，compressed 压缩图，默认二者都有</td>
+        <td>App、微信小程序、支付宝小程序、百度小程序</td>
+      </tr>
+      <tr>
+        <td>extension</td>
+        <td>Array&lt;\String&gt;	</td>
+        <td>根据文件拓展名过滤，每一项都不能是空字符串。默认不过滤。</td>
+        <td>H5(HBuilder X2.9.9+)</td>
+      </tr>
+      <tr>
+        <td>sourceType</td>
+        <td>Array&lt;\String&gt;	</td>
+        <td>album 从相册选图，camera 使用相机，默认二者都有。如需直接开相机或直接选相册，请只使用一个选项</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>crop</td>
+        <td>Object</td>
+        <td>图像裁剪参数，设置后 sizeType 失效</td>
+        <td>App 3.1.19+</td>
+      </tr>
+      <tr>
+        <td>success</td>
+        <td>Function</td>
+        <td>成功则返回图片的本地文件路径列表 tempFilePaths</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>fail</td>
+        <td>Function</td>
+        <td>接口调用失败的回调函数</td>
+        <td>小程序、App</td>
+      </tr>
+      <tr>
+        <td>complete</td>
+        <td>Function</td>
+        <td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+
+<h2 id="unipreviewimageobject">uni.previewImage(OBJECT)</h2>
+
+<p>图片预览</p>
+
+<table>
+    <thead>
+      <tr>
+        <th>参数名</th>
+        <th>类型</th>
+        <th>说明</th>
+        <th>差异</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>current</td>
+        <td>String/Number</td>
+        <td>为当前显示图片的链接/索引值，不填或填写的值无效则为 urls 的第一张</td>
+        <td>App平台在 1.9.5至1.9.8之间，current为必填。不填会报错</td>
+      </tr>
+      <tr>
+        <td>urls</td>
+        <td>Array&lt;\String&gt;</td>
+        <td>需要预览的图片链接列表</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>indicator</td>
+        <td>String</td>
+        <td>图片指示器样式，可取值："default" - 底部圆点指示器； "number" - 顶部数字指示器； "none" - 不显示指示器。</td>
+        <td>App</td>
+      </tr>
+      <tr>
+        <td>loop</td>
+        <td>Boolean</td>
+        <td>是否可循环预览，默认值为 false</td>
+        <td>App</td>
+      </tr>
+      <tr>
+        <td>longPressActions</td>
+        <td>Object</td>
+        <td>长按图片显示操作菜单，如不填默认为保存相册</td>
+        <td>App 1.9.5+</td>
+      </tr>
+      <tr>
+        <td>success</td>
+        <td>Function</td>
+        <td>接口调用成功的回调函数</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>fail</td>
+        <td>Function</td>
+        <td>接口调用失败的回调函数	</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>complete</td>
+        <td>Function</td>
+        <td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+
+<h2 id="条件注释实现跨段兼容">条件注释实现跨段兼容</h2>
+
+<p>条件编译使用特殊的注释作为标记,在编译时根据这些特殊的注释,将注释里面的代码编译到不同平台</p>
+
+<p>写法:以 <strong>#ifdef</strong> 或 <strong>#inndef</strong> 加 <strong>%PLATFORM</strong> 开头,以<strong>#endif</strong> 结尾</p>
+
+<ul>
+  <li>#ifdef: if defined 仅在某平台存在</li>
+  <li>#inndef: if not defined 除了某平台均存在</li>
+  <li>%PLATFORM: 平台名称</li>
+</ul>
+
+<table>
+  <thead>
+      <tr>
+        <th>条件编译写法</th>
+        <th>说明</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          #ifdef APP-PLUS <br />
+          需要条件编译的代码 <br />
+          #endif
+        </td>
+        <td>仅出现在 App 平台下的代码</td>
+      </tr>
+      <tr>
+        <td>
+          #ifndef H5 <br />
+          需要条件编译的代码 <br />
+          #endif
+        </td>
+        <td>除了H5平台,其他平台均存在的代码</td>
+      </tr>
+      <tr>
+        <td>
+          #ifdef H5 || MP-WEIXIN <br />
+          需要条件编译的代码 <br />
+          #endif
+        </td>
+        <td>除了H5平台或微信小程序平台存在的代码(这里只有 || ,不可能出现&amp;&amp;,因为没有交集)</td>
+      </tr>
+  </tbody>
+</table>
+
+<p>%PLATFORM% 可取值如下：</p>
+
+<table>
+  <thead>
+      <tr>
+        <th>值</th>
+        <th>生效条件</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>VUE3</td>
+        <td>HBuilderX 3.2.0+ <a href="https://ask.dcloud.net.cn/article/37834">详情</a> </td>
+      </tr>
+      <tr>
+        <td>APP-PLUS</td>
+        <td>App</td>
+      </tr>
+      <tr>
+        <td>APP-PLUS-NVUE或APP-NVUE</td>
+        <td>App nvue</td>
+      </tr>
+      <tr>
+        <td>H5</td>
+        <td>H5</td>
+      </tr>
+      <tr>
+        <td>MP-WEIXIN</td>
+        <td>微信小程序</td>
+      </tr>
+      <tr>
+        <td>MP-ALIPAY</td>
+        <td>支付宝小程序</td>
+      </tr>
+      <tr>
+        <td>MP-BAIDU</td>
+        <td>百度小程序</td>
+      </tr>
+      <tr>
+        <td>MP-TOUTIAO</td>
+        <td>字节跳动小程序</td>
+      </tr>
+      <tr>
+        <td>MP-QQ</td>
+        <td>QQ小程序</td>
+      </tr>
+      <tr>
+        <td>MP-KUAISHOU</td>
+        <td>快手小程序</td>
+      </tr>
+      <tr>
+        <td>H5</td>
+        <td>H5</td>
+      </tr>
+      <tr>
+        <td>MP-360</td>
+        <td>360小程序</td>
+      </tr>
+      <tr>
+        <td>MP</td>
+        <td>微信小程序/支付宝小程序/百度小程序/字节跳动小程序/QQ小程序/360小程序</td>
+      </tr>
+      <tr>
+        <td>QUICKAPP-WEBVIEW</td>
+        <td>快应用通用(包含联盟、华为)</td>
+      </tr>
+      <tr>
+        <td>QUICKAPP-WEBVIEW-UNION</td>
+        <td>快应用联盟</td>
+      </tr>
+      <tr>
+        <td>QUICKAPP-WEBVIEW-HUAWEI	</td>
+        <td>快应用华为</td>
+      </tr>
+  </tbody>
+</table>
 
 
   
