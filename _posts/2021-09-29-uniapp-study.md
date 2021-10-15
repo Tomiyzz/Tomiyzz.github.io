@@ -526,3 +526,123 @@ Object:
       </tr>
   </tbody>
 </table>
+
+## 路由与跳转 (navigator)
+
+页面跳转 该组件类似 HTML 中的<a>组件,但只能跳转本地页面.目标页面必须在 pages.json 中注册
+
+生命式导航属性说明:
+
+<table>
+  <thead>
+      <tr>
+        <th>属性名</th>
+        <th>类型</th>
+        <th>默认值</th>
+        <th>说明</th>
+        <th>平台差异</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>url</td>
+        <td>String</td>
+        <td></td>
+        <td>应用内的跳转链接，值为相对路径或绝对路径</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>open-type</td>
+        <td>String</td>
+        <td>navigate</td>
+        <td>跳转方式. 值有:navigate,redirect,switchTab,reLaunch,navigateBack,exit</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>delta</td>
+        <td>Number</td>
+        <td></td>
+        <td>当 open-type 为 'navigateBack' 时有效，表示回退的层数</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>animation-type</td>
+        <td>String</td>
+        <td>pop-in/out</td>
+        <td>当 open-type 为 navigate、navigateBack 时有效，窗口的显示/关闭动画效果 <a href="https://uniapp.dcloud.io/api/router?id=animation">详情</a></td>
+        <td>App</td>
+      </tr>
+      <tr>
+        <td>animation-duration</td>
+        <td>Number</td>
+        <td>300</td>
+        <td>当 open-type 为 navigate、navigateBack 时有效，窗口显示/关闭动画的持续时间。</td>
+        <td>App</td>
+      </tr>
+      <tr>
+        <td>hover-class</td>
+        <td>String</td>
+        <td>navigator-hover</td>
+        <td>指定点击时的样式类，当hover-class="none"时，没有点击态效果</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>hover-stop-propagation</td>
+        <td>Boolean</td>
+        <td>false</td>
+        <td>指定是否阻止本节点的祖先节点出现点击态</td>
+        <td>微信小程序</td>
+      </tr>
+      <tr>
+        <td>hover-start-time</td>
+        <td>Number</td>
+        <td>50</td>
+        <td>按住后多久出现点击态，单位毫秒</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>hover-stay-time</td>
+        <td>Number</td>
+        <td>600</td>
+        <td>手指松开后点击态保留时间，单位毫秒</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>target</td>
+        <td>String</td>
+        <td>self</td>
+        <td>在哪个小程序目标上发生跳转，默认当前小程序，值域self/miniProgram</td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+
+### 示例
+
+{% highlight js linenos %}
+<navigator url="navigate/navigate?title=navigate" hover-class="navigator-hover">
+<button type="default">跳转到新页面</button>
+</navigator>
+{% endhighlight %}
+
+编程式导航:
+
+- uni.navigateTo(OBJECT)
+
+  OBJECT 参数说明
+
+  - url: String 类型, 必填, 需要跳转的应用内非 tabBar 的页面的路径 , 路径后可以带参数。参数与路径之间使用?分隔，参数键与参数值用=相连，不同参数用&分隔；如 'path?key=value&key2=value2'，path 为下一个页面的路径，下一个页面的 onLoad 函数可得到传递的参数
+  - animationType: String 类型, 非必填, 默认值:pop-in, 窗口显示的动画效果 <a href="https://uniapp.dcloud.io/api/router?id=animation">详情</a> 仅支持 APP
+  - animationDuration: Number 类型, 非必填, 默认值:300, 窗口动画持续时间，单位为 ms 仅支持 APP
+  - events: Object 类型, 非必填, 页面间通信接口，用于监听被打开页面发送到当前页面的数据。2.8.9+ 开始支持。
+  - success: 成功回调
+  - fail: 失败回调
+  - complete: 接口调用结束的回调
+
+- uni.redirectTo(OBJECT)
+
+  会销毁当前页面
+
+## uni-app 组件
+
+组件的生命周期同 vue 2.0

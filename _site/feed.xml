@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-10-13T16:14:14+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">记录学习历程 Tomiyzz</title><subtitle>记录每次学到的新知识,希望能有所收获!!!</subtitle><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><entry><title type="html">Uniapp Study</title><link href="http://localhost:4000/2021/09/29/uniapp-study/" rel="alternate" type="text/html" title="Uniapp Study" /><published>2021-09-29T12:00:00+08:00</published><updated>2021-09-29T12:00:00+08:00</updated><id>http://localhost:4000/2021/09/29/uniapp-study</id><content type="html" xml:base="http://localhost:4000/2021/09/29/uniapp-study/">&lt;p class=&quot;message&quot;&gt;学习 UniApp 的历程&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-10-14T17:31:30+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">记录学习历程 Tomiyzz</title><subtitle>记录每次学到的新知识,希望能有所收获!!!</subtitle><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><entry><title type="html">Uniapp Study</title><link href="http://localhost:4000/2021/09/29/uniapp-study/" rel="alternate" type="text/html" title="Uniapp Study" /><published>2021-09-29T12:00:00+08:00</published><updated>2021-09-29T12:00:00+08:00</updated><id>http://localhost:4000/2021/09/29/uniapp-study</id><content type="html" xml:base="http://localhost:4000/2021/09/29/uniapp-study/">&lt;p class=&quot;message&quot;&gt;学习 UniApp 的历程&lt;/p&gt;
 
 &lt;h2 id=&quot;uni-app-介绍&quot;&gt;uni-app 介绍&lt;/h2&gt;
 
@@ -581,7 +581,136 @@ aspectFill 保持纵横比缩放图片,使图片的短边完全显示出来&lt;/
         &lt;td&gt;快应用华为&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
-&lt;/table&gt;</content><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><category term="mathjax" /><summary type="html">学习 UniApp 的历程</summary></entry><entry><title type="html">Testing MathJax</title><link href="http://localhost:4000/2020/10/02/testing-mathjax/" rel="alternate" type="text/html" title="Testing MathJax" /><published>2020-10-02T15:32:00+08:00</published><updated>2020-10-02T15:32:00+08:00</updated><id>http://localhost:4000/2020/10/02/testing-mathjax</id><content type="html" xml:base="http://localhost:4000/2020/10/02/testing-mathjax/">Not Pure Poole supports [MathJax](https://www.mathjax.org/). You can enable it on a page by setting `math: true` in the front matter.
+&lt;/table&gt;
+
+&lt;h2 id=&quot;路由与跳转-navigator&quot;&gt;路由与跳转 (navigator)&lt;/h2&gt;
+
+&lt;p&gt;页面跳转 该组件类似 HTML 中的&lt;a&gt;组件,但只能跳转本地页面.目标页面必须在 pages.json 中注册&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;生命式导航属性说明:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;属性名&lt;/th&gt;
+        &lt;th&gt;类型&lt;/th&gt;
+        &lt;th&gt;默认值&lt;/th&gt;
+        &lt;th&gt;说明&lt;/th&gt;
+        &lt;th&gt;平台差异&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;url&lt;/td&gt;
+        &lt;td&gt;String&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+        &lt;td&gt;应用内的跳转链接，值为相对路径或绝对路径&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;open-type&lt;/td&gt;
+        &lt;td&gt;String&lt;/td&gt;
+        &lt;td&gt;navigate&lt;/td&gt;
+        &lt;td&gt;跳转方式. 值有:navigate,redirect,switchTab,reLaunch,navigateBack,exit&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;delta&lt;/td&gt;
+        &lt;td&gt;Number&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+        &lt;td&gt;当 open-type 为 'navigateBack' 时有效，表示回退的层数&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;animation-type&lt;/td&gt;
+        &lt;td&gt;String&lt;/td&gt;
+        &lt;td&gt;pop-in/out&lt;/td&gt;
+        &lt;td&gt;当 open-type 为 navigate、navigateBack 时有效，窗口的显示/关闭动画效果 &lt;a href=&quot;https://uniapp.dcloud.io/api/router?id=animation&quot;&gt;详情&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;App&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;animation-duration&lt;/td&gt;
+        &lt;td&gt;Number&lt;/td&gt;
+        &lt;td&gt;300&lt;/td&gt;
+        &lt;td&gt;当 open-type 为 navigate、navigateBack 时有效，窗口显示/关闭动画的持续时间。&lt;/td&gt;
+        &lt;td&gt;App&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;hover-class&lt;/td&gt;
+        &lt;td&gt;String&lt;/td&gt;
+        &lt;td&gt;navigator-hover&lt;/td&gt;
+        &lt;td&gt;指定点击时的样式类，当hover-class=&quot;none&quot;时，没有点击态效果&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;hover-stop-propagation&lt;/td&gt;
+        &lt;td&gt;Boolean&lt;/td&gt;
+        &lt;td&gt;false&lt;/td&gt;
+        &lt;td&gt;指定是否阻止本节点的祖先节点出现点击态&lt;/td&gt;
+        &lt;td&gt;微信小程序&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;hover-start-time&lt;/td&gt;
+        &lt;td&gt;Number&lt;/td&gt;
+        &lt;td&gt;50&lt;/td&gt;
+        &lt;td&gt;按住后多久出现点击态，单位毫秒&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;hover-stay-time&lt;/td&gt;
+        &lt;td&gt;Number&lt;/td&gt;
+        &lt;td&gt;600&lt;/td&gt;
+        &lt;td&gt;手指松开后点击态保留时间，单位毫秒&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;target&lt;/td&gt;
+        &lt;td&gt;String&lt;/td&gt;
+        &lt;td&gt;self&lt;/td&gt;
+        &lt;td&gt;在哪个小程序目标上发生跳转，默认当前小程序，值域self/miniProgram&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;示例&quot;&gt;示例&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;navigator&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;navigate/navigate?title=navigate&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;hover&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;navigator-hover&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;跳转到新页面&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/button&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/navigator&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;编程式导航:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;uni.navigateTo(OBJECT)&lt;/p&gt;
+
+    &lt;p&gt;OBJECT 参数说明&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;url: String 类型, 必填, 需要跳转的应用内非 tabBar 的页面的路径 , 路径后可以带参数。参数与路径之间使用?分隔，参数键与参数值用=相连，不同参数用&amp;amp;分隔；如 ‘path?key=value&amp;amp;key2=value2’，path 为下一个页面的路径，下一个页面的 onLoad 函数可得到传递的参数&lt;/li&gt;
+      &lt;li&gt;animationType: String 类型, 非必填, 默认值:pop-in, 窗口显示的动画效果 &lt;a href=&quot;https://uniapp.dcloud.io/api/router?id=animation&quot;&gt;详情&lt;/a&gt; 仅支持 APP&lt;/li&gt;
+      &lt;li&gt;animationDuration: Number 类型, 非必填, 默认值:300, 窗口动画持续时间，单位为 ms 仅支持 APP&lt;/li&gt;
+      &lt;li&gt;events: Object 类型, 非必填, 页面间通信接口，用于监听被打开页面发送到当前页面的数据。2.8.9+ 开始支持。&lt;/li&gt;
+      &lt;li&gt;success: 成功回调&lt;/li&gt;
+      &lt;li&gt;fail: 失败回调&lt;/li&gt;
+      &lt;li&gt;complete: 接口调用结束的回调&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;uni.redirectTo(OBJECT)&lt;/p&gt;
+
+    &lt;p&gt;会销毁当前页面&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;uni-app-组件&quot;&gt;uni-app 组件&lt;/h2&gt;
+
+&lt;p&gt;组件的生命周期同 vue 2.0&lt;/p&gt;</content><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><category term="mathjax" /><summary type="html">学习 UniApp 的历程</summary></entry><entry><title type="html">Testing MathJax</title><link href="http://localhost:4000/2020/10/02/testing-mathjax/" rel="alternate" type="text/html" title="Testing MathJax" /><published>2020-10-02T15:32:00+08:00</published><updated>2020-10-02T15:32:00+08:00</updated><id>http://localhost:4000/2020/10/02/testing-mathjax</id><content type="html" xml:base="http://localhost:4000/2020/10/02/testing-mathjax/">Not Pure Poole supports [MathJax](https://www.mathjax.org/). You can enable it on a page by setting `math: true` in the front matter.
 
 An inline math: \\\(E=mc^2\\\).
 
