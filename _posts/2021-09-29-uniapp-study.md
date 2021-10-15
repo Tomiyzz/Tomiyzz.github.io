@@ -646,3 +646,15 @@ Object:
 ## uni-app 组件
 
 组件的生命周期同 vue 2.0
+
+### 组件的通讯
+
+父->子: 在父组件中给子组件绑定属性,在子组件中通过 props 接收 (同 vue)
+
+子->父: 通过\$emit 来触发事件 (同 vue)
+
+兄弟组件之间传值: uni.on() 注册全局监听的事件 uni.\$emit() 触发全局的监听事件
+
+## uni-ui 的使用
+
+<a href="https://uniapp.dcloud.io/component/README?id=uniui">地址</a>

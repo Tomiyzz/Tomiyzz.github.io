@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-10-14T17:31:30+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">记录学习历程 Tomiyzz</title><subtitle>记录每次学到的新知识,希望能有所收获!!!</subtitle><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><entry><title type="html">Uniapp Study</title><link href="http://localhost:4000/2021/09/29/uniapp-study/" rel="alternate" type="text/html" title="Uniapp Study" /><published>2021-09-29T12:00:00+08:00</published><updated>2021-09-29T12:00:00+08:00</updated><id>http://localhost:4000/2021/09/29/uniapp-study</id><content type="html" xml:base="http://localhost:4000/2021/09/29/uniapp-study/">&lt;p class=&quot;message&quot;&gt;学习 UniApp 的历程&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-10-15T10:53:26+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">记录学习历程 Tomiyzz</title><subtitle>记录每次学到的新知识,希望能有所收获!!!</subtitle><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><entry><title type="html">Uniapp Study</title><link href="http://localhost:4000/2021/09/29/uniapp-study/" rel="alternate" type="text/html" title="Uniapp Study" /><published>2021-09-29T12:00:00+08:00</published><updated>2021-09-29T12:00:00+08:00</updated><id>http://localhost:4000/2021/09/29/uniapp-study</id><content type="html" xml:base="http://localhost:4000/2021/09/29/uniapp-study/">&lt;p class=&quot;message&quot;&gt;学习 UniApp 的历程&lt;/p&gt;
 
 &lt;h2 id=&quot;uni-app-介绍&quot;&gt;uni-app 介绍&lt;/h2&gt;
 
@@ -710,7 +710,19 @@ aspectFill 保持纵横比缩放图片,使图片的短边完全显示出来&lt;/
 
 &lt;h2 id=&quot;uni-app-组件&quot;&gt;uni-app 组件&lt;/h2&gt;
 
-&lt;p&gt;组件的生命周期同 vue 2.0&lt;/p&gt;</content><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><category term="mathjax" /><summary type="html">学习 UniApp 的历程</summary></entry><entry><title type="html">Testing MathJax</title><link href="http://localhost:4000/2020/10/02/testing-mathjax/" rel="alternate" type="text/html" title="Testing MathJax" /><published>2020-10-02T15:32:00+08:00</published><updated>2020-10-02T15:32:00+08:00</updated><id>http://localhost:4000/2020/10/02/testing-mathjax</id><content type="html" xml:base="http://localhost:4000/2020/10/02/testing-mathjax/">Not Pure Poole supports [MathJax](https://www.mathjax.org/). You can enable it on a page by setting `math: true` in the front matter.
+&lt;p&gt;组件的生命周期同 vue 2.0&lt;/p&gt;
+
+&lt;h3 id=&quot;组件的通讯&quot;&gt;组件的通讯&lt;/h3&gt;
+
+&lt;p&gt;父-&amp;gt;子: 在父组件中给子组件绑定属性,在子组件中通过 props 接收 (同 vue)&lt;/p&gt;
+
+&lt;p&gt;子-&amp;gt;父: 通过$emit 来触发事件 (同 vue)&lt;/p&gt;
+
+&lt;p&gt;兄弟组件之间传值: uni.on() 注册全局监听的事件 uni.$emit() 触发全局的监听事件&lt;/p&gt;
+
+&lt;h2 id=&quot;uni-ui-的使用&quot;&gt;uni-ui 的使用&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://uniapp.dcloud.io/component/README?id=uniui&quot;&gt;地址&lt;/a&gt;&lt;/p&gt;</content><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><category term="mathjax" /><summary type="html">学习 UniApp 的历程</summary></entry><entry><title type="html">Testing MathJax</title><link href="http://localhost:4000/2020/10/02/testing-mathjax/" rel="alternate" type="text/html" title="Testing MathJax" /><published>2020-10-02T15:32:00+08:00</published><updated>2020-10-02T15:32:00+08:00</updated><id>http://localhost:4000/2020/10/02/testing-mathjax</id><content type="html" xml:base="http://localhost:4000/2020/10/02/testing-mathjax/">Not Pure Poole supports [MathJax](https://www.mathjax.org/). You can enable it on a page by setting `math: true` in the front matter.
 
 An inline math: \\\(E=mc^2\\\).
 
