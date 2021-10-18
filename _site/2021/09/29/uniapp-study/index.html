@@ -781,6 +781,69 @@ aspectFill 保持纵横比缩放图片,使图片的短边完全显示出来</p>
 
 <p><a href="https://uniapp.dcloud.io/component/README?id=uniui">地址</a></p>
 
+<h2 id="封装-unirequest-请求">封装 uni.request 请求</h2>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+</pre></td><td class="code"><pre><span class="kd">const</span> <span class="nx">BASE_URL</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">xxxxxxxxxxxx</span><span class="dl">'</span>
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">myRequest</span> <span class="o">=</span> <span class="p">(</span><span class="nx">options</span><span class="p">)</span><span class="o">=&gt;</span><span class="p">{</span>
+<span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span><span class="nx">reject</span><span class="p">)</span><span class="o">=&gt;</span><span class="p">{</span>
+<span class="nx">uni</span><span class="p">.</span><span class="nx">request</span><span class="p">({</span>
+<span class="na">url</span><span class="p">:</span><span class="nx">BASE_URL</span><span class="o">+</span><span class="nx">options</span><span class="p">.</span><span class="nx">url</span><span class="p">,</span>
+<span class="na">method</span><span class="p">:</span> <span class="nx">options</span><span class="p">.</span><span class="nx">method</span> <span class="o">||</span> <span class="dl">'</span><span class="s1">GET</span><span class="dl">'</span><span class="p">,</span>
+<span class="na">data</span><span class="p">:</span><span class="nx">options</span><span class="p">.</span><span class="nx">data</span> <span class="o">||</span> <span class="p">{},</span>
+<span class="na">success</span><span class="p">:</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">status</span> <span class="o">!==</span> <span class="mi">0</span><span class="p">){</span>
+<span class="k">return</span> <span class="nx">uni</span><span class="p">.</span><span class="nx">showToast</span><span class="p">({</span>
+<span class="na">title</span><span class="p">:</span><span class="dl">'</span><span class="s1">获取数据失败</span><span class="dl">'</span>
+<span class="p">})</span>
+<span class="p">}</span>
+<span class="nx">resolve</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span>
+<span class="p">},</span>
+<span class="na">fail</span><span class="p">:</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+<span class="nx">uni</span><span class="p">.</span><span class="nx">showToast</span><span class="p">({</span>
+<span class="na">title</span><span class="p">:</span><span class="dl">'</span><span class="s1">请求接口失败</span><span class="dl">'</span>
+<span class="p">})</span>
+<span class="nx">reject</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="p">})</span>
+<span class="p">})</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>在 main.js 中导入</p>
+
+<ul>
+  <li>
+    <p>import {myRequest} from ‘./pages/util/api.js’</p>
+  </li>
+  <li>
+    <p>Vue.prototype.$myRequest = myRequest</p>
+  </li>
+</ul>
+
 
   
     

@@ -658,3 +658,38 @@ Object:
 ## uni-ui 的使用
 
 <a href="https://uniapp.dcloud.io/component/README?id=uniui">地址</a>
+
+## 封装 uni.request 请求
+
+{% highlight js linenos %}
+const BASE_URL = 'xxxxxxxxxxxx'
+export const myRequest = (options)=>{
+return new Promise((resolve,reject)=>{
+uni.request({
+url:BASE_URL+options.url,
+method: options.method || 'GET',
+data:options.data || {},
+success: (res) => {
+if(res.data.status !== 0){
+return uni.showToast({
+title:'获取数据失败'
+})
+}
+resolve(res)
+},
+fail: (err) => {
+uni.showToast({
+title:'请求接口失败'
+})
+reject(err)
+}
+})
+})
+}
+{% endhighlight %}
+
+在 main.js 中导入
+
+- import {myRequest} from './pages/util/api.js'
+
+- Vue.prototype.\$myRequest = myRequest
