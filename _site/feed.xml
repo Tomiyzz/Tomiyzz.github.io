@@ -1,108 +1,94 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-10-22T15:43:47+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">记录学习历程 Tomiyzz</title><subtitle>记录每次学到的新知识,希望能有所收获!!!</subtitle><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><entry><title type="html">Uniapp Study</title><link href="http://localhost:4000/2021/09/29/uniapp-study/" rel="alternate" type="text/html" title="Uniapp Study" /><published>2021-09-29T12:00:00+08:00</published><updated>2021-09-29T12:00:00+08:00</updated><id>http://localhost:4000/2021/09/29/uniapp-study</id><content type="html" xml:base="http://localhost:4000/2021/09/29/uniapp-study/">&lt;p class=&quot;message&quot;&gt;学习 UniApp 的历程&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-10-22T16:16:17+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">记录学习历程 Tomiyzz</title><subtitle>记录每次学到的新知识,希望能有所收获!!!</subtitle><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><entry><title type="html">Webpack Study</title><link href="http://localhost:4000/2021/10/11/webpack-study/" rel="alternate" type="text/html" title="Webpack Study" /><published>2021-10-11T12:00:00+08:00</published><updated>2021-10-11T12:00:00+08:00</updated><id>http://localhost:4000/2021/10/11/webpack-study</id><content type="html" xml:base="http://localhost:4000/2021/10/11/webpack-study/">&lt;p class=&quot;message&quot;&gt;学习 Webpack 的历程&lt;/p&gt;
 
-&lt;h2 id=&quot;uni-app-介绍&quot;&gt;uni-app 介绍&lt;/h2&gt;
+&lt;p&gt;##&lt;/p&gt;</content><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><category term="mathjax" /><summary type="html">学习 Webpack 的历程</summary></entry><entry><title type="html">Uniapp Study</title><link href="http://localhost:4000/2021/09/29/uniapp-study/" rel="alternate" type="text/html" title="Uniapp Study" /><published>2021-09-29T12:00:00+08:00</published><updated>2021-09-29T12:00:00+08:00</updated><id>http://localhost:4000/2021/09/29/uniapp-study</id><content type="html" xml:base="http://localhost:4000/2021/09/29/uniapp-study/">学习 UniApp 的历程
+{: .message }
 
-&lt;p&gt;uni-app 是一个使用 Vue.js 开发所有前端应用的框架,开发者便携一套代码,可以发不到 iOS,安卓,H5,以及各个小程序等多个平台.&lt;/p&gt;
+## uni-app 介绍
 
-&lt;blockquote&gt;
-  &lt;p&gt;具有 vue 和微信小程序的开发经验,可快速上手 uni-app&lt;/p&gt;
-&lt;/blockquote&gt;
+uni-app 是一个使用 Vue.js 开发所有前端应用的框架,开发者便携一套代码,可以发不到 iOS,安卓,H5,以及各个小程序等多个平台.
 
-&lt;h2 id=&quot;环境搭建&quot;&gt;环境搭建&lt;/h2&gt;
+&gt; 具有 vue 和微信小程序的开发经验,可快速上手 uni-app
 
-&lt;ul&gt;
-  &lt;li&gt;1.安装编辑器 Hbuilderx &lt;a href=&quot;https://www.dcloud.io/hbuilderx.html&quot;&gt;下载地址&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;2.安装微信开发者工具 &lt;a href=&quot;https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html&quot;&gt;下载地址&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+## 环境搭建
 
-&lt;h2 id=&quot;运行微信开发者工具模拟器&quot;&gt;运行微信开发者工具模拟器&lt;/h2&gt;
+- 1.安装编辑器 Hbuilderx &lt;a href=&quot;https://www.dcloud.io/hbuilderx.html&quot;&gt;下载地址&lt;/a&gt;
+- 2.安装微信开发者工具 &lt;a href='https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html'&gt;下载地址&lt;/a&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;1.如果是第一次使用，需要先配置小程序 ide 的相关路径，才能运行成功。如下图，需在输入框输入微信开发者工具的安装路径。 若 HBuilderX 不能正常启动微信开发者工具，需要开发者手动启动，然后将 uni-app 生成小程序工程的路径拷贝到微信开发者工具里面，在 HBuilderX 里面开发，在微信开发者工具里面就可看到实时的效果。
-&lt;img src=&quot;https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-uni-app-doc/a142b6a0-4f1a-11eb-8a36-ebb87efcf8c0.png&quot; alt=&quot;alt&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;2.微信小程序的 &lt;strong&gt;设置 –&amp;gt; 安全 –&amp;gt; 服务窗口 开启&lt;/strong&gt; 不开启会报错&lt;/li&gt;
-&lt;/ul&gt;
+## 运行微信开发者工具模拟器
 
-&lt;h2 id=&quot;运行到手机模拟器&quot;&gt;运行到手机模拟器&lt;/h2&gt;
+- 1.如果是第一次使用，需要先配置小程序 ide 的相关路径，才能运行成功。如下图，需在输入框输入微信开发者工具的安装路径。 若 HBuilderX 不能正常启动微信开发者工具，需要开发者手动启动，然后将 uni-app 生成小程序工程的路径拷贝到微信开发者工具里面，在 HBuilderX 里面开发，在微信开发者工具里面就可看到实时的效果。
+  ![alt](https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-uni-app-doc/a142b6a0-4f1a-11eb-8a36-ebb87efcf8c0.png)
+- 2.微信小程序的 **设置 --&gt; 安全 --&gt; 服务窗口 开启** 不开启会报错
 
-&lt;ul&gt;
-  &lt;li&gt;1.手机数据线和电脑连接,下载包&lt;/li&gt;
-&lt;/ul&gt;
+## 运行到手机模拟器
 
-&lt;h2 id=&quot;为了实现多端兼容综合考虑编译速度uni-app-约定了如下开发规范&quot;&gt;为了实现多端兼容,综合考虑编译速度,uni-app 约定了如下开发规范&lt;/h2&gt;
+- 1.手机数据线和电脑连接,下载包
 
-&lt;ul&gt;
-  &lt;li&gt;1.页面文件遵循 &lt;strong&gt;Vue 单文件组建(SFC)规范&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;2.组件标签靠近小程序规范&lt;/li&gt;
-  &lt;li&gt;3.接口能力(JS API)靠近微信小程序规范,但需要将前缀 &lt;strong&gt;wx&lt;/strong&gt; 替换成 &lt;strong&gt;uni&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;4.数据绑定及事件处理同 &lt;strong&gt;Vue.js&lt;/strong&gt; 规范,同时补充了 App 及页面的生命周期&lt;/li&gt;
-  &lt;li&gt;5.为兼容多端运行,建议使用 &lt;strong&gt;flex 布局&lt;/strong&gt; 进行开发&lt;/li&gt;
-&lt;/ul&gt;
+## 为了实现多端兼容,综合考虑编译速度,uni-app 约定了如下开发规范
 
-&lt;h2 id=&quot;uni-app-全局配置&quot;&gt;uni-app 全局配置&lt;/h2&gt;
+- 1.页面文件遵循 **Vue 单文件组建(SFC)规范**
+- 2.组件标签靠近小程序规范
+- 3.接口能力(JS API)靠近微信小程序规范,但需要将前缀 **wx** 替换成 **uni**
+- 4.数据绑定及事件处理同 **Vue.js** 规范,同时补充了 App 及页面的生命周期
+- 5.为兼容多端运行,建议使用 **flex 布局** 进行开发
 
-&lt;ul&gt;
-  &lt;li&gt;1.在文件&lt;strong&gt;&lt;em&gt;pages.json&lt;/em&gt;&lt;/strong&gt;
-    &lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;属性&lt;/th&gt;
-      &lt;th&gt;类型&lt;/th&gt;
-      &lt;th&gt;默认值&lt;/th&gt;
-      &lt;th&gt;描述&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;navigationBarBackgroundColor&lt;/td&gt;
-      &lt;td&gt;HexColor&lt;/td&gt;
-      &lt;td&gt;#F7F7F7&lt;/td&gt;
-      &lt;td&gt;导航栏背景颜色&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;navigationBarTextStyle&lt;/td&gt;
-      &lt;td&gt;String&lt;/td&gt;
-      &lt;td&gt;white&lt;/td&gt;
-      &lt;td&gt;导航栏标题颜色及状态栏前景颜色 仅支持black/white&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;navigationBarTitleText&lt;/td&gt;
-      &lt;td&gt;String&lt;/td&gt;
-      &lt;td&gt;&lt;/td&gt;
-      &lt;td&gt;导航栏标题文字内容&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;backgroundColor&lt;/td&gt;
-      &lt;td&gt;HexColor&lt;/td&gt;
-      &lt;td&gt;#ffffff&lt;/td&gt;
-      &lt;td&gt;窗口背景颜色(需要在微信开发者工具中查看)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;backgroundTextStyle&lt;/td&gt;
-      &lt;td&gt;String&lt;/td&gt;
-      &lt;td&gt;dark&lt;/td&gt;
-      &lt;td&gt;下拉loading的样式,仅支持dark/light&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;onReachBottomDistance&lt;/td&gt;
-      &lt;td&gt;Number&lt;/td&gt;
-      &lt;td&gt;50&lt;/td&gt;
-      &lt;td&gt;页面上拉触底事件触发时距页面底部距离,单位只支持px(距离底部多少的时候,加载下一页的数据)&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+## uni-app 全局配置
 
-&lt;h2 id=&quot;通过-pages-来配置页面&quot;&gt;通过 pages 来配置页面&lt;/h2&gt;
+- 1.在文件**_pages.json_**
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;属性&lt;/th&gt;
+        &lt;th&gt;类型&lt;/th&gt;
+        &lt;th&gt;默认值&lt;/th&gt;
+        &lt;th&gt;描述&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;navigationBarBackgroundColor&lt;/td&gt;
+        &lt;td&gt;HexColor&lt;/td&gt;
+        &lt;td&gt;#F7F7F7&lt;/td&gt;
+        &lt;td&gt;导航栏背景颜色&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;navigationBarTextStyle&lt;/td&gt;
+        &lt;td&gt;String&lt;/td&gt;
+        &lt;td&gt;white&lt;/td&gt;
+        &lt;td&gt;导航栏标题颜色及状态栏前景颜色 仅支持black/white&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;navigationBarTitleText&lt;/td&gt;
+        &lt;td&gt;String&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+        &lt;td&gt;导航栏标题文字内容&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;backgroundColor&lt;/td&gt;
+        &lt;td&gt;HexColor&lt;/td&gt;
+        &lt;td&gt;#ffffff&lt;/td&gt;
+        &lt;td&gt;窗口背景颜色(需要在微信开发者工具中查看)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;backgroundTextStyle&lt;/td&gt;
+        &lt;td&gt;String&lt;/td&gt;
+        &lt;td&gt;dark&lt;/td&gt;
+        &lt;td&gt;下拉loading的样式,仅支持dark/light&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;onReachBottomDistance&lt;/td&gt;
+        &lt;td&gt;Number&lt;/td&gt;
+        &lt;td&gt;50&lt;/td&gt;
+        &lt;td&gt;页面上拉触底事件触发时距页面底部距离,单位只支持px(距离底部多少的时候,加载下一页的数据)&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;pages 的第一个对象就是初始页面&lt;/p&gt;
-&lt;/blockquote&gt;
+## 通过 pages 来配置页面
 
-&lt;blockquote&gt;
-  &lt;p&gt;pages 的内部样式会覆盖全局样式&lt;/p&gt;
-&lt;/blockquote&gt;
+&gt; pages 的第一个对象就是初始页面
+
+&gt; pages 的内部样式会覆盖全局样式
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -129,209 +115,163 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;在 pages 中,可以给 h5 或者 app-plus 单独设置样式&lt;/p&gt;
-&lt;/blockquote&gt;
+&gt; 在 pages 中,可以给 h5 或者 app-plus 单独设置样式
 
-&lt;h2 id=&quot;配置-tabbar-详情&quot;&gt;配置 tabbar (&lt;a href=&quot;https://uniapp.dcloud.io/collocation/pages?id=tabbar&quot;&gt;详情&lt;/a&gt;)&lt;/h2&gt;
+## 配置 tabbar (&lt;a href='https://uniapp.dcloud.io/collocation/pages?id=tabbar'&gt;详情&lt;/a&gt;)
 
-&lt;p&gt;&lt;abbr&gt;如果应用是一个多 tab 应用,可以通过 tabBar 配置项指定 tab 栏的表现,以及 tab 切换时小时的对应项&lt;abbr&gt;&lt;/abbr&gt;&lt;/abbr&gt;&lt;/p&gt;
+&lt;abbr&gt;如果应用是一个多 tab 应用,可以通过 tabBar 配置项指定 tab 栏的表现,以及 tab 切换时小时的对应项&lt;abbr&gt;
 
-&lt;h3 id=&quot;tips&quot;&gt;Tips&lt;/h3&gt;
+### Tips
 
-&lt;ul&gt;
-  &lt;li&gt;1.当设置 position 为 top 时,将不会显示 icon (浏览器中不可以,只能在小程序中)&lt;/li&gt;
-  &lt;li&gt;2.tabBar 中的 list 是一个数组,只能配置最少 2 个,最多 5 个 tab,tab 按数组的顺序排序&lt;/li&gt;
-&lt;/ul&gt;
+- 1.当设置 position 为 top 时,将不会显示 icon (浏览器中不可以,只能在小程序中)
+- 2.tabBar 中的 list 是一个数组,只能配置最少 2 个,最多 5 个 tab,tab 按数组的顺序排序
 
-&lt;h3 id=&quot;通过-condition-配置微信小程序详情页的启动模式&quot;&gt;通过 condition 配置微信小程序详情页的启动模式&lt;/h3&gt;
+### 通过 condition 配置微信小程序详情页的启动模式
 
-&lt;h1 id=&quot;组件的基本使用&quot;&gt;组件的基本使用&lt;/h1&gt;
+# 组件的基本使用
 
-&lt;h2 id=&quot;text-文本组件-行内元素&quot;&gt;text 文本组件 (行内元素)&lt;/h2&gt;
+## text 文本组件 (行内元素)
 
-&lt;p&gt;属性:&lt;/p&gt;
+属性:
 
-&lt;ul&gt;
-  &lt;li&gt;selectable :控制文本是否可选 默认 false&lt;/li&gt;
-  &lt;li&gt;space :显示连续空格,可选参数:ensp,emsp,nbsp&lt;/li&gt;
-  &lt;li&gt;decode :默认解码&lt;/li&gt;
-&lt;/ul&gt;
+- selectable :控制文本是否可选 默认 false
+- space :显示连续空格,可选参数:ensp,emsp,nbsp
+- decode :默认解码
 
-&lt;h2 id=&quot;view-组件-容器组件-相当于-html-中的-div&quot;&gt;view 组件 容器组件 (相当于 html 中的 div)&lt;/h2&gt;
+## view 组件 容器组件 (相当于 html 中的 div)
 
-&lt;p&gt;属性:&lt;/p&gt;
+属性:
 
-&lt;ul&gt;
-  &lt;li&gt;hover-class :指定按下去的样式类&lt;/li&gt;
-  &lt;li&gt;hover-stop-propagation :是否阻止本节点的祖先节点出现点击状态 (类似于阻止冒泡的效果)&lt;/li&gt;
-  &lt;li&gt;hover-start-time :按住后多久出现点击状态 单位毫秒 默认值:50&lt;/li&gt;
-  &lt;li&gt;hover-stay-time :手指松开后点击状态保留时间 单位毫秒&lt;/li&gt;
-&lt;/ul&gt;
+- hover-class :指定按下去的样式类
+- hover-stop-propagation :是否阻止本节点的祖先节点出现点击状态 (类似于阻止冒泡的效果)
+- hover-start-time :按住后多久出现点击状态 单位毫秒 默认值:50
+- hover-stay-time :手指松开后点击状态保留时间 单位毫秒
 
-&lt;h2 id=&quot;button-组件&quot;&gt;button 组件&lt;/h2&gt;
+## button 组件
 
-&lt;p&gt;属性&lt;/p&gt;
+属性
 
-&lt;ul&gt;
-  &lt;li&gt;size&lt;/li&gt;
-  &lt;li&gt;type :primary default warn&lt;/li&gt;
-  &lt;li&gt;plain :镂空&lt;/li&gt;
-  &lt;li&gt;disabled :禁用&lt;/li&gt;
-  &lt;li&gt;loading : loading 效果&lt;/li&gt;
-&lt;/ul&gt;
+- size
+- type :primary default warn
+- plain :镂空
+- disabled :禁用
+- loading : loading 效果
 
-&lt;h2 id=&quot;image-组件-图片组件&quot;&gt;image 组件 图片组件&lt;/h2&gt;
+## image 组件 图片组件
 
-&lt;p&gt;属性&lt;/p&gt;
+属性
 
-&lt;ul&gt;
-  &lt;li&gt;src 图片资源路径&lt;/li&gt;
-  &lt;li&gt;mode :
-    &lt;blockquote&gt;
-      &lt;p&gt;aspectFit 保持纵横比缩放图片,使图片的长边完全显示出来
-aspectFill 保持纵横比缩放图片,使图片的短边完全显示出来&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+- src 图片资源路径
+- mode :
+  &gt; aspectFit 保持纵横比缩放图片,使图片的长边完全显示出来
+  &gt; aspectFill 保持纵横比缩放图片,使图片的短边完全显示出来
 
-&lt;h2 id=&quot;uni-app-中的样式&quot;&gt;uni-app 中的样式&lt;/h2&gt;
+## uni-app 中的样式
 
-&lt;ul&gt;
-  &lt;li&gt;1.rpx 即响应式 px,一种根据屏幕宽度自适应的动态单位,以 750 宽的屏幕为基准,750rpx 恰好为屏幕宽度,屏幕变宽,rpx 实际显示效果会等比放大.&lt;/li&gt;
-  &lt;li&gt;2.使用 &lt;strong&gt;&lt;em&gt;@import&lt;/em&gt;&lt;/strong&gt; 语句可以倒入外链样式表&lt;/li&gt;
-  &lt;li&gt;3.在 uni-app 中可以使用基本的选择器&lt;/li&gt;
-  &lt;li&gt;4.在 uni-app 中不能使用 &lt;strong&gt;*&lt;/strong&gt; 选择器&lt;/li&gt;
-  &lt;li&gt;5.&lt;strong&gt;&lt;em&gt;page&lt;/em&gt;&lt;/strong&gt;相当于&lt;strong&gt;&lt;em&gt;body&lt;/em&gt;&lt;/strong&gt;节点&lt;/li&gt;
-  &lt;li&gt;6.在 App.vue 中的样式为全局样式,作用于每一个页面,在 pages 目录下的 vue 文件中定义的样式为局部样式,只作用在对用的页面,会覆盖 App,vue 中相同的选择器&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;7.在 uni-app 中使用字体图标,使用方式和普通的 web 项目相同,需要注意:&lt;/p&gt;
+- 1.rpx 即响应式 px,一种根据屏幕宽度自适应的动态单位,以 750 宽的屏幕为基准,750rpx 恰好为屏幕宽度,屏幕变宽,rpx 实际显示效果会等比放大.
+- 2.使用 **_@import_** 语句可以倒入外链样式表
+- 3.在 uni-app 中可以使用基本的选择器
+- 4.在 uni-app 中不能使用 **\*** 选择器
+- 5.**_page_**相当于**_body_**节点
+- 6.在 App.vue 中的样式为全局样式,作用于每一个页面,在 pages 目录下的 vue 文件中定义的样式为局部样式,只作用在对用的页面,会覆盖 App,vue 中相同的选择器
+- 7.在 uni-app 中使用字体图标,使用方式和普通的 web 项目相同,需要注意:
 
-    &lt;blockquote&gt;
-      &lt;p&gt;字体文件小于 40kb,uni-app 会自动将其转化为 base64 格式&lt;/p&gt;
-    &lt;/blockquote&gt;
+  &gt; 字体文件小于 40kb,uni-app 会自动将其转化为 base64 格式
 
-    &lt;blockquote&gt;
-      &lt;p&gt;字体文件大于 40kb,需开发者自己转换,否则使用将不生效&lt;/p&gt;
-    &lt;/blockquote&gt;
+  &gt; 字体文件大于 40kb,需开发者自己转换,否则使用将不生效
 
-    &lt;blockquote&gt;
-      &lt;p&gt;字体文件的引用路径推荐使用以 &lt;strong&gt;&lt;em&gt;-@&lt;/em&gt;&lt;/strong&gt; 开头的绝对路径 (src:url(‘-@/static/….’))&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+  &gt; 字体文件的引用路径推荐使用以 **_-@_** 开头的绝对路径 (src:url('-@/static/....'))
 
-&lt;h2 id=&quot;uni-app-数据绑定-和-vue-的数据绑定相同&quot;&gt;uni-app 数据绑定 和 Vue 的数据绑定相同&lt;/h2&gt;
+## uni-app 数据绑定 和 Vue 的数据绑定相同
 
-&lt;blockquote&gt;
-  &lt;p&gt;在点击事件中传递事件对象,在方法中传入 $event&lt;/p&gt;
-&lt;/blockquote&gt;
+&gt; 在点击事件中传递事件对象,在方法中传入 \$event
 
-&lt;h2 id=&quot;uni-app-中的生命生命周期&quot;&gt;uni-app 中的生命生命周期&lt;/h2&gt;
+## uni-app 中的生命生命周期
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;应用的声明周期:&lt;/p&gt;
+- 应用的声明周期:
 
-    &lt;p&gt;onLaunch: 全局只会触发一次&lt;/p&gt;
+  onLaunch: 全局只会触发一次
 
-    &lt;p&gt;onShow:从后台进入前台显示&lt;/p&gt;
+  onShow:从后台进入前台显示
 
-    &lt;p&gt;onHide:从前台进入后台&lt;/p&gt;
+  onHide:从前台进入后台
 
-    &lt;p&gt;onError:报错时触发&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;页面的生命周期:&lt;/p&gt;
+  onError:报错时触发
 
-    &lt;p&gt;onLoad:监听页面加载,其参数为上个页面传递的数据,参数类型为 Object&lt;/p&gt;
+- 页面的生命周期:
 
-    &lt;p&gt;onShow:监听页面显示,页面每次出现在屏幕上都触发,包括从下级页面返回&lt;/p&gt;
+  onLoad:监听页面加载,其参数为上个页面传递的数据,参数类型为 Object
 
-    &lt;p&gt;onReady:监听页面初次渲染完成&lt;/p&gt;
+  onShow:监听页面显示,页面每次出现在屏幕上都触发,包括从下级页面返回
 
-    &lt;p&gt;onHide:监听页面隐藏&lt;/p&gt;
+  onReady:监听页面初次渲染完成
 
-    &lt;p&gt;onUnload:监听页面卸载&lt;/p&gt;
+  onHide:监听页面隐藏
 
-    &lt;p&gt;onPullDownRefresh:监听用户下拉动作，一般用于下拉刷新&lt;/p&gt;
+  onUnload:监听页面卸载
 
-    &lt;p&gt;onReachBottom:页面滚动到底部的事件（不是 scroll-view 滚到底），常用于下拉下一页数据。具体见下方注意事项&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+  onPullDownRefresh:监听用户下拉动作，一般用于下拉刷新
 
-&lt;h2 id=&quot;uni-app-发送网络请求&quot;&gt;uni-app 发送网络请求&lt;/h2&gt;
+  onReachBottom:页面滚动到底部的事件（不是 scroll-view 滚到底），常用于下拉下一页数据。具体见下方注意事项
 
-&lt;blockquote&gt;
-  &lt;p&gt;uni.request(Object)&lt;/p&gt;
-&lt;/blockquote&gt;
+## uni-app 发送网络请求
 
-&lt;h4 id=&quot;object&quot;&gt;Object:&lt;/h4&gt;
+&gt; uni.request(Object)
 
-&lt;ul&gt;
-  &lt;li&gt;url: 开发者服务器接口地址 String 类型&lt;/li&gt;
-  &lt;li&gt;data: 请求的参数 Object/String/ArraryBuffer&lt;/li&gt;
-  &lt;li&gt;header: 设置请求的 header,header 中不能设置 Referer Object 类型&lt;/li&gt;
-  &lt;li&gt;method: 请求的方法 String 类型 默认 GET&lt;/li&gt;
-  &lt;li&gt;timeout: 超市时间,单位是 ms Number 类型&lt;/li&gt;
-  &lt;li&gt;dataType: 如果设为 json,会尝试对返回的数据做一次 JSON.parse String 类型&lt;/li&gt;
-  &lt;li&gt;success: 成功之后返回的回调函数&lt;/li&gt;
-&lt;/ul&gt;
+#### Object:
 
-&lt;h2 id=&quot;uni-app-异步数据缓存&quot;&gt;uni-app 异步数据缓存&lt;/h2&gt;
+- url: 开发者服务器接口地址 String 类型
+- data: 请求的参数 Object/String/ArraryBuffer
+- header: 设置请求的 header,header 中不能设置 Referer Object 类型
+- method: 请求的方法 String 类型 默认 GET
+- timeout: 超市时间,单位是 ms Number 类型
+- dataType: 如果设为 json,会尝试对返回的数据做一次 JSON.parse String 类型
+- success: 成功之后返回的回调函数
 
-&lt;p&gt;设置缓存: uni.setStorage(Object)&lt;/p&gt;
+## uni-app 异步数据缓存
 
-&lt;p&gt;Object:&lt;/p&gt;
+设置缓存: uni.setStorage(Object)
 
-&lt;ul&gt;
-  &lt;li&gt;key:本地缓存中的指定的 key String 类型&lt;/li&gt;
-  &lt;li&gt;data:需要存储的内容&lt;/li&gt;
-  &lt;li&gt;success:接口调用成功的回调函数&lt;/li&gt;
-  &lt;li&gt;fail:接口调用失败的回调函数&lt;/li&gt;
-  &lt;li&gt;complete:接口调用结束的回调函数(调用成功,失败都会执行)&lt;/li&gt;
-&lt;/ul&gt;
+Object:
 
-&lt;p&gt;获取缓存: uni.getStorage(Object)&lt;/p&gt;
+- key:本地缓存中的指定的 key String 类型
+- data:需要存储的内容
+- success:接口调用成功的回调函数
+- fail:接口调用失败的回调函数
+- complete:接口调用结束的回调函数(调用成功,失败都会执行)
 
-&lt;p&gt;Object:&lt;/p&gt;
+获取缓存: uni.getStorage(Object)
 
-&lt;ul&gt;
-  &lt;li&gt;key:本地缓存中的指定的 key String 类型&lt;/li&gt;
-  &lt;li&gt;success:接口调用成功的回调函数&lt;/li&gt;
-&lt;/ul&gt;
+Object:
 
-&lt;blockquote&gt;
-  &lt;p&gt;成功的数据在返回的 res 里&lt;/p&gt;
-&lt;/blockquote&gt;
+- key:本地缓存中的指定的 key String 类型
+- success:接口调用成功的回调函数
 
-&lt;ul&gt;
-  &lt;li&gt;fail:接口调用失败的回调函数&lt;/li&gt;
-  &lt;li&gt;complete:接口调用结束的回调函数(调用成功,失败都会执行)&lt;/li&gt;
-&lt;/ul&gt;
+&gt; 成功的数据在返回的 res 里
 
-&lt;p&gt;移除缓存: uni.removeStorage(Object)&lt;/p&gt;
+- fail:接口调用失败的回调函数
+- complete:接口调用结束的回调函数(调用成功,失败都会执行)
 
-&lt;ul&gt;
-  &lt;li&gt;key:本地缓存中指定的 key&lt;/li&gt;
-  &lt;li&gt;success:接口调用成功的回调函数&lt;/li&gt;
-  &lt;li&gt;fail:接口调用失败的回调函数&lt;/li&gt;
-  &lt;li&gt;complete:接口调用结束的回调函数(调用成功,失败都会执行)&lt;/li&gt;
-&lt;/ul&gt;
+移除缓存: uni.removeStorage(Object)
 
-&lt;h2 id=&quot;uni-app-同步数据缓存&quot;&gt;uni-app 同步数据缓存&lt;/h2&gt;
+- key:本地缓存中指定的 key
+- success:接口调用成功的回调函数
+- fail:接口调用失败的回调函数
+- complete:接口调用结束的回调函数(调用成功,失败都会执行)
 
-&lt;p&gt;设置缓存: uni.setStorageSync(key,data))&lt;/p&gt;
+## uni-app 同步数据缓存
 
-&lt;p&gt;获取缓存: uni.getStorageSync(key)&lt;/p&gt;
+设置缓存: uni.setStorageSync(key,data))
 
-&lt;p&gt;移除缓存: uni.removeStorageSync(key)&lt;/p&gt;
+获取缓存: uni.getStorageSync(key)
 
-&lt;h2 id=&quot;uni-app-图片上传和预览&quot;&gt;uni-app 图片上传和预览&lt;/h2&gt;
+移除缓存: uni.removeStorageSync(key)
 
-&lt;h3 id=&quot;unichooseimageobject&quot;&gt;uni.chooseImage(Object)&lt;/h3&gt;
+## uni-app 图片上传和预览
 
-&lt;p&gt;从本地相册选择图片或使用相机拍照&lt;/p&gt;
+### uni.chooseImage(Object)
+
+从本地相册选择图片或使用相机拍照
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -351,19 +291,19 @@ aspectFill 保持纵横比缩放图片,使图片的短边完全显示出来&lt;/
       &lt;/tr&gt;
       &lt;tr&gt;
         &lt;td&gt;sizeType&lt;/td&gt;
-        &lt;td&gt;Array&amp;lt;\String&amp;gt;	&lt;/td&gt;
+        &lt;td&gt;Array&lt;\String&gt;	&lt;/td&gt;
         &lt;td&gt;original 原图，compressed 压缩图，默认二者都有&lt;/td&gt;
         &lt;td&gt;App、微信小程序、支付宝小程序、百度小程序&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
         &lt;td&gt;extension&lt;/td&gt;
-        &lt;td&gt;Array&amp;lt;\String&amp;gt;	&lt;/td&gt;
+        &lt;td&gt;Array&lt;\String&gt;	&lt;/td&gt;
         &lt;td&gt;根据文件拓展名过滤，每一项都不能是空字符串。默认不过滤。&lt;/td&gt;
         &lt;td&gt;H5(HBuilder X2.9.9+)&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
         &lt;td&gt;sourceType&lt;/td&gt;
-        &lt;td&gt;Array&amp;lt;\String&amp;gt;	&lt;/td&gt;
+        &lt;td&gt;Array&lt;\String&gt;	&lt;/td&gt;
         &lt;td&gt;album 从相册选图，camera 使用相机，默认二者都有。如需直接开相机或直接选相册，请只使用一个选项&lt;/td&gt;
         &lt;td&gt;&lt;/td&gt;
       &lt;/tr&gt;
@@ -394,9 +334,9 @@ aspectFill 保持纵横比缩放图片,使图片的短边完全显示出来&lt;/
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h2 id=&quot;unipreviewimageobject&quot;&gt;uni.previewImage(OBJECT)&lt;/h2&gt;
+## uni.previewImage(OBJECT)
 
-&lt;p&gt;图片预览&lt;/p&gt;
+图片预览
 
 &lt;table&gt;
     &lt;thead&gt;
@@ -416,7 +356,7 @@ aspectFill 保持纵横比缩放图片,使图片的短边完全显示出来&lt;/
       &lt;/tr&gt;
       &lt;tr&gt;
         &lt;td&gt;urls&lt;/td&gt;
-        &lt;td&gt;Array&amp;lt;\String&amp;gt;&lt;/td&gt;
+        &lt;td&gt;Array&lt;\String&gt;&lt;/td&gt;
         &lt;td&gt;需要预览的图片链接列表&lt;/td&gt;
         &lt;td&gt;&lt;/td&gt;
       &lt;/tr&gt;
@@ -459,17 +399,15 @@ aspectFill 保持纵横比缩放图片,使图片的短边完全显示出来&lt;/
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h2 id=&quot;条件注释实现跨段兼容&quot;&gt;条件注释实现跨段兼容&lt;/h2&gt;
+## 条件注释实现跨段兼容
 
-&lt;p&gt;条件编译使用特殊的注释作为标记,在编译时根据这些特殊的注释,将注释里面的代码编译到不同平台&lt;/p&gt;
+条件编译使用特殊的注释作为标记,在编译时根据这些特殊的注释,将注释里面的代码编译到不同平台
 
-&lt;p&gt;写法:以 &lt;strong&gt;#ifdef&lt;/strong&gt; 或 &lt;strong&gt;#inndef&lt;/strong&gt; 加 &lt;strong&gt;%PLATFORM&lt;/strong&gt; 开头,以&lt;strong&gt;#endif&lt;/strong&gt; 结尾&lt;/p&gt;
+写法:以 **\#ifdef** 或 **\#inndef** 加 **%PLATFORM** 开头,以**\#endif** 结尾
 
-&lt;ul&gt;
-  &lt;li&gt;#ifdef: if defined 仅在某平台存在&lt;/li&gt;
-  &lt;li&gt;#inndef: if not defined 除了某平台均存在&lt;/li&gt;
-  &lt;li&gt;%PLATFORM: 平台名称&lt;/li&gt;
-&lt;/ul&gt;
+- #ifdef: if defined 仅在某平台存在
+- #inndef: if not defined 除了某平台均存在
+- %PLATFORM: 平台名称
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -481,32 +419,32 @@ aspectFill 保持纵横比缩放图片,使图片的短边完全显示出来&lt;/
     &lt;tbody&gt;
       &lt;tr&gt;
         &lt;td&gt;
-          #ifdef APP-PLUS &lt;br /&gt;
-          需要条件编译的代码 &lt;br /&gt;
+          #ifdef APP-PLUS &lt;br/&gt;
+          需要条件编译的代码 &lt;br/&gt;
           #endif
         &lt;/td&gt;
         &lt;td&gt;仅出现在 App 平台下的代码&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
         &lt;td&gt;
-          #ifndef H5 &lt;br /&gt;
-          需要条件编译的代码 &lt;br /&gt;
+          #ifndef H5 &lt;br/&gt;
+          需要条件编译的代码 &lt;br/&gt;
           #endif
         &lt;/td&gt;
         &lt;td&gt;除了H5平台,其他平台均存在的代码&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
         &lt;td&gt;
-          #ifdef H5 || MP-WEIXIN &lt;br /&gt;
-          需要条件编译的代码 &lt;br /&gt;
+          #ifdef H5 || MP-WEIXIN &lt;br/&gt;
+          需要条件编译的代码 &lt;br/&gt;
           #endif
         &lt;/td&gt;
-        &lt;td&gt;除了H5平台或微信小程序平台存在的代码(这里只有 || ,不可能出现&amp;amp;&amp;amp;,因为没有交集)&lt;/td&gt;
+        &lt;td&gt;除了H5平台或微信小程序平台存在的代码(这里只有 || ,不可能出现&amp;&amp;,因为没有交集)&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;%PLATFORM% 可取值如下：&lt;/p&gt;
+%PLATFORM% 可取值如下：
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -583,11 +521,11 @@ aspectFill 保持纵横比缩放图片,使图片的短边完全显示出来&lt;/
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h2 id=&quot;路由与跳转-navigator&quot;&gt;路由与跳转 (navigator)&lt;/h2&gt;
+## 路由与跳转 (navigator)
 
-&lt;p&gt;页面跳转 该组件类似 HTML 中的&lt;a&gt;组件,但只能跳转本地页面.目标页面必须在 pages.json 中注册&lt;/a&gt;&lt;/p&gt;
+页面跳转 该组件类似 HTML 中的&lt;a&gt;组件,但只能跳转本地页面.目标页面必须在 pages.json 中注册
 
-&lt;p&gt;生命式导航属性说明:&lt;/p&gt;
+生命式导航属性说明:
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -673,172 +611,118 @@ aspectFill 保持纵横比缩放图片,使图片的短边完全显示出来&lt;/
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h3 id=&quot;示例&quot;&gt;示例&lt;/h3&gt;
+### 示例
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;navigator&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;navigate/navigate?title=navigate&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;hover&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;navigator-hover&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;跳转到新页面&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/button&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
-&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/navigator&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+{% highlight js linenos %}
+&lt;navigator url=&quot;navigate/navigate?title=navigate&quot; hover-class=&quot;navigator-hover&quot;&gt;
+&lt;button type=&quot;default&quot;&gt;跳转到新页面&lt;/button&gt;
+&lt;/navigator&gt;
+{% endhighlight %}
 
-&lt;p&gt;编程式导航:&lt;/p&gt;
+编程式导航:
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;uni.navigateTo(OBJECT)&lt;/p&gt;
+- uni.navigateTo(OBJECT)
 
-    &lt;p&gt;OBJECT 参数说明&lt;/p&gt;
+  OBJECT 参数说明
 
-    &lt;ul&gt;
-      &lt;li&gt;url: String 类型, 必填, 需要跳转的应用内非 tabBar 的页面的路径 , 路径后可以带参数。参数与路径之间使用?分隔，参数键与参数值用=相连，不同参数用&amp;amp;分隔；如 ‘path?key=value&amp;amp;key2=value2’，path 为下一个页面的路径，下一个页面的 onLoad 函数可得到传递的参数&lt;/li&gt;
-      &lt;li&gt;animationType: String 类型, 非必填, 默认值:pop-in, 窗口显示的动画效果 &lt;a href=&quot;https://uniapp.dcloud.io/api/router?id=animation&quot;&gt;详情&lt;/a&gt; 仅支持 APP&lt;/li&gt;
-      &lt;li&gt;animationDuration: Number 类型, 非必填, 默认值:300, 窗口动画持续时间，单位为 ms 仅支持 APP&lt;/li&gt;
-      &lt;li&gt;events: Object 类型, 非必填, 页面间通信接口，用于监听被打开页面发送到当前页面的数据。2.8.9+ 开始支持。&lt;/li&gt;
-      &lt;li&gt;success: 成功回调&lt;/li&gt;
-      &lt;li&gt;fail: 失败回调&lt;/li&gt;
-      &lt;li&gt;complete: 接口调用结束的回调&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;uni.redirectTo(OBJECT)&lt;/p&gt;
+  - url: String 类型, 必填, 需要跳转的应用内非 tabBar 的页面的路径 , 路径后可以带参数。参数与路径之间使用?分隔，参数键与参数值用=相连，不同参数用&amp;分隔；如 'path?key=value&amp;key2=value2'，path 为下一个页面的路径，下一个页面的 onLoad 函数可得到传递的参数
+  - animationType: String 类型, 非必填, 默认值:pop-in, 窗口显示的动画效果 &lt;a href=&quot;https://uniapp.dcloud.io/api/router?id=animation&quot;&gt;详情&lt;/a&gt; 仅支持 APP
+  - animationDuration: Number 类型, 非必填, 默认值:300, 窗口动画持续时间，单位为 ms 仅支持 APP
+  - events: Object 类型, 非必填, 页面间通信接口，用于监听被打开页面发送到当前页面的数据。2.8.9+ 开始支持。
+  - success: 成功回调
+  - fail: 失败回调
+  - complete: 接口调用结束的回调
 
-    &lt;p&gt;会销毁当前页面&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+- uni.redirectTo(OBJECT)
 
-&lt;h2 id=&quot;uni-app-组件&quot;&gt;uni-app 组件&lt;/h2&gt;
+  会销毁当前页面
 
-&lt;p&gt;组件的生命周期同 vue 2.0&lt;/p&gt;
+## uni-app 组件
 
-&lt;h3 id=&quot;组件的通讯&quot;&gt;组件的通讯&lt;/h3&gt;
+组件的生命周期同 vue 2.0
 
-&lt;p&gt;父-&amp;gt;子: 在父组件中给子组件绑定属性,在子组件中通过 props 接收 (同 vue)&lt;/p&gt;
+### 组件的通讯
 
-&lt;p&gt;子-&amp;gt;父: 通过$emit 来触发事件 (同 vue)&lt;/p&gt;
+父-&gt;子: 在父组件中给子组件绑定属性,在子组件中通过 props 接收 (同 vue)
 
-&lt;p&gt;兄弟组件之间传值: uni.on() 注册全局监听的事件 uni.$emit() 触发全局的监听事件&lt;/p&gt;
+子-&gt;父: 通过\$emit 来触发事件 (同 vue)
 
-&lt;h2 id=&quot;uni-ui-的使用&quot;&gt;uni-ui 的使用&lt;/h2&gt;
+兄弟组件之间传值: uni.on() 注册全局监听的事件 uni.\$emit() 触发全局的监听事件
 
-&lt;p&gt;&lt;a href=&quot;https://uniapp.dcloud.io/component/README?id=uniui&quot;&gt;地址&lt;/a&gt;&lt;/p&gt;
+## uni-ui 的使用
 
-&lt;h2 id=&quot;封装-unirequest-请求&quot;&gt;封装 uni.request 请求&lt;/h2&gt;
+&lt;a href=&quot;https://uniapp.dcloud.io/component/README?id=uniui&quot;&gt;地址&lt;/a&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;BASE_URL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;xxxxxxxxxxxx&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myRequest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Promise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;resolve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;uni&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;BASE_URL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;method&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;GET&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{},&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;uni&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;showToast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;获取数据失败&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;resolve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;fail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;uni&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;showToast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;请求接口失败&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;reject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+## 封装 uni.request 请求
 
-&lt;p&gt;在 main.js 中导入&lt;/p&gt;
+{% highlight js linenos %}
+const BASE_URL = 'xxxxxxxxxxxx'
+export const myRequest = (options)=&gt;{
+return new Promise((resolve,reject)=&gt;{
+uni.request({
+url:BASE_URL+options.url,
+method: options.method || 'GET',
+data:options.data || {},
+success: (res) =&gt; {
+if(res.data.status !== 0){
+return uni.showToast({
+title:'获取数据失败'
+})
+}
+resolve(res)
+},
+fail: (err) =&gt; {
+uni.showToast({
+title:'请求接口失败'
+})
+reject(err)
+}
+})
+})
+}
+{% endhighlight %}
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;import {myRequest} from ‘./pages/util/api.js’&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Vue.prototype.$myRequest = myRequest&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+在 main.js 中导入
 
-&lt;h2 id=&quot;小程序的发布&quot;&gt;小程序的发布&lt;/h2&gt;
+- import {myRequest} from './pages/util/api.js'
 
-&lt;p&gt;在 manifest.js 页面的 微信小程序配置中 配置 AppID 在微信开发者工具中点击上传即可&lt;/p&gt;
+- Vue.prototype.\$myRequest = myRequest
 
-&lt;h3 id=&quot;微信小程序发布线上地址&quot;&gt;微信小程序发布线上地址&lt;/h3&gt;
+## 小程序的发布
 
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;需要线上的接口地址 在代码中将请求换成线上的地址&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;将线上地址的接口域名配置到 小程序的服务器域名&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;发布上线的时候需要将字体图标放到线上的服务器中&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+在 manifest.js 页面的 微信小程序配置中 配置 AppID 在微信开发者工具中点击上传即可
 
-&lt;h2 id=&quot;h5-的发布&quot;&gt;h5 的发布&lt;/h2&gt;
+### 微信小程序发布线上地址
 
-&lt;p&gt;在 manifest.js 页面的 h5 配置中 配置 项目名称 路由方式 等&lt;/p&gt;
+1. 需要线上的接口地址 在代码中将请求换成线上的地址
 
-&lt;p&gt;点击 发行-&amp;gt; 网站-H5 手机版&lt;/p&gt;
+2. 将线上地址的接口域名配置到 小程序的服务器域名
 
-&lt;h2 id=&quot;app-的发布&quot;&gt;App 的发布&lt;/h2&gt;
+3. 发布上线的时候需要将字体图标放到线上的服务器中
 
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;在基础配置中 uni-app 应用标识 (没有的需要 重新获取)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;APP 图标配置&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;App 启动图配置&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;App SDK 配置 (用到哪些钩哪些)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;App 模块权限配置 (用到哪些钩哪些)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;App 原生插件配置&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;App 常用其他配置&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;点击发行 -&amp;gt; App 云打包 (生成安卓, IOS 包,在公司 使用自有证书)&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><category term="mathjax" /><summary type="html">学习 UniApp 的历程</summary></entry><entry><title type="html">Testing MathJax</title><link href="http://localhost:4000/2020/10/02/testing-mathjax/" rel="alternate" type="text/html" title="Testing MathJax" /><published>2020-10-02T15:32:00+08:00</published><updated>2020-10-02T15:32:00+08:00</updated><id>http://localhost:4000/2020/10/02/testing-mathjax</id><content type="html" xml:base="http://localhost:4000/2020/10/02/testing-mathjax/">Not Pure Poole supports [MathJax](https://www.mathjax.org/). You can enable it on a page by setting `math: true` in the front matter.
+## h5 的发布
+
+在 manifest.js 页面的 h5 配置中 配置 项目名称 路由方式 等
+
+点击 发行-&gt; 网站-H5 手机版
+
+## App 的发布
+
+1. 在基础配置中 uni-app 应用标识 (没有的需要 重新获取)
+
+2. APP 图标配置
+
+3. App 启动图配置
+
+4. App SDK 配置 (用到哪些钩哪些)
+
+5. App 模块权限配置 (用到哪些钩哪些)
+
+6. App 原生插件配置
+
+7. App 常用其他配置
+
+8. 点击发行 -&gt; App 云打包 (生成安卓, IOS 包,在公司 使用自有证书)</content><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><category term="mathjax" /><summary type="html">学习 UniApp 的历程</summary></entry><entry><title type="html">Testing MathJax</title><link href="http://localhost:4000/2020/10/02/testing-mathjax/" rel="alternate" type="text/html" title="Testing MathJax" /><published>2020-10-02T15:32:00+08:00</published><updated>2020-10-02T15:32:00+08:00</updated><id>http://localhost:4000/2020/10/02/testing-mathjax</id><content type="html" xml:base="http://localhost:4000/2020/10/02/testing-mathjax/">Not Pure Poole supports [MathJax](https://www.mathjax.org/). You can enable it on a page by setting `math: true` in the front matter.
 
 An inline math: \\\(E=mc^2\\\).
 
