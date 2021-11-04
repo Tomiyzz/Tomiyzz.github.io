@@ -1,0 +1,1187 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+
+
+<body>
+
+  <div class="container pure-g"><div class="sidebar-left pure-u-1 pure-u-md-1-4"
+      style="background-color: rgb(40, 73, 77); color: rgb(255, 255, 255); background-image: url(/bg.jpeg);"><header class="masthead">
+  <div class="avatar"><img src="/avatar.jpeg" class="avatar-image" alt="Tomiyzz Zhou">
+  </div>
+  <div class="masthead-title">
+    <a href="/" title="Home">记录学习历程 Tomiyzz</a>
+  </div>
+  <div class="masthead-tagline">
+    <small>记录每次学到的新知识,希望能有所收获!!!</small>
+  </div><nav class="navigation">
+    <!-- <ul class="navigation-list"><li class="navigation-item">
+        <a onclick="sessionStorage.setItem('forceCheckScroll', 'true')"
+          href="/">Blog</a>
+      </li><li class="navigation-item">
+        <a onclick="sessionStorage.setItem('forceCheckScroll', 'true')"
+          href="/about/">About</a>
+      </li></ul> -->
+  </nav><!-- <div class="social pure-menu pure-menu-horizontal">
+      <ul class="social-icons pure-menu-list">
+      <li class="pure-menu-item">
+          <a class="social-icon pure-menu-link" href="mailto://vszhub@gmail.com">
+            <i class="fas fa-envelope" title="Email"></i>
+          </a>
+        </li><li class="pure-menu-item">
+          <a class="social-icon pure-menu-link" href="https://twitter.com/vszhub">
+            <i class="fab fa-twitter" title="Twitter"></i>
+          </a>
+        </li><li class="pure-menu-item">
+          <a class="social-icon pure-menu-link" href="https://github.com/vszhub/not-pure-poole">
+            <i class="fab fa-github" title="GitHub"></i>
+          </a>
+        </li>
+      </ul>
+    </div> -->
+</header>
+</div>
+
+    <div class="content pure-u-1 pure-u-md-1-2"><main>
+  <article class="post">
+  <h1 class="post-title">Webpack Study</h1>
+  <div class="post-meta"><time datetime="2021-10-21T12:00:00+08:00" itemprop="datePublished">21 Oct 2021</time></div>
+
+  <p class="message">学习 Webpack 的历程</p>
+
+<h2 id="webpack-介绍">Webpack 介绍</h2>
+
+<p><a href="https://webpack.docschina.org/">地址</a></p>
+
+<p>Webpack 是一种前端资源构建工具(不能直接解析 less,等),一个静态模块打包器(module bundler).</p>
+
+<p>在 Webpack 看来,前端的所有资源文件(js/json/css/img/less/…)都会作为模块处理.</p>
+
+<p>它将根据模块的依赖关系进行静态分析,打包生成对应的静态资源(bundle)</p>
+
+<ul>
+  <li>静态模块打包器:根据入口文件的依赖关系,将资源全部引进来,生成 chunk(代码块),然后根据 chunk 根据不同的资源进行不同的处理,进行打包,输出出去的文件叫 bundle</li>
+</ul>
+
+<h2 id="webpack-五个核心概念">Webpack 五个核心概念</h2>
+
+<h3 id="entry">Entry</h3>
+
+<p>入口(Entry) 指示 Webpack 以那个文件为入口为入口起点开始打包,分析构建内部依赖图</p>
+
+<h3 id="output">Output</h3>
+
+<p>输出(Output) 指示 Webpack 打包后的资源 bundles 输出到哪里去,以及如何命名</p>
+
+<h3 id="loader">Loader</h3>
+
+<p>Loader 让 Webpack 能够去处理那些非 JaceScript 文件 (webpack 自身只理解 JavaScript,将 css,img 翻译成 js)</p>
+
+<h3 id="plugins">Plugins</h3>
+
+<p>插件(Plugins) 可以用于执行范围更广的任务,插件的范围包括,从打包优化和压缩,一直到重新定义环境中的变量等</p>
+
+<h3 id="mode">Mode</h3>
+
+<p>模式(Mode) 指示 Webpack 使用相应模式的配置</p>
+
+<h2 id="初体验">初体验</h2>
+
+<p>创建 build 文件夹, 创建 src 文件夹,在里面创建 index.js 文件</p>
+
+<p>index.js 作为 webpack 入口起点文件</p>
+
+<h3 id="运行指令">运行指令</h3>
+
+<p>开发环境:</p>
+
+<ul>
+  <li>webpack ./src/index.js -o ./build/built.js –mode=development</li>
+  <li>webpack 会以 ./src/index.js 为入口文件开始打包,打包后输出到 ./build/built.js</li>
+  <li>整体打包环境,是开发环境</li>
+</ul>
+
+<p>生产环境:</p>
+
+<ul>
+  <li>webpack ./src/index.js -o ./build/built.js –mode=production</li>
+  <li>webpack 会以 ./src/index.js 为入口文件开始打包,打包后输出到 ./build/built.js</li>
+  <li>整体打包环境,是生产环境</li>
+</ul>
+
+<h3 id="结论">结论</h3>
+
+<ul>
+  <li>webpack 能处理 js/json 文件,不能处理 css/img 等其他资源</li>
+  <li>生产环境和开发环境将 ES6 模块化编译成浏览器能识别的模块化</li>
+  <li>生产环境比开发环境多一个压缩 js 代码</li>
+</ul>
+
+<h2 id="打包样式资源">打包样式资源</h2>
+
+<ol>
+  <li>和 src 同级 创建 webpack.config.js 打包压缩 css 和 img 资源</li>
+</ol>
+
+<ul>
+  <li>
+    <ul>
+      <li>指示 webpack 做什么 (当运行的时候 webpack 指令时,会加载里面的配置)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>所有的构建工具都是基于 node 平台运行的 模块化默认采用 common.js</strong></p>
+
+<h3 id="开发环境配置">开发环境配置</h3>
+
+<p>运行项目指令</p>
+
+<ul>
+  <li>webpack 会将打包结果输出出去</li>
+  <li>npx webpack-dev-server 只会在内存中编译打包, 没有输出</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+</pre></td><td class="code"><pre><span class="kd">const</span> <span class="p">{</span><span class="nx">resolve</span><span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">path</span><span class="dl">'</span><span class="p">)</span>
+<span class="kd">const</span> <span class="nx">HtmlWebpackPlugin</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">html-webpack-plugin</span><span class="dl">'</span><span class="p">)</span>
+<span class="c1">// 打包 css 成一个单独的文件的插件</span>
+<span class="kd">const</span> <span class="nx">MiniCssExtractPlugin</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">mini-css-extract-plugin</span><span class="dl">'</span><span class="p">)</span>
+<span class="c1">// 压缩 css</span>
+<span class="kd">const</span> <span class="nx">OptimizeCssAssetsWebpackPlugin</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">optimize-css-assets-webpack-plugin</span><span class="dl">'</span><span class="p">)</span>
+
+<span class="c1">// 设置 nodejs 环境变量</span>
+<span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NODE_ENV</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">development</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+<span class="c1">//webpack 配置</span>
+<span class="c1">//入口文件</span>
+<span class="na">entry</span><span class="p">:</span><span class="dl">'</span><span class="s1">./src/index.js</span><span class="dl">'</span><span class="p">,</span>
+<span class="c1">//输出</span>
+<span class="na">output</span><span class="p">:{</span>
+<span class="c1">//输出文件名</span>
+<span class="na">filename</span><span class="p">:</span><span class="dl">'</span><span class="s1">js/built.js</span><span class="dl">'</span><span class="p">,</span>
+<span class="c1">//输出路径</span>
+<span class="c1">// \_\_dirname node.js 的变量,代表当前文件的目录绝对路径</span>
+<span class="na">path</span><span class="p">:</span><span class="nx">resolve</span><span class="p">(</span><span class="err">\</span><span class="nx">_</span><span class="err">\</span><span class="nx">_dirname</span><span class="p">,</span><span class="dl">'</span><span class="s1">build</span><span class="dl">'</span><span class="p">)</span>
+<span class="p">},</span>
+
+<span class="c">&lt;!--</span> <span class="nx">loader的配置</span> <span class="o">--&gt;</span>
+
+<span class="na">module</span><span class="p">:{</span>
+<span class="na">rules</span><span class="p">:[</span>
+<span class="c1">// 详细的 loader 配置</span>
+<span class="c1">// 不同文件必须配置不同 loader 处理</span>
+<span class="p">{</span>
+<span class="c1">// 匹配哪些文件</span>
+<span class="na">test</span><span class="p">:</span><span class="sr">/</span><span class="se">\.</span><span class="sr">css</span><span class="se">\$</span><span class="sr">/</span><span class="p">,</span>
+<span class="c1">//使用哪些 loader 进行处理</span>
+<span class="na">use</span><span class="p">:[</span>
+<span class="c1">// use 数组中 loader 执行顺序,从右到左,从下到上,依次执行</span>
+<span class="c1">// 创建 style 标签,将 js 中的样式资源插入进去,添加到 head 中生效</span>
+
+<span class="c">&lt;!--</span> <span class="dl">'</span><span class="s1">style-loader</span><span class="dl">'</span><span class="p">,</span> <span class="o">--&gt;</span>
+
+<span class="nx">这个</span> <span class="nx">loader</span> <span class="nx">取代</span> <span class="nx">style</span><span class="o">-</span><span class="nx">loader</span><span class="p">.</span><span class="na">作用</span><span class="p">:</span><span class="nx">提取</span> <span class="nx">js</span> <span class="nx">中的</span> <span class="nx">css</span> <span class="nx">成单独文件</span>
+<span class="nx">MiniCssExtractPlugin</span><span class="p">.</span><span class="nx">loader</span><span class="p">,</span>
+<span class="c1">// 将 css 文件变成 common.js 模块加载到 js 中,里面内容是样式字符串</span>
+<span class="dl">'</span><span class="s1">css-loader</span><span class="dl">'</span><span class="p">,</span>
+
+<span class="c1">// css 兼容性处理: postcss -- &gt; postcss-loader postcss-preset-env</span>
+<span class="c1">// 帮 postcss 找到 package.json 中 browserslist 里面的配置,通过配置加载指定的 css 兼容性样式</span>
+
+<span class="c1">// 使用 loader 的默认配置</span>
+<span class="c1">// 'postcss-loader',</span>
+<span class="c1">// 修改 loader 的配置</span>
+<span class="p">{</span>
+<span class="na">loader</span><span class="p">:</span><span class="dl">'</span><span class="s1">postcss-loader</span><span class="dl">'</span><span class="p">,</span>
+<span class="na">options</span><span class="p">:{</span>
+<span class="na">ident</span><span class="p">:</span><span class="dl">'</span><span class="s1">postcss</span><span class="dl">'</span><span class="p">,</span>
+<span class="na">plugins</span><span class="p">:()</span><span class="o">=&gt;</span><span class="p">[</span>
+<span class="c1">// postcss 的插件</span>
+<span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">postcss-preset-env</span><span class="dl">'</span><span class="p">)()</span>
+<span class="p">]</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">]</span>
+<span class="p">},</span>
+<span class="p">{</span>
+<span class="na">test</span><span class="p">:</span><span class="sr">/</span><span class="se">\.</span><span class="sr">less&amp;/</span><span class="p">,</span>
+<span class="na">use</span><span class="p">:[</span>
+<span class="dl">'</span><span class="s1">style-loader</span><span class="dl">'</span><span class="p">,</span>
+<span class="dl">'</span><span class="s1">css-loader</span><span class="dl">'</span><span class="p">,</span>
+<span class="c1">// 需要下载 less-loader less</span>
+<span class="dl">'</span><span class="s1">less-loader</span><span class="dl">'</span>
+<span class="p">]</span>
+<span class="p">},</span>
+<span class="p">{</span>
+<span class="c1">// 处理图片</span>
+<span class="c1">// 默认处理不累 html 中 img 图片</span>
+<span class="na">test</span><span class="p">:</span><span class="sr">/</span><span class="se">\.(</span><span class="sr">jpg|png|gif</span><span class="se">)\$</span><span class="sr">/</span><span class="p">,</span>
+<span class="c1">// 下载 url-loader file-loader</span>
+<span class="na">loader</span><span class="p">:</span><span class="dl">'</span><span class="s1">url-loader</span><span class="dl">'</span><span class="p">,</span>
+<span class="na">options</span><span class="p">:{</span>
+<span class="c1">//图片大小小于 8kb,就会被 base64 处理</span>
+<span class="c1">//优点:减少请求数量(减轻服务器压力)</span>
+<span class="c1">//缺点:图片体积会更大(文件请求速度更慢)</span>
+<span class="na">limit</span><span class="p">:</span><span class="mi">8</span><span class="err">\</span><span class="o">*</span><span class="mi">1024</span>
+<span class="c1">// 问题:因为 url-loader 默认使用 es6 模块化解析,而 html-loader 引入图片是 commonjs</span>
+<span class="c1">// 解析时会出问题: [object Module]</span>
+<span class="c1">// 解决:关闭 url-loader 的 es6 模块化,使用 commonjs 解析</span>
+<span class="na">esModule</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>
+<span class="na">outputPath</span><span class="p">:</span><span class="dl">'</span><span class="s1">imgs</span><span class="dl">'</span><span class="p">,</span>
+<span class="c1">//给图片进行重命名</span>
+<span class="c1">//[hash:10] 取图片的 hash 原来的前 10 位</span>
+<span class="c1">//[ext]取文件拓展名</span>
+<span class="na">name</span><span class="p">:</span><span class="dl">'</span><span class="s1">[hash:10].[ext]</span><span class="dl">'</span>
+<span class="p">}</span>
+<span class="p">},</span>
+<span class="p">{</span>
+<span class="na">test</span><span class="p">:</span><span class="sr">/</span><span class="se">\.</span><span class="sr">html</span><span class="se">\$</span><span class="sr">/</span><span class="p">,</span>
+<span class="c1">// 处理 html 文件的 img 图片(负责引入 img,从而能被 url-loader 进行处理)</span>
+<span class="na">loader</span><span class="p">:</span><span class="dl">'</span><span class="s1">html-loader</span><span class="dl">'</span>
+<span class="p">}</span>
+<span class="c1">// 打包其他资源</span>
+<span class="p">{</span>
+<span class="c1">// 排除 css/js/html 资源</span>
+<span class="na">exclude</span><span class="p">:</span><span class="dl">'</span><span class="s1">/</span><span class="se">\</span><span class="s1">.(css|js|html|less)</span><span class="se">\</span><span class="s1">$/,
+loader:</span><span class="dl">'</span><span class="nx">file</span><span class="o">-</span><span class="nx">loader</span><span class="dl">'</span><span class="s1">,
+options:{
+name:</span><span class="dl">'</span><span class="p">[</span><span class="na">hash</span><span class="p">:</span><span class="mi">10</span><span class="p">].[</span><span class="nx">ext</span><span class="p">]</span><span class="dl">'</span><span class="s1">,
+outputPath:</span><span class="dl">'</span><span class="nx">media</span><span class="dl">'</span><span class="s1">,
+}
+}
+]
+},
+// plugins 的配置
+plugins:[
+// 详细 plugins 的配置
+
+// 下载插件 html-webpack-plugin
+// 功能: 默认会创建一个空的 html,自动引入打包输出的所有资源(JS/CSS)
+// 需求:需要有结构的 HTML 文件
+new HtmlWebpackPlugin(
+{
+// 复制</span><span class="dl">'</span><span class="p">.</span><span class="o">/</span><span class="nx">src</span><span class="o">/</span><span class="nx">index</span><span class="p">.</span><span class="nx">html</span><span class="dl">'</span><span class="s1"> 文件,并自动引入打包输出的所有资源(JS/CSS)
+template:</span><span class="dl">'</span><span class="p">.</span><span class="o">/</span><span class="nx">src</span><span class="o">/</span><span class="nx">index</span><span class="p">.</span><span class="nx">html</span><span class="p">,</span>
+<span class="na">minify</span><span class="p">:{</span>
+<span class="c1">// 移除空格</span>
+<span class="na">collapseWhitespace</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+<span class="c1">// 移除注释</span>
+<span class="na">removeComments</span><span class="p">:</span><span class="kc">true</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">)</span>
+
+<span class="k">new</span> <span class="nx">MiniCssExtractPlugin</span><span class="p">({</span>
+<span class="c1">// 对输出的 css 文件进行重命名</span>
+<span class="na">filename</span><span class="p">:</span><span class="dl">'</span><span class="s1">css/built.css</span><span class="dl">'</span>
+<span class="p">})</span>
+
+<span class="c1">// 压缩 css optimize-css-assets-webpack-plugin</span>
+<span class="k">new</span> <span class="nx">OptimizeCssAssetsWebpackPlugin</span><span class="p">()</span>
+<span class="p">],</span>
+<span class="c1">// 模式</span>
+<span class="na">mode</span><span class="p">:</span><span class="dl">'</span><span class="s1">development</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// 开发模式</span>
+
+<span class="c">&lt;!--</span> <span class="na">mode</span><span class="p">:</span><span class="dl">'</span><span class="s1">production</span><span class="dl">'</span>  <span class="o">--&gt;</span>
+
+<span class="c1">// 开发服务器 devServer:用来自动化 (自动编译,自动打开浏览器,自动刷新浏览器)</span>
+<span class="c1">// 特点: 只会在内存中编译打包,不会有任何输出</span>
+<span class="c1">// 启动 devServer 指令为: npx webpack-dev-server (需要下载 webpack-dev-server)</span>
+<span class="na">devServer</span><span class="p">:{</span>
+<span class="c1">// 项目构建后的路径</span>
+<span class="na">contentBase</span><span class="p">:</span><span class="nx">resolve</span><span class="p">(</span><span class="err">\</span><span class="nx">_</span><span class="err">\</span><span class="nx">_dirname</span><span class="p">,</span><span class="dl">'</span><span class="s1">build</span><span class="dl">'</span><span class="p">),</span>
+<span class="c1">// 启动 gzip 压缩</span>
+<span class="na">compress</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+<span class="c1">// 端口号</span>
+<span class="na">port</span><span class="p">:</span><span class="mi">3000</span><span class="p">,</span>
+<span class="c1">// 自动打开浏览器</span>
+<span class="na">open</span><span class="p">:</span><span class="kc">true</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<ul>
+  <li>package.json 中 browserslist 里面的配置</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="code"><pre>  <span class="dl">"</span><span class="s2">browserslist</span><span class="dl">"</span><span class="p">:{</span>
+  <span class="c1">// 开发环境 --&gt; 设置 node 环境变量:process.env.NODE_ENV = development</span>
+  <span class="dl">"</span><span class="s2">development</span><span class="dl">"</span><span class="p">:[</span>
+  <span class="dl">"</span><span class="s2">last 1 chrome version</span><span class="dl">"</span><span class="p">,</span> <span class="c1">// 兼容最近的一个 chrome 版本</span>
+  <span class="dl">"</span><span class="s2">last 1 firefox version</span><span class="dl">"</span><span class="p">,</span> <span class="c1">// 兼容最近的一个 firefox 版本</span>
+  <span class="dl">"</span><span class="s2">last 1 safari version</span><span class="dl">"</span><span class="p">,</span> <span class="c1">// 兼容最近的一个 safari 版本</span>
+  <span class="p">],</span>
+  <span class="c1">// 生产环境: 默认是看生产环境</span>
+  <span class="dl">"</span><span class="s2">production</span><span class="dl">"</span><span class="p">:[</span>
+  <span class="dl">"</span><span class="s2">&gt;0.2%</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">not dead</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">not op_mini all</span><span class="dl">"</span>
+  <span class="p">]</span>
+  <span class="p">}</span>
+  
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h2 id="js-的语法检查">JS 的语法检查</h2>
+
+<ul>
+  <li>语法检查: eslint-loader eslint</li>
+  <li>注意: 只检查自己写的源代码,第三方的库是不用检查的</li>
+  <li>设置检查规则 :
+    <ul>
+      <li>package.json 中 eslintConfig 中设置</li>
+      <li>airbnb –&gt; eslint-config-airbnb-base eslint eslint-plugin-import</li>
+    </ul>
+  </li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="code"><pre><span class="p">{</span>
+<span class="nl">test</span><span class="p">:</span><span class="sr">/</span><span class="se">\.</span><span class="sr">js</span><span class="se">\$</span><span class="sr">/</span><span class="p">,</span>
+<span class="nx">exclude</span><span class="p">:</span><span class="o">/</span><span class="nx">node</span><span class="o">-</span><span class="nx">modules</span><span class="o">/</span><span class="p">,</span>
+<span class="nx">loader</span><span class="p">:</span><span class="dl">'</span><span class="s1">eslint-loader</span><span class="dl">'</span><span class="p">,</span>
+<span class="c1">// 优先执行</span>
+<span class="nx">enforce</span><span class="p">:</span><span class="dl">'</span><span class="s1">pre</span><span class="dl">'</span><span class="p">,</span>
+<span class="nx">options</span><span class="p">:{</span>
+<span class="nl">fix</span><span class="p">:</span><span class="kc">true</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<ul>
+  <li>package.json 中 eslintConfig 里面的配置 eslint</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="code"><pre>  <span class="dl">"</span><span class="s2">eslintConfig</span><span class="dl">"</span><span class="p">:{</span>
+  <span class="dl">"</span><span class="s2">extends</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">airbnb-base</span><span class="dl">"</span>
+  <span class="p">}</span>
+  
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<ul>
+  <li>// 下一行 eslint 所有规则都失效(下一行不进行 eslint 检查)</li>
+  <li>// eslint-disable-next-line</li>
+</ul>
+
+<h2 id="js-的兼容性处理">js 的兼容性处理</h2>
+
+<ul>
+  <li>babel-loader @babel/preset-env @babel/core</li>
+  <li>全部 js 兼容性处理: @babel/polyfill</li>
+  <li>需要兼容性处理的就做: 按需加载 –&gt;core-js</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+</pre></td><td class="code"><pre>  <span class="p">{</span>
+  <span class="nl">test</span><span class="p">:</span><span class="sr">/</span><span class="se">\.</span><span class="sr">js</span><span class="se">\$</span><span class="sr">/</span><span class="p">,</span>
+  <span class="nx">exclude</span><span class="p">:</span><span class="o">/</span><span class="nx">node</span><span class="o">-</span><span class="nx">modules</span><span class="o">/</span><span class="p">,</span>
+  <span class="nx">loader</span><span class="p">:</span><span class="dl">'</span><span class="s1">babel-loader</span><span class="dl">'</span><span class="p">,</span>
+  <span class="nx">options</span><span class="p">:{</span>
+  <span class="nl">presets</span><span class="p">:[</span>
+  <span class="p">[</span>
+  <span class="dl">'</span><span class="s1">@babel/preset-env</span><span class="dl">'</span><span class="p">,</span>
+  <span class="p">{</span>
+  <span class="na">useBuiltIns</span><span class="p">:</span><span class="dl">'</span><span class="s1">usage</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">corejs</span><span class="p">:{</span>
+  <span class="na">version</span><span class="p">:</span><span class="mi">3</span>
+  <span class="p">},</span>
+  <span class="c1">// 指定兼容性做到哪个版本浏览器</span>
+  <span class="na">targets</span><span class="p">:{</span>
+  <span class="na">chrome</span><span class="p">:</span><span class="dl">'</span><span class="s1">60</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">firefox</span><span class="p">:</span><span class="dl">'</span><span class="s1">60</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">ie</span><span class="p">:</span><span class="dl">'</span><span class="s1">9</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">safari</span><span class="p">:</span><span class="dl">'</span><span class="s1">10</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">edge</span><span class="p">:</span><span class="dl">'</span><span class="s1">17</span><span class="dl">'</span>
+  <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="p">]</span>
+  <span class="p">]</span>
+  <span class="p">}</span>
+  <span class="p">}</span>
+  
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h2 id="js-的压缩">js 的压缩</h2>
+
+<ul>
+  <li>mode:production 时会自动进行压缩</li>
+</ul>
+
+<h1 id="webpack-性能优化介绍">Webpack 性能优化介绍</h1>
+
+<ul>
+  <li>开发环境性能优化</li>
+  <li>生产环境性能优化</li>
+</ul>
+
+<h2 id="开发环境性能优化--速度快调试更友好">开发环境性能优化 : 速度快,调试更友好</h2>
+
+<p>速度快:(eval&gt;line&gt;cheap&gt;…)</p>
+
+<p>eval-cheap-source-map</p>
+
+<p>eval-source-map</p>
+
+<p>调试更友好:source-map</p>
+
+<p>cheap-module-source-map</p>
+
+<p>cheap-source-map</p>
+
+<p>–&gt; eval-source-map / eval-cheap-module-source-map</p>
+
+<ul>
+  <li>
+    <p>优化打包构建速度</p>
+
+    <p>/*</p>
+
+    <p>HMR : hot module replacement 热模块替换 / 模块热替换</p>
+
+    <p>作用:一个模块发生变化,只会重新打包这一个模块(而不是打包所有魔模块)</p>
+
+    <p>极大提升构建速度</p>
+
+    <p>样式文件:可以使用 HMR 功能:因为 style-loader 内部实现了</p>
+
+    <p>js 文件:默认不能使用 HMR 功能 –&gt; 需要修改 js 代码,添加支持 HMR 功能的代码</p>
+
+    <ul>
+      <li>注意:HMR 功能对 js 的处理,只能处理非入口 js 文件的其他文件.</li>
+    </ul>
+
+    <p>html 文件:默认不能使用 HMR 功能,同时会导致 html 文件不能热更新了(不用做 HMR 功能)</p>
+
+    <ul>
+      <li>解决:修改 entry 入口,将 html 文件引入</li>
+    </ul>
+
+    <p>*/</p>
+  </li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre>  <span class="nx">devServer</span><span class="p">:{</span>
+  <span class="c1">// 开启 HMR 功能</span>
+  <span class="c1">// 当修改了 webpack 配置,新配置要想生效,必须要重新 webpack 服务</span>
+  <span class="nl">hot</span><span class="p">:</span><span class="kc">true</span>
+  <span class="p">}</span>
+  
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<ul>
+  <li>
+    <p>优化代码调试</p>
+
+    <p>source-map : 一种提供源代码到构建后代码映射 技术(如果构建代码出错,通过映射可以追踪代码错误)</p>
+  </li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="code"><pre>  <span class="nx">devServer</span><span class="p">:{</span>
+  <span class="p">...</span>
+  <span class="p">},</span>
+  <span class="nx">devtool</span><span class="p">:</span><span class="dl">'</span><span class="s1">source-map</span><span class="dl">'</span>
+  <span class="cm">/**
+  source-map:外部 错误代码准确信息 和 源代码的错误位置
+  inline-source-map:内联 1.只生成一个内联 source-map 2.错误代码准确信息 和 源代码的错误位置
+  hidden-source-map:外部 1.错误代码的错误原因, 但是没有错误位置 不能追踪到源代码, 只能提示到构建后代码的错误位置
+  eval-source-map:内联 1.每一个文件都生成对应的 source-map, 都在 eval 中 2.错误代码准确信息 和 源代码的错误位置
+  nosurces-source-map:外部 1.错误代码准确信息, 但是没有任何源代码信息
+  cheap-source-map:外部 1.错误代码准确信息 和 源代码的错误位置, 只能精确到行
+  cheap-module-source-map:外部 1.错误代码准确信息 和 源代码的错误位置
+  内联 和 外部 的区别: 1.外部生成了文件,内联没有 2. 内联构建速度更快
+  **/</span>
+  
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h2 id="生产环境性能优化--源代码要不要隐藏-调试要不要更友好">生产环境性能优化 : 源代码要不要隐藏? 调试要不要更友好</h2>
+
+<p>内联会让代码体积更大,所以在生产环境不同内联</p>
+
+<p>代码隐藏: nosurces-source-map 全部隐藏</p>
+
+<p>hidden-source-map 只隐藏源代码,会提示构建后代码错误信息</p>
+
+<p>调试友好: source-map</p>
+
+<p>–&gt; source-map / cheap-module-source-map</p>
+
+<ul>
+  <li>优化打包构建速度</li>
+  <li>优化代码运行的性能</li>
+</ul>
+
+<h2 id="oneof">oneOf</h2>
+
+<p>在 rules 里用 oneOf 数组包裹</p>
+
+<p>// 以下 loader 只会匹配一个</p>
+
+<p>// 注意: 不能有两个配置处理同一种类型文件 (同一个要提取出去)</p>
+
+<h2 id="缓存">缓存</h2>
+
+<ul>
+  <li>babel 缓存: cacheDirectory:true</li>
+  <li>文件资源 缓存: hash: 每次 webpack 构建时会发生一个唯一的 hash 值
+    <ul>
+      <li>问题: 因为 js 和 css 同时使用一个 hash 值,如果重新打包,会导致所有缓存失效.(可能只改动一个文件)</li>
+      <li>chunkhash: 根据 chunk 生成的值.如果打包来源于同一个 chunk,那么 hash 值就一样
+        <ul>
+          <li>问题: js 和 css 的 hash 还是一样的? 因为 css 是在 js 中被引入的,所以同属于一个 chunk</li>
+        </ul>
+      </li>
+      <li>contenthash: 根据文件的内容生成 hash 值,不同文件 hash 值一定不一样
+        <ul>
+          <li>–&gt; 让代码上线运行缓存更好使用</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="tree-shaking">tree shaking</h2>
+
+<p>目的:去除无用代码</p>
+
+<p>前提:</p>
+
+<ul>
+  <li>
+    <ol>
+      <li>必须使用 ES6 模块化</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>开启 production 环境
+        <ul>
+          <li>作用:减少代码体积</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>在 package.json 中配置 “sideEffects”:false 所有代码都没有副作用(都可以进行 tree shaking)
+        <ul>
+          <li>问题: 可能会把 css / @babel/polyfill (副作用)文件干掉</li>
+          <li>“sideEffects”:[“<em>.css”,”</em>.less”]</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<h1 id="code-split-代码分割">code split 代码分割</h1>
+
+<ul>
+  <li>单入口:entry:’./src/js/index/js’,</li>
+  <li>多入口:
+    <ul>
+      <li>index:’./src/js/index/js’,</li>
+      <li>test:’./src/js/test.js’</li>
+    </ul>
+  </li>
+  <li>可以将 node_modules 中代码单独打包一个 chunk 最终输出. 自动分析多入口 chunk 中,有没有公共的文件.如果有会打包成单独的一个 chunk</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre>  <span class="nx">optimization</span><span class="p">:{</span>
+  <span class="nl">splitChunks</span><span class="p">:{</span>
+  <span class="na">chunks</span><span class="p">:</span><span class="dl">'</span><span class="s1">all</span><span class="dl">'</span>
+  <span class="p">}</span>
+  <span class="p">}</span>
+  
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<ul>
+  <li>通过 js 代码,让某个文件单独打包成一个 chunk. import 动态导入语法,能将某个文件单独打包</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="code"><pre>  <span class="k">import</span><span class="p">(</span><span class="sr">/</span><span class="se">\*</span><span class="sr"> webpackChunkName: 'test' </span><span class="se">\*</span><span class="sr">/</span><span class="dl">'</span><span class="s1">./test</span><span class="dl">'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span><span class="p">{</span>
+  <span class="p">...</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">(()</span><span class="o">=&gt;</span><span class="p">{</span>
+  <span class="c1">//eslint-disable-next-line</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">文件加载失败</span><span class="dl">'</span><span class="p">)</span>
+  <span class="p">})</span>
+  
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h2 id="懒加载和预加载">懒加载和预加载</h2>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre><span class="c1">// 在需要进行懒加载的地方使用: 当文件使用时才加载</span>
+<span class="c1">// webpackPrefetch: 预加载: 会在使用之前,提前加载 js 文件</span>
+<span class="c1">// 正常加载是并行加载(同一时间加载多个文件) 预加载 等其他资源加载完毕,再偷偷加载资源</span>
+<span class="k">import</span><span class="p">(</span><span class="sr">/</span><span class="se">\*</span><span class="sr"> webpackChunkName: 'test',webpackPrefetch: true </span><span class="se">\*</span><span class="sr">/</span><span class="dl">'</span><span class="s1">./test</span><span class="dl">'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(({</span><span class="nx">mul</span><span class="p">})</span><span class="o">=&gt;</span><span class="p">{</span>
+<span class="p">...</span>
+<span class="p">})</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h2 id="pwa-渐进式网络开发应用程序离线可访问">PWA 渐进式网络开发应用程序(离线可访问)</h2>
+
+<p>workbox –&gt; workbox-webpack-plugin</p>
+
+<p>import WorkboxWebpackPlugin = require(‘workbox-webpack-plugin’)</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="code"><pre><span class="nx">在</span> <span class="nx">plugins</span><span class="p">:[</span>
+<span class="k">new</span> <span class="nx">WorkboxWebpackPlugin</span><span class="p">.</span><span class="nx">GenerateSW</span><span class="p">({</span>
+<span class="c1">// 帮助 serviceworker 快速启动</span>
+<span class="c1">// 删除旧的 serviceworker</span>
+
+<span class="c1">// 生成 serviceworker 配置文件</span>
+<span class="na">clientsClaim</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+<span class="na">skipWaiting</span><span class="p">:</span><span class="kc">true</span>
+<span class="p">})</span>
+<span class="p">]</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>/ **</p>
+
+<ol>
+  <li>eslint 不认识 window,navigator 全局变量
+解决:需要修改 package.json 中 eslintConfig 配置
+“env”:{
+“browser”:true // 支持浏览器端全局变量
+}</li>
+  <li>sw 代码必须训醒在服务器上
+–&gt;nodejs
+–&gt;
+node i serve -g
+serve -s build 启动服务器,将 build 目录下所有资源作为静态资源暴露出去</li>
+</ol>
+
+<p>** /</p>
+
+<p>// 注册 serviceWorker
+// 处理兼容性问题</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="code"><pre><span class="k">if</span><span class="p">(</span><span class="dl">'</span><span class="s1">serviceWorker</span><span class="dl">'</span> <span class="k">in</span> <span class="nb">navigator</span><span class="p">){</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">load</span><span class="dl">'</span><span class="p">,()</span><span class="o">=&gt;</span><span class="p">{</span>
+<span class="nb">navigator</span><span class="p">.</span><span class="nx">serviceWorker</span><span class="p">.</span><span class="nx">register</span><span class="p">(</span><span class="dl">'</span><span class="s1">/service-worker.js</span><span class="dl">'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(()</span><span class="o">=&gt;</span><span class="p">{</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">sw 注册成功了</span><span class="dl">'</span><span class="p">)</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="k">catch</span><span class="p">(()</span><span class="o">=&gt;</span><span class="p">{</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">sw 注册失败了</span><span class="dl">'</span><span class="p">)</span>
+<span class="p">})</span>
+<span class="p">})</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h2 id="多进程打包">多进程打包</h2>
+
+<p>npm i thread-loader -D</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="code"><pre><span class="nx">use</span><span class="p">:[</span>
+<span class="c1">// 开启多进程打包</span>
+<span class="c1">// 进程启动大概为 600ms,进程通信也有开销,</span>
+<span class="c1">// 只有工作消耗时间比较长,才需要多进程打包</span>
+<span class="dl">'</span><span class="s1">thread-loader</span><span class="dl">'</span><span class="p">,</span>
+<span class="p">{</span>
+<span class="na">loader</span><span class="p">:</span><span class="dl">'</span><span class="s1">babel-loader</span><span class="dl">'</span><span class="p">,</span>
+<span class="p">...</span>
+<span class="p">}</span>
+<span class="p">]</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h2 id="externals">externals</h2>
+
+<p>和 mode 同级</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="code"><pre><span class="nx">externals</span><span class="p">:{</span>
+<span class="c1">// 拒绝被打包进去</span>
+<span class="nl">jquery</span><span class="p">:</span><span class="dl">'</span><span class="s1">jQuery</span><span class="dl">'</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>需要手动在 index.js 中引入 cdn 中的包</p>
+
+<h2 id="dll">dll</h2>
+
+<p>// 使用 dll 技术对某些库(第三方的库:jquery,react,vue)进行单独打包
+// 当运行 webpack 时,默认查找 webpack.config.js 配置文件
+需求</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre></td><td class="code"><pre><span class="kd">const</span> <span class="p">{</span><span class="nx">resolve</span><span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">path</span><span class="dl">'</span><span class="p">)</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="o">=</span><span class="p">{</span>
+<span class="na">entry</span><span class="p">:{</span>
+<span class="c1">// 最终打包生成的[name] --&gt;jquery</span>
+<span class="c1">// ['jquery'] --&gt; 要打包的库是 jquery</span>
+<span class="na">jquery</span><span class="p">:[</span><span class="dl">'</span><span class="s1">jquery</span><span class="dl">'</span><span class="p">]</span>
+<span class="p">},</span>
+<span class="na">output</span><span class="p">:{</span>
+<span class="na">fillname</span><span class="p">:</span><span class="dl">'</span><span class="s1">[name].js</span><span class="dl">'</span><span class="p">,</span>
+<span class="na">path</span><span class="p">:</span><span class="nx">resolve</span><span class="p">(</span><span class="err">\</span><span class="nx">_</span><span class="err">\</span><span class="nx">_dirname</span><span class="p">,</span><span class="dl">'</span><span class="s1">dll</span><span class="dl">'</span><span class="p">),</span>
+<span class="na">library</span><span class="p">:</span><span class="dl">'</span><span class="s1">[name]</span><span class="se">\</span><span class="s1">_[hash]</span><span class="dl">'</span><span class="p">,</span><span class="c1">// 打包的库里面向外暴露出去的内容叫什么名字</span>
+<span class="na">plugins</span><span class="p">:[</span>
+<span class="c1">// 打包生成一个 mainfest.json --&gt;提供和 jquery 映射</span>
+<span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">DllPlugin</span><span class="p">({</span>
+<span class="na">name</span><span class="p">:</span><span class="dl">'</span><span class="s1">[name]</span><span class="se">\</span><span class="s1">_[hash]</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// 映射库的暴露的内容名称</span>
+<span class="na">path</span><span class="p">:</span><span class="nx">resolve</span><span class="p">(</span><span class="err">\</span><span class="nx">_</span><span class="err">\</span><span class="nx">_dirname</span><span class="p">,</span><span class="dl">'</span><span class="s1">dll/mainfest.json</span><span class="dl">'</span><span class="p">)</span> <span class="c1">// 输出文件路径名称</span>
+<span class="p">})</span>
+<span class="p">],</span>
+<span class="na">mode</span><span class="p">:</span><span class="dl">'</span><span class="s1">production</span><span class="dl">'</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h2 id="optimization">optimization</h2>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td><td class="code"><pre><span class="kd">const</span> <span class="nx">TerserWebpackPlugin</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">terser-webpack-plugin</span><span class="dl">'</span><span class="p">)</span>
+<span class="c1">// 将当前模块的记录其他模块的 hash 单独打包为一个文件 runtime</span>
+<span class="c1">// 解决:修改 a 文件导致 b 文件的 contenthash 变化</span>
+<span class="nx">optimization</span><span class="p">:{</span>
+<span class="nl">splitChunks</span><span class="p">:{},</span>
+<span class="nx">runtimeChunk</span><span class="p">:{</span>
+<span class="nl">name</span><span class="p">:</span><span class="nx">entrypoint</span> <span class="o">=&gt;</span><span class="s2">`runtime - </span><span class="p">${</span><span class="nx">entrypoint</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="s2">`</span>
+<span class="p">},</span>
+<span class="nx">minimizer</span><span class="p">:{</span>
+<span class="c1">// 配置生产环境的压缩方案:js 和 css</span>
+<span class="k">new</span> <span class="nx">TerserWebpackPlugin</span><span class="p">({</span>
+<span class="c1">// 开启缓存</span>
+<span class="na">cache</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+<span class="c1">// 开启多进程打包</span>
+<span class="na">parallel</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+<span class="c1">// 启动 source-map</span>
+<span class="na">sourceMap</span><span class="p">:</span><span class="kc">true</span>
+<span class="p">})</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+
+
+  
+    
+<!-- <div class="post-tags-section">
+  <i class="post-tags-icon fas fa-tags"></i>
+  <ul class="post-tags"><li>
+        <a class="post-tag" href="/tags/#mathjax">mathjax</a></li></ul>
+</div> -->
+
+  
+
+  
+</article>
+
+
+<aside class="related">
+  <h2>Related posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <a href="/2021/09/29/uniapp-study/">
+          Uniapp Study
+          <small><time datetime="2021-09-29T12:00:00+08:00">29 Sep 2021</time></small>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/2020/09/29/welcome-to-not-pure-poole/">
+          Welcome to 记录学习历程
+          <small><time datetime="2020-09-29T23:18:00+08:00">29 Sep 2020</time></small>
+        </a>
+      </li>
+    
+  </ul>
+</aside>
+
+
+</main>
+
+<footer class="footer"><!-- <small>
+    &copy; 2020&nbsp;-&nbsp;2021 <a href="https://github.com/Tomiyzz/">Tomiyzz Zhou</a>.
+    All rights reserved.
+    Powered by <a href="https://jekyllrb.com/">Tomiyzz</a> & <a href="https://tomiyzz.github.io/">记录学习</a>.
+  </small> -->
+</footer>
+</div>
+    <div class="sidebar-right pure-u-1 pure-u-md-1-4">
+</div>
+  </div>
+
+  <script async src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script><script>
+  function strip(str, remove) {
+    while (str.length > 0 && remove.indexOf(str.charAt(0)) != -1) {
+      str = str.substr(1);
+    }
+    while (str.length > 0 && remove.indexOf(str.charAt(str.length - 1)) != -1) {
+      str = str.substr(0, str.length - 1);
+    }
+    return str;
+  }
+
+  function scroll() {
+    console.log('scroll');
+    window.scrollTo({
+      left: 0, 
+      top: window.innerHeight,
+      behavior: 'smooth'
+    });
+    sessionStorage.removeItem('forceCheckScroll');
+  }
+
+  const forceCheckScroll = sessionStorage.getItem('forceCheckScroll') === 'true';
+  const checkScroll = strip(window.location.pathname, '/') !== strip('', '/');
+
+  if (forceCheckScroll || checkScroll) {
+    const maxWidth = "(max-width: 48rem)";
+    const result = window.matchMedia(maxWidth);
+    if (result.matches) {
+      scroll();
+    } else {
+      result.addListener((match) => {
+        if (match.media == maxWidth) {
+          if (match.matches) {
+            scroll();
+          }
+        }
+      });
+    }
+  }
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+
+</html>
