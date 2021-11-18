@@ -1,4 +1,251 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-11-04T11:22:36+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">记录学习历程 Tomiyzz</title><subtitle>记录每次学到的新知识,希望能有所收获!!!</subtitle><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><entry><title type="html">Webpack Study</title><link href="http://localhost:4000/2021/10/21/webpack-study/" rel="alternate" type="text/html" title="Webpack Study" /><published>2021-10-21T12:00:00+08:00</published><updated>2021-10-21T12:00:00+08:00</updated><id>http://localhost:4000/2021/10/21/webpack-study</id><content type="html" xml:base="http://localhost:4000/2021/10/21/webpack-study/">&lt;p class=&quot;message&quot;&gt;学习 Webpack 的历程&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-11-17T17:46:57+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">记录学习历程 Tomiyzz</title><subtitle>记录每次学到的新知识,希望能有所收获!!!</subtitle><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><entry><title type="html">VUE 2.0 知识点</title><link href="http://localhost:4000/2021/11/16/vue2.0-knowledge_point/" rel="alternate" type="text/html" title="VUE 2.0 知识点" /><published>2021-11-16T12:00:00+08:00</published><updated>2021-11-16T12:00:00+08:00</updated><id>http://localhost:4000/2021/11/16/vue2.0-knowledge_point</id><content type="html" xml:base="http://localhost:4000/2021/11/16/vue2.0-knowledge_point/">&lt;p class=&quot;message&quot;&gt;巩固 VUE 2.0 的知识点&lt;/p&gt;
+
+&lt;h2 id=&quot;什么是-mvvm&quot;&gt;什么是 MVVM&lt;/h2&gt;
+
+&lt;p&gt;MVVM 是 Model-View-ViewModel 的缩写. MVVM 是一种设计思想.Model 代表数据模型,也可以在 Model 中定义数据修改的操作和业务逻辑;View 代表 UI 组件,它负责将数据模型转化成 UI 展现出来,
+ViewModel 是一个同步 View 和 Model 的对象&lt;/p&gt;
+
+&lt;p&gt;在 MVVM 架构下,View 和 Model 之间并没有直接的联系,而是通过 ViewModel 进行交互的,Model 和 ViewModel 之间的交互是双向的,因此 View 数据的变化会同步到 Model 中,而 Model 数据的变化也会反应到 View 上&lt;/p&gt;
+
+&lt;p&gt;ViewModel 通过双向数据绑定把 View 和 Model 层连接了起来,而 View 和 Model 之间的同步工作完全是自动的,无需人为干涉,因此开发者只需要关注业务逻辑,不需要手动的操作 DOM,不需要数据状态的同步问题,复杂的数据状态维护完全由 MVVM 来统一管理&lt;/p&gt;
+
+&lt;h2 id=&quot;mvvm-和-mvc-区别它和其他框架jquery的区别哪些场景适合&quot;&gt;MVVM 和 MVC 区别?它和其他框架(Jquery)的区别?哪些场景适合?&lt;/h2&gt;
+
+&lt;p&gt;MVC 和 MVVM 其实区别并不大. 都是一种设计思想. 主要就是 MVC 中 Controller 演变成的 ViewModel. MVVM 主要解决了 MVC 中大量的 DOM 操作使页面渲染性能降低,加载速度变慢,影响用户体验&lt;/p&gt;
+
+&lt;p&gt;区别:vue 数据驱动,通过数据来显示图层而不是节点操作&lt;/p&gt;
+
+&lt;p&gt;场景:数据操作比较多的场景,更加便捷&lt;/p&gt;
+
+&lt;h2 id=&quot;vue-的优点是什么&quot;&gt;Vue 的优点是什么?&lt;/h2&gt;
+
+&lt;p&gt;低耦合: 视图可以独立于 Model 变化和修改, 一个 ViewModel 可以绑定到不同的“View”上,当 View 变化的时候 Model 可以不变, 当 Model 变化的时候 View 也可以不变&lt;/p&gt;
+
+&lt;p&gt;可复用性: 可以把一些视图逻辑放在 ViewModel 里面,让很多 View 复用这段视图逻辑.&lt;/p&gt;
+
+&lt;p&gt;独立开发: 开发人员可以专注于业务逻辑和数据的开发,设计人员可以专注于页面设计&lt;/p&gt;
+
+&lt;p&gt;可测试: 界面素来是比较难测试的,而现在测试可以针对 ViewModel 来写&lt;/p&gt;
+
+&lt;h2 id=&quot;组件之间的传值&quot;&gt;组件之间的传值&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;父组件 -&amp;gt; 子组件
+    &lt;ul&gt;
+      &lt;li&gt;父组件给子组件绑定属性, 子组件通过 props 属性来接收传递的数据&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;子组件 -&amp;gt; 父组件
+    &lt;ul&gt;
+      &lt;li&gt;在父组件中声明一个接收数据的函数,父组件给子组件绑定事件,子组件通过$emit 触发事件,并且可在此时传递参数,父组件通过定义好的监听事件接收参数&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;兄弟组件
+    &lt;ul&gt;
+      &lt;li&gt;创建一个新的 vue 实例,让各个兄弟组件公用一个事件机制,通过事件触发$emit(方法名,传递的数据),在mounted()钩子函数中,触发事件$on(方法名,callback(接收数据)),此时 callback 函数中的 this 已经发生改变,可以使用箭头函数&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;路由之间的跳转&quot;&gt;路由之间的跳转&lt;/h2&gt;
+
+&lt;p&gt;声明方式(标签跳转)&lt;/p&gt;
+
+&lt;p&gt;编程式(js 跳转)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;用 query 传参数 优势: 页面刷新,参数不会丢失 劣势: 参数暴露&lt;/li&gt;
+  &lt;li&gt;密文传输 用 params 替换 query 优势:参数没有暴露 劣势: 页面刷新,参数丢失&lt;/li&gt;
+  &lt;li&gt;路由配置里用冒号的形式传参&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;vuecli-怎样使用自定义的组件有遇到过哪些问题呢&quot;&gt;vue.cli 怎样使用自定义的组件?有遇到过哪些问题呢?&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;在 components 目录中新建你的组件文件(indexPage.vue),script 一定要 export default{}&lt;/li&gt;
+  &lt;li&gt;在需要用的页面(组件)中导入:import indexPage from ‘@/components/indexPage.vue’&lt;/li&gt;
+  &lt;li&gt;注入到 vue 中的子组件的 comonents 属性上面,components:{indexPage}&lt;/li&gt;
+  &lt;li&gt;在 template 视图 view 中使用,例如有 indexPage 中使用,例如 indexPage 命名,使用的时候则 index-page&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;vue-如何实现按需加载配合-webpack-配置&quot;&gt;Vue 如何实现按需加载配合 webpack 配置&lt;/h2&gt;
+
+&lt;p&gt;webpack 中提供了 require.ensure()来实现按需加载. 以前引入路由是通过 import 这样的方式引入,改为 const 定义的方式进行引入&lt;/p&gt;
+
+&lt;p&gt;不进行页面按需加载引入方式: import home from ‘../../common/home.vue’&lt;/p&gt;
+
+&lt;p&gt;进行页面按需加载的引入方式: const home = r =&amp;gt; require.ensure([],()=&amp;gt;r(require(‘../../common/home.vue’)))&lt;/p&gt;
+
+&lt;h2 id=&quot;vuex-是什么怎么使用哪种功能场景使用它&quot;&gt;Vuex 是什么?怎么使用?哪种功能场景使用它?&lt;/h2&gt;
+
+&lt;p&gt;vuex 是 vue 框架中的状态管理.在 main.js 中引入 store,注入.新建一个目录 store,…export.场景有: 单页面应用中,组件之间的状态. 音乐播放器,登录状态,加入购物车&lt;/p&gt;
+
+&lt;h2 id=&quot;vuex-有哪几种属性&quot;&gt;Vuex 有哪几种属性?&lt;/h2&gt;
+
+&lt;p&gt;有五种, 分别是 State, Getter, Mutation, Action, Module&lt;/p&gt;
+
+&lt;h2 id=&quot;vuex-的-state-特性&quot;&gt;Vuex 的 State 特性&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Vuex 就是一个仓库,仓库里面放了很多对象. 其中 state 就是数据源存放地, 对应一般 Vue 对象里面的 data&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;state 里面存放的数据是响应式的, Vue 组件从 state 中读取数据, 若是 store 中的数据发生改变, 依赖这个数据的组件也会发生更新&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;它通过 mapState 把全局的 state 和 getters 映射到当前组件的 computed 计算属性中&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;vuex-的-getter-特性&quot;&gt;Vuex 的 Getter 特性&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;getter 可以对 State 进行计算操作,它就是 Store 计算属性&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;虽然在组件内也可以做计算属性,但是 getter 可以在多组件之间复用&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;如果一个状态只在一个组件内使用,是可以不用 getter&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;vuex-的-mutation-特性&quot;&gt;Vuex 的 Mutation 特性&lt;/h2&gt;
+
+&lt;p&gt;Action 类型于 Mutation, 不同于: Action 提交的是 Mutation, 而不是直接变更状态; Action 可以包含任意异步操作&lt;/p&gt;
+
+&lt;h2 id=&quot;不用-vuex-带来什么问题&quot;&gt;不用 Vuex 带来什么问题?&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;可维护性下降,想修改数据要修改三个地方&lt;/li&gt;
+  &lt;li&gt;可读性下降,因为一个组件里的数据,根本就看不出来从哪来的&lt;/li&gt;
+  &lt;li&gt;增加耦合性,大量的上传派发,会让耦合性打打增加,本来 Vue 用 Component 就是为了减少耦合,现在这么用,就违背了组件化的初衷&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;v-show-和-v-if-指令的共同点和不同点&quot;&gt;v-show 和 v-if 指令的共同点和不同点&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;v-show 指令是通过修改元素的 display 的 css 属性让其显示或隐藏&lt;/li&gt;
+  &lt;li&gt;v-if 指令是直接销毁和重建 DOM 达到让元素显示和隐藏的效果&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;如何让-css-只在当前组件中起作用&quot;&gt;如何让 CSS 只在当前组件中起作用&lt;/h2&gt;
+
+&lt;p&gt;将当前组件的&amp;lt;style&amp;gt;修改为&amp;lt;style scoped&amp;gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;keep-alivekeep-alive的作用是什么&quot;&gt;&amp;lt;keep-alive&amp;gt;&amp;lt;/keep-alive&amp;gt;的作用是什么?&lt;/h2&gt;
+
+&lt;p&gt;&amp;lt;keep-alive&amp;gt;&amp;lt;/keep-alive&amp;gt;包裹动态组件时,会缓存不活动的组件实例,主要用于保留组件状态或避免重新渲染&lt;/p&gt;
+
+&lt;h2 id=&quot;指令-v-el-的作用是什么&quot;&gt;指令 v-el 的作用是什么?&lt;/h2&gt;
+
+&lt;p&gt;提供一个页面中已存在的 DOM 元素作为 vue 实例的挂载目标,可以是 css 选择器,也可以是一个 HTMLElement 实例&lt;/p&gt;
+
+&lt;h2 id=&quot;请列举出-3-个-vue-中常用的生命周期钩子函数&quot;&gt;请列举出 3 个 Vue 中常用的生命周期钩子函数?&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;created: 实例已经创建完成之后调用,在这一步,实例已经完成数据观测,属性和方法的运算, watch/event 事件回调. 但是, 挂载阶段还没有开始,$el 属性目前还不可见&lt;/li&gt;
+  &lt;li&gt;mounted: el 被新创建的 vm.$el替换,并且挂载在实例上去之后调用该钩子. 如果root实例挂载了一个文档内部元素,当mounted被调用是vm.$el 也在文档中&lt;/li&gt;
+  &lt;li&gt;activated: keep-alive 组件激活时调用&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;active-class-是那个组件的属性&quot;&gt;active-class 是那个组件的属性&lt;/h2&gt;
+
+&lt;p&gt;vue-router 模块的 router-link 组件&lt;/p&gt;
+
+&lt;h2 id=&quot;vue-router-中的导航钩子&quot;&gt;Vue-router 中的导航钩子&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;全局导航钩子: 前置守卫,后置守卫 router.beforeEach(to,from,next)，作用：跳转前进行判断拦截&lt;/li&gt;
+  &lt;li&gt;路由独享的钩子: 在 routes 数组的对象的里 beforeEnter:(to,from,next) =&amp;gt;{}&lt;/li&gt;
+  &lt;li&gt;组件内的导航钩子: 在组件内可以使用 beforeRouteEnter,beforeRouteUpdate,beforeRouteLeave(to,from,next){}&lt;/li&gt;
+  &lt;li&gt;beforeRouteEnter 中没有 this 其他的是有 this 的&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;生命周期的八个阶段&quot;&gt;生命周期的八个阶段&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;beforeCreate 阶段: vue 实例挂载元素 el 和数据对象 data 都为 undefined,还未初始化&lt;/li&gt;
+  &lt;li&gt;created 阶段: vue 实例的数据对象 data 有了,el 还没有&lt;/li&gt;
+  &lt;li&gt;beforeMount 阶段: vue 实例的$el 和 data 都初始化了,但还是挂载之前为虚拟的 DOM 节点,data.message 还未替换&lt;/li&gt;
+  &lt;li&gt;mounted 阶段: vue 实例挂载完成,data.message 成功渲染&lt;/li&gt;
+  &lt;li&gt;beforeUpdate/updated: 在 data 变化时,都会触发&lt;/li&gt;
+  &lt;li&gt;beforeDestroy/destroyed:销毁&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;vue-的双向数据绑定原理是什么&quot;&gt;Vue 的双向数据绑定原理是什么?&lt;/h2&gt;
+
+&lt;p&gt;vue.js 是采用数据劫持结合发布者-订阅者模式,通过 Object.defineProperty()来劫持各个属性的 setter、getter,在数据变动时发布消息给订阅者,触发相应的监听回调&lt;/p&gt;
+
+&lt;h2 id=&quot;axios-的优点&quot;&gt;axios 的优点?&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;可以设置拦截请求和响应&lt;/li&gt;
+  &lt;li&gt;自动转换 json 请求和响应&lt;/li&gt;
+  &lt;li&gt;支持 promise 和 api&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;插槽&quot;&gt;插槽&lt;/h2&gt;
+
+&lt;p&gt;默认插槽 &amp;lt;slot&amp;gt;&amp;lt;/slot&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;具名插槽: 给插槽起个名字 &amp;lt;slot name=”girl”&amp;gt;&amp;lt;/slot&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;作用域插槽: 就是组件上的属性,可以在组件元素内部使用(element 的 table) slot-scope=”a”&lt;/p&gt;</content><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><category term="mathjax" /><summary type="html">巩固 VUE 2.0 的知识点</summary></entry><entry><title type="html">前端工程化</title><link href="http://localhost:4000/2021/11/02/web-engineering/" rel="alternate" type="text/html" title="前端工程化" /><published>2021-11-02T12:00:00+08:00</published><updated>2021-11-02T12:00:00+08:00</updated><id>http://localhost:4000/2021/11/02/web-engineering</id><content type="html" xml:base="http://localhost:4000/2021/11/02/web-engineering/">&lt;p class=&quot;message&quot;&gt;学习 前端工程化 的历程&lt;/p&gt;
+
+&lt;h2 id=&quot;前端工程化是什么&quot;&gt;前端工程化是什么?&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;前端工程化就是通过各种工具和技术,提升前端开发效率的过程&lt;/p&gt;
+
+    &lt;p&gt;(1.项目上线前,代码需要压缩 2.想要使用 ES6+或 CSS3 新特性,要解决兼容性问题 3.想要使用 Less 增强 Css 的编程性,但是浏览器不能直接支持 Less 4.多人协作开发)&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;前端工程化的内容:各种工具和技术&lt;/li&gt;
+      &lt;li&gt;前端工程化的作用:通过使用工具,提升开发效率&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;一个工程的生命周期&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;工程立项-&amp;gt;需求分析-&amp;gt;产品原型-&amp;gt;开发实施-&amp;gt;测试部署-&amp;gt;上线运行&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;前端工程还包括的内容&quot;&gt;前端工程还包括的内容&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;脚手架工具: 1. 专用脚手架 (vue-cli, create-react-app, angular-cli, gatsby-cli) 2. 通用脚手架 (Yeoman, Plop)&lt;/li&gt;
+  &lt;li&gt;自动化构建: npm script &amp;amp; script hooks Grunt, Gulp, FIS&lt;/li&gt;
+  &lt;li&gt;模块化打包: Webpack, Rollup, Parcel&lt;/li&gt;
+  &lt;li&gt;标准化规范: ESLint, StyleLint, Prettier&lt;/li&gt;
+  &lt;li&gt;自动化测试: Mocha, Jest, Enzyme, Cypress, Nightmare, Puppeteer&lt;/li&gt;
+  &lt;li&gt;自动化部署: Git Hook, Lint-staged, CI/CD&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;yeoman-的基本概念&quot;&gt;Yeoman 的基本概念&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Yeoman 是一款脚手架工具
+    &lt;ul&gt;
+      &lt;li&gt;可以帮助开发人员创建项目的基础结构代码&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;yo 是 Yeoman 的命令行管理工具
+    &lt;ul&gt;
+      &lt;li&gt;可以在命令行运行 Yeoman 的命令&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;生成器: Yeoman 中具体的脚手架
+    &lt;ul&gt;
+      &lt;li&gt;正对不同项目有不同的脚手架(例如:网站,APP,小程序等)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><category term="mathjax" /><summary type="html">学习 前端工程化 的历程</summary></entry><entry><title type="html">Webpack Study</title><link href="http://localhost:4000/2021/10/21/webpack-study/" rel="alternate" type="text/html" title="Webpack Study" /><published>2021-10-21T12:00:00+08:00</published><updated>2021-10-21T12:00:00+08:00</updated><id>http://localhost:4000/2021/10/21/webpack-study</id><content type="html" xml:base="http://localhost:4000/2021/10/21/webpack-study/">&lt;p class=&quot;message&quot;&gt;学习 Webpack 的历程&lt;/p&gt;
 
 &lt;h2 id=&quot;webpack-介绍&quot;&gt;Webpack 介绍&lt;/h2&gt;
 

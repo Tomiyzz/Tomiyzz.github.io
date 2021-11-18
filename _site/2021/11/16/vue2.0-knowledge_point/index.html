@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+
+
+<body>
+
+  <div class="container pure-g"><div class="sidebar-left pure-u-1 pure-u-md-1-4"
+      style="background-color: rgb(40, 73, 77); color: rgb(255, 255, 255); background-image: url(/bg.jpeg);"><header class="masthead">
+  <div class="avatar"><img src="/avatar.jpeg" class="avatar-image" alt="Tomiyzz Zhou">
+  </div>
+  <div class="masthead-title">
+    <a href="/" title="Home">记录学习历程 Tomiyzz</a>
+  </div>
+  <div class="masthead-tagline">
+    <small>记录每次学到的新知识,希望能有所收获!!!</small>
+  </div><nav class="navigation">
+    <!-- <ul class="navigation-list"><li class="navigation-item">
+        <a onclick="sessionStorage.setItem('forceCheckScroll', 'true')"
+          href="/">Blog</a>
+      </li><li class="navigation-item">
+        <a onclick="sessionStorage.setItem('forceCheckScroll', 'true')"
+          href="/about/">About</a>
+      </li></ul> -->
+  </nav><!-- <div class="social pure-menu pure-menu-horizontal">
+      <ul class="social-icons pure-menu-list">
+      <li class="pure-menu-item">
+          <a class="social-icon pure-menu-link" href="mailto://vszhub@gmail.com">
+            <i class="fas fa-envelope" title="Email"></i>
+          </a>
+        </li><li class="pure-menu-item">
+          <a class="social-icon pure-menu-link" href="https://twitter.com/vszhub">
+            <i class="fab fa-twitter" title="Twitter"></i>
+          </a>
+        </li><li class="pure-menu-item">
+          <a class="social-icon pure-menu-link" href="https://github.com/vszhub/not-pure-poole">
+            <i class="fab fa-github" title="GitHub"></i>
+          </a>
+        </li>
+      </ul>
+    </div> -->
+</header>
+</div>
+
+    <div class="content pure-u-1 pure-u-md-1-2"><main>
+  <article class="post">
+  <h1 class="post-title">VUE 2.0 知识点</h1>
+  <div class="post-meta"><time datetime="2021-11-16T12:00:00+08:00" itemprop="datePublished">16 Nov 2021</time></div>
+
+  <p class="message">巩固 VUE 2.0 的知识点</p>
+
+<h2 id="什么是-mvvm">什么是 MVVM</h2>
+
+<p>MVVM 是 Model-View-ViewModel 的缩写. MVVM 是一种设计思想.Model 代表数据模型,也可以在 Model 中定义数据修改的操作和业务逻辑;View 代表 UI 组件,它负责将数据模型转化成 UI 展现出来,
+ViewModel 是一个同步 View 和 Model 的对象</p>
+
+<p>在 MVVM 架构下,View 和 Model 之间并没有直接的联系,而是通过 ViewModel 进行交互的,Model 和 ViewModel 之间的交互是双向的,因此 View 数据的变化会同步到 Model 中,而 Model 数据的变化也会反应到 View 上</p>
+
+<p>ViewModel 通过双向数据绑定把 View 和 Model 层连接了起来,而 View 和 Model 之间的同步工作完全是自动的,无需人为干涉,因此开发者只需要关注业务逻辑,不需要手动的操作 DOM,不需要数据状态的同步问题,复杂的数据状态维护完全由 MVVM 来统一管理</p>
+
+<h2 id="mvvm-和-mvc-区别它和其他框架jquery的区别哪些场景适合">MVVM 和 MVC 区别?它和其他框架(Jquery)的区别?哪些场景适合?</h2>
+
+<p>MVC 和 MVVM 其实区别并不大. 都是一种设计思想. 主要就是 MVC 中 Controller 演变成的 ViewModel. MVVM 主要解决了 MVC 中大量的 DOM 操作使页面渲染性能降低,加载速度变慢,影响用户体验</p>
+
+<p>区别:vue 数据驱动,通过数据来显示图层而不是节点操作</p>
+
+<p>场景:数据操作比较多的场景,更加便捷</p>
+
+<h2 id="vue-的优点是什么">Vue 的优点是什么?</h2>
+
+<p>低耦合: 视图可以独立于 Model 变化和修改, 一个 ViewModel 可以绑定到不同的“View”上,当 View 变化的时候 Model 可以不变, 当 Model 变化的时候 View 也可以不变</p>
+
+<p>可复用性: 可以把一些视图逻辑放在 ViewModel 里面,让很多 View 复用这段视图逻辑.</p>
+
+<p>独立开发: 开发人员可以专注于业务逻辑和数据的开发,设计人员可以专注于页面设计</p>
+
+<p>可测试: 界面素来是比较难测试的,而现在测试可以针对 ViewModel 来写</p>
+
+<h2 id="组件之间的传值">组件之间的传值</h2>
+
+<ul>
+  <li>父组件 -&gt; 子组件
+    <ul>
+      <li>父组件给子组件绑定属性, 子组件通过 props 属性来接收传递的数据</li>
+    </ul>
+  </li>
+  <li>子组件 -&gt; 父组件
+    <ul>
+      <li>在父组件中声明一个接收数据的函数,父组件给子组件绑定事件,子组件通过$emit 触发事件,并且可在此时传递参数,父组件通过定义好的监听事件接收参数</li>
+    </ul>
+  </li>
+  <li>兄弟组件
+    <ul>
+      <li>创建一个新的 vue 实例,让各个兄弟组件公用一个事件机制,通过事件触发$emit(方法名,传递的数据),在mounted()钩子函数中,触发事件$on(方法名,callback(接收数据)),此时 callback 函数中的 this 已经发生改变,可以使用箭头函数</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="路由之间的跳转">路由之间的跳转</h2>
+
+<p>声明方式(标签跳转)</p>
+
+<p>编程式(js 跳转)</p>
+
+<ul>
+  <li>用 query 传参数 优势: 页面刷新,参数不会丢失 劣势: 参数暴露</li>
+  <li>密文传输 用 params 替换 query 优势:参数没有暴露 劣势: 页面刷新,参数丢失</li>
+  <li>路由配置里用冒号的形式传参</li>
+</ul>
+
+<h2 id="vuecli-怎样使用自定义的组件有遇到过哪些问题呢">vue.cli 怎样使用自定义的组件?有遇到过哪些问题呢?</h2>
+
+<ul>
+  <li>在 components 目录中新建你的组件文件(indexPage.vue),script 一定要 export default{}</li>
+  <li>在需要用的页面(组件)中导入:import indexPage from ‘@/components/indexPage.vue’</li>
+  <li>注入到 vue 中的子组件的 comonents 属性上面,components:{indexPage}</li>
+  <li>在 template 视图 view 中使用,例如有 indexPage 中使用,例如 indexPage 命名,使用的时候则 index-page</li>
+</ul>
+
+<h2 id="vue-如何实现按需加载配合-webpack-配置">Vue 如何实现按需加载配合 webpack 配置</h2>
+
+<p>webpack 中提供了 require.ensure()来实现按需加载. 以前引入路由是通过 import 这样的方式引入,改为 const 定义的方式进行引入</p>
+
+<p>不进行页面按需加载引入方式: import home from ‘../../common/home.vue’</p>
+
+<p>进行页面按需加载的引入方式: const home = r =&gt; require.ensure([],()=&gt;r(require(‘../../common/home.vue’)))</p>
+
+<h2 id="vuex-是什么怎么使用哪种功能场景使用它">Vuex 是什么?怎么使用?哪种功能场景使用它?</h2>
+
+<p>vuex 是 vue 框架中的状态管理.在 main.js 中引入 store,注入.新建一个目录 store,…export.场景有: 单页面应用中,组件之间的状态. 音乐播放器,登录状态,加入购物车</p>
+
+<h2 id="vuex-有哪几种属性">Vuex 有哪几种属性?</h2>
+
+<p>有五种, 分别是 State, Getter, Mutation, Action, Module</p>
+
+<h2 id="vuex-的-state-特性">Vuex 的 State 特性</h2>
+
+<ul>
+  <li>
+    <p>Vuex 就是一个仓库,仓库里面放了很多对象. 其中 state 就是数据源存放地, 对应一般 Vue 对象里面的 data</p>
+  </li>
+  <li>
+    <p>state 里面存放的数据是响应式的, Vue 组件从 state 中读取数据, 若是 store 中的数据发生改变, 依赖这个数据的组件也会发生更新</p>
+  </li>
+  <li>
+    <p>它通过 mapState 把全局的 state 和 getters 映射到当前组件的 computed 计算属性中</p>
+  </li>
+</ul>
+
+<h2 id="vuex-的-getter-特性">Vuex 的 Getter 特性</h2>
+
+<ul>
+  <li>
+    <p>getter 可以对 State 进行计算操作,它就是 Store 计算属性</p>
+  </li>
+  <li>
+    <p>虽然在组件内也可以做计算属性,但是 getter 可以在多组件之间复用</p>
+  </li>
+  <li>
+    <p>如果一个状态只在一个组件内使用,是可以不用 getter</p>
+  </li>
+</ul>
+
+<h2 id="vuex-的-mutation-特性">Vuex 的 Mutation 特性</h2>
+
+<p>Action 类型于 Mutation, 不同于: Action 提交的是 Mutation, 而不是直接变更状态; Action 可以包含任意异步操作</p>
+
+<h2 id="不用-vuex-带来什么问题">不用 Vuex 带来什么问题?</h2>
+
+<ul>
+  <li>可维护性下降,想修改数据要修改三个地方</li>
+  <li>可读性下降,因为一个组件里的数据,根本就看不出来从哪来的</li>
+  <li>增加耦合性,大量的上传派发,会让耦合性打打增加,本来 Vue 用 Component 就是为了减少耦合,现在这么用,就违背了组件化的初衷</li>
+</ul>
+
+<h2 id="v-show-和-v-if-指令的共同点和不同点">v-show 和 v-if 指令的共同点和不同点</h2>
+
+<ul>
+  <li>v-show 指令是通过修改元素的 display 的 css 属性让其显示或隐藏</li>
+  <li>v-if 指令是直接销毁和重建 DOM 达到让元素显示和隐藏的效果</li>
+</ul>
+
+<h2 id="如何让-css-只在当前组件中起作用">如何让 CSS 只在当前组件中起作用</h2>
+
+<p>将当前组件的&lt;style&gt;修改为&lt;style scoped&gt;</p>
+
+<h2 id="keep-alivekeep-alive的作用是什么">&lt;keep-alive&gt;&lt;/keep-alive&gt;的作用是什么?</h2>
+
+<p>&lt;keep-alive&gt;&lt;/keep-alive&gt;包裹动态组件时,会缓存不活动的组件实例,主要用于保留组件状态或避免重新渲染</p>
+
+<h2 id="指令-v-el-的作用是什么">指令 v-el 的作用是什么?</h2>
+
+<p>提供一个页面中已存在的 DOM 元素作为 vue 实例的挂载目标,可以是 css 选择器,也可以是一个 HTMLElement 实例</p>
+
+<h2 id="请列举出-3-个-vue-中常用的生命周期钩子函数">请列举出 3 个 Vue 中常用的生命周期钩子函数?</h2>
+
+<ul>
+  <li>created: 实例已经创建完成之后调用,在这一步,实例已经完成数据观测,属性和方法的运算, watch/event 事件回调. 但是, 挂载阶段还没有开始,$el 属性目前还不可见</li>
+  <li>mounted: el 被新创建的 vm.$el替换,并且挂载在实例上去之后调用该钩子. 如果root实例挂载了一个文档内部元素,当mounted被调用是vm.$el 也在文档中</li>
+  <li>activated: keep-alive 组件激活时调用</li>
+</ul>
+
+<h2 id="active-class-是那个组件的属性">active-class 是那个组件的属性</h2>
+
+<p>vue-router 模块的 router-link 组件</p>
+
+<h2 id="vue-router-中的导航钩子">Vue-router 中的导航钩子</h2>
+
+<ul>
+  <li>全局导航钩子: 前置守卫,后置守卫 router.beforeEach(to,from,next)，作用：跳转前进行判断拦截</li>
+  <li>路由独享的钩子: 在 routes 数组的对象的里 beforeEnter:(to,from,next) =&gt;{}</li>
+  <li>组件内的导航钩子: 在组件内可以使用 beforeRouteEnter,beforeRouteUpdate,beforeRouteLeave(to,from,next){}</li>
+  <li>beforeRouteEnter 中没有 this 其他的是有 this 的</li>
+</ul>
+
+<h2 id="生命周期的八个阶段">生命周期的八个阶段</h2>
+
+<ul>
+  <li>beforeCreate 阶段: vue 实例挂载元素 el 和数据对象 data 都为 undefined,还未初始化</li>
+  <li>created 阶段: vue 实例的数据对象 data 有了,el 还没有</li>
+  <li>beforeMount 阶段: vue 实例的$el 和 data 都初始化了,但还是挂载之前为虚拟的 DOM 节点,data.message 还未替换</li>
+  <li>mounted 阶段: vue 实例挂载完成,data.message 成功渲染</li>
+  <li>beforeUpdate/updated: 在 data 变化时,都会触发</li>
+  <li>beforeDestroy/destroyed:销毁</li>
+</ul>
+
+<h2 id="vue-的双向数据绑定原理是什么">Vue 的双向数据绑定原理是什么?</h2>
+
+<p>vue.js 是采用数据劫持结合发布者-订阅者模式,通过 Object.defineProperty()来劫持各个属性的 setter、getter,在数据变动时发布消息给订阅者,触发相应的监听回调</p>
+
+<h2 id="axios-的优点">axios 的优点?</h2>
+
+<ul>
+  <li>可以设置拦截请求和响应</li>
+  <li>自动转换 json 请求和响应</li>
+  <li>支持 promise 和 api</li>
+</ul>
+
+<h2 id="插槽">插槽</h2>
+
+<p>默认插槽 &lt;slot&gt;&lt;/slot&gt;</p>
+
+<p>具名插槽: 给插槽起个名字 &lt;slot name=”girl”&gt;&lt;/slot&gt;</p>
+
+<p>作用域插槽: 就是组件上的属性,可以在组件元素内部使用(element 的 table) slot-scope=”a”</p>
+
+
+  
+    
+<!-- <div class="post-tags-section">
+  <i class="post-tags-icon fas fa-tags"></i>
+  <ul class="post-tags"><li>
+        <a class="post-tag" href="/tags/#mathjax">mathjax</a></li></ul>
+</div> -->
+
+  
+
+  
+</article>
+
+
+<aside class="related">
+  <h2>Related posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <a href="/2021/11/02/web-engineering/">
+          前端工程化
+          <small><time datetime="2021-11-02T12:00:00+08:00">02 Nov 2021</time></small>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/2021/10/21/webpack-study/">
+          Webpack Study
+          <small><time datetime="2021-10-21T12:00:00+08:00">21 Oct 2021</time></small>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/2021/09/29/uniapp-study/">
+          Uniapp Study
+          <small><time datetime="2021-09-29T12:00:00+08:00">29 Sep 2021</time></small>
+        </a>
+      </li>
+    
+  </ul>
+</aside>
+
+
+</main>
+
+<footer class="footer"><!-- <small>
+    &copy; 2020&nbsp;-&nbsp;2021 <a href="https://github.com/Tomiyzz/">Tomiyzz Zhou</a>.
+    All rights reserved.
+    Powered by <a href="https://jekyllrb.com/">Tomiyzz</a> & <a href="https://tomiyzz.github.io/">记录学习</a>.
+  </small> -->
+</footer>
+</div>
+    <div class="sidebar-right pure-u-1 pure-u-md-1-4">
+</div>
+  </div>
+
+  <script async src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script><script>
+  function strip(str, remove) {
+    while (str.length > 0 && remove.indexOf(str.charAt(0)) != -1) {
+      str = str.substr(1);
+    }
+    while (str.length > 0 && remove.indexOf(str.charAt(str.length - 1)) != -1) {
+      str = str.substr(0, str.length - 1);
+    }
+    return str;
+  }
+
+  function scroll() {
+    console.log('scroll');
+    window.scrollTo({
+      left: 0, 
+      top: window.innerHeight,
+      behavior: 'smooth'
+    });
+    sessionStorage.removeItem('forceCheckScroll');
+  }
+
+  const forceCheckScroll = sessionStorage.getItem('forceCheckScroll') === 'true';
+  const checkScroll = strip(window.location.pathname, '/') !== strip('', '/');
+
+  if (forceCheckScroll || checkScroll) {
+    const maxWidth = "(max-width: 48rem)";
+    const result = window.matchMedia(maxWidth);
+    if (result.matches) {
+      scroll();
+    } else {
+      result.addListener((match) => {
+        if (match.media == maxWidth) {
+          if (match.matches) {
+            scroll();
+          }
+        }
+      });
+    }
+  }
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+
+</html>
