@@ -215,7 +215,34 @@ ViewModel 是一个同步 View 和 Model 的对象</p>
 <h2 id="vue-router-中的导航钩子">Vue-router 中的导航钩子</h2>
 
 <ul>
-  <li>全局导航钩子: 前置守卫,后置守卫 router.beforeEach(to,from,next)，作用：跳转前进行判断拦截</li>
+  <li>
+    <p>全局导航钩子:</p>
+
+    <ul>
+      <li>前置守卫:</li>
+    </ul>
+  </li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="code"><pre>    <span class="nx">router</span><span class="p">.</span><span class="nx">beforeEach</span><span class="p">((</span><span class="nx">to</span><span class="p">,</span><span class="k">from</span><span class="p">,</span><span class="nx">next</span><span class="p">)</span> <span class="o">=&gt;</span><span class="p">{})</span>
+    
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<ul>
+  <li>后置守卫</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="code"><pre>    <span class="nx">router</span><span class="p">.</span><span class="nx">afterEach</span><span class="p">((</span><span class="nx">to</span><span class="p">,</span><span class="k">from</span><span class="p">)</span> <span class="o">=&gt;</span><span class="p">{})</span>
+    
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>作用：跳转前进行判断拦截</p>
+
+<ul>
   <li>路由独享的钩子: 在 routes 数组的对象的里 beforeEnter:(to,from,next) =&gt;{}</li>
   <li>组件内的导航钩子: 在组件内可以使用 beforeRouteEnter,beforeRouteUpdate,beforeRouteLeave(to,from,next){}</li>
   <li>beforeRouteEnter 中没有 this 其他的是有 this 的</li>
@@ -251,6 +278,103 @@ ViewModel 是一个同步 View 和 Model 的对象</p>
 <p>具名插槽: 给插槽起个名字 &lt;slot name=”girl”&gt;&lt;/slot&gt;</p>
 
 <p>作用域插槽: 就是组件上的属性,可以在组件元素内部使用(element 的 table) slot-scope=”a”</p>
+
+<h2 id="自定义指令">自定义指令</h2>
+
+<p>directive 自定义指令池</p>
+
+<h2 id="history-和-hash-的区别">history 和 hash 的区别</h2>
+
+<ul>
+  <li>hash 带#,history 没有</li>
+  <li>history 相对比较新,只能兼容 ie10, hash 能兼容 ie8</li>
+  <li>
+    <p>跳转的时候 hash 只能修改#后面的内容,而 history 只要是同源的就可以</p>
+  </li>
+  <li>
+    <p>原理:</p>
+
+    <ul>
+      <li>hash: 通过监听浏览器的 onhashchange()事件变化,查看对应的路由规则</li>
+      <li>history: 利用 H5 的 history 中新增的两个 API pushState()和 replaceState()和一个事件 onpopstate 监听 URL 变化</li>
+      <li>pushState()和 replaceState()可以用于浏览器的历史记录栈,通过 back、forward、go 可以对当前浏览器进行修改,当他们发生修改的时候,尽管 url 变化了,
+但是不会立即向后端服务器发送请求,除非点击刷新</li>
+    </ul>
+  </li>
+  <li>
+    <p>总结:</p>
+
+    <ul>
+      <li>1.history 和 hash 一般来说都能用,history 更美观</li>
+      <li>2.history 修改更自由</li>
+      <li>3.两个原理差不多都是通过事件监听,一个是 onhashchange(),另一个是 onpopstate()</li>
+      <li>4.history 必须要和后端保持一致,路由全覆盖,不然容易报 404</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="vue-组件通信之-bus">Vue 组件通信之 Bus</h2>
+
+<p>通过事件中心,允许组件自由交流,无论组件处于组件树的哪一层,由于 Vue 实例实现了一个事件分发接口,你可以通过实例话一个空的 Vue 实例来实现这个目的.这个集中式的事件中间件就是 Bus</p>
+
+<p>将 bus 定义到全局:main.js</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">eventBus</span> <span class="o">=</span> <span class="p">{</span>
+<span class="nx">install</span><span class="p">(</span><span class="nx">Vue</span><span class="p">,</span><span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
+<span class="nx">Vue</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="err">\</span><span class="nx">$bus</span> <span class="o">=</span> <span class="nx">vue</span>
+<span class="p">}</span>
+<span class="p">};</span>
+<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">eventBus</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>在组件中,使用$emit,$on,$off 分别来分发,监听,取消监听事件:</p>
+
+<p>分发事件的组件</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre><span class="nx">methods</span><span class="p">:</span> <span class="p">{</span>
+<span class="nx">todo</span><span class="p">()</span> <span class="p">{</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">$bus</span><span class="p">.</span><span class="err">\</span><span class="nx">$emit</span><span class="p">(</span><span class="dl">'</span><span class="s1">todoSth</span><span class="dl">'</span><span class="p">,</span> <span class="nx">params</span><span class="p">);</span> <span class="c1">//params 是传递的参数</span>
+<span class="c1">//...</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>监听的组件</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="code"><pre><span class="nx">created</span><span class="p">()</span> <span class="p">{</span>
+<span class="err"> </span><span class="k">this</span><span class="p">.</span><span class="nx">$bus</span><span class="p">.</span><span class="nx">$on</span><span class="p">(</span><span class="dl">'</span><span class="s1">todoSth</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="c1">//获取传递的参数并进行操作</span>
+<span class="err">  </span><span class="c1">//todo something</span>
+<span class="err"> </span><span class="p">})</span>
+<span class="p">},</span>
+<span class="c1">// 最好在组件销毁前</span>
+<span class="c1">// 清除事件监听</span>
+<span class="nx">beforeDestroy</span> <span class="p">()</span> <span class="p">{</span>
+<span class="err"> </span><span class="k">this</span><span class="p">.</span><span class="nx">$bus</span><span class="p">.</span><span class="nx">$off</span><span class="p">(</span><span class="dl">'</span><span class="s1">todoSth</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">},</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
 
 
   

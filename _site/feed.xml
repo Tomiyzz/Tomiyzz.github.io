@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-11-17T17:46:57+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">记录学习历程 Tomiyzz</title><subtitle>记录每次学到的新知识,希望能有所收获!!!</subtitle><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><entry><title type="html">VUE 2.0 知识点</title><link href="http://localhost:4000/2021/11/16/vue2.0-knowledge_point/" rel="alternate" type="text/html" title="VUE 2.0 知识点" /><published>2021-11-16T12:00:00+08:00</published><updated>2021-11-16T12:00:00+08:00</updated><id>http://localhost:4000/2021/11/16/vue2.0-knowledge_point</id><content type="html" xml:base="http://localhost:4000/2021/11/16/vue2.0-knowledge_point/">&lt;p class=&quot;message&quot;&gt;巩固 VUE 2.0 的知识点&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-11-19T14:43:50+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">记录学习历程 Tomiyzz</title><subtitle>记录每次学到的新知识,希望能有所收获!!!</subtitle><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><entry><title type="html">VUE 2.0 知识点</title><link href="http://localhost:4000/2021/11/16/vue2.0-knowledge_point/" rel="alternate" type="text/html" title="VUE 2.0 知识点" /><published>2021-11-16T12:00:00+08:00</published><updated>2021-11-16T12:00:00+08:00</updated><id>http://localhost:4000/2021/11/16/vue2.0-knowledge_point</id><content type="html" xml:base="http://localhost:4000/2021/11/16/vue2.0-knowledge_point/">&lt;p class=&quot;message&quot;&gt;巩固 VUE 2.0 的知识点&lt;/p&gt;
 
 &lt;h2 id=&quot;什么是-mvvm&quot;&gt;什么是 MVVM&lt;/h2&gt;
 
@@ -158,7 +158,34 @@ ViewModel 是一个同步 View 和 Model 的对象&lt;/p&gt;
 &lt;h2 id=&quot;vue-router-中的导航钩子&quot;&gt;Vue-router 中的导航钩子&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;全局导航钩子: 前置守卫,后置守卫 router.beforeEach(to,from,next)，作用：跳转前进行判断拦截&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;全局导航钩子:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;前置守卫:&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;    &lt;span class=&quot;nx&quot;&gt;router&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;beforeEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{})&lt;/span&gt;
+    
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;后置守卫&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;    &lt;span class=&quot;nx&quot;&gt;router&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;afterEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{})&lt;/span&gt;
+    
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;作用：跳转前进行判断拦截&lt;/p&gt;
+
+&lt;ul&gt;
   &lt;li&gt;路由独享的钩子: 在 routes 数组的对象的里 beforeEnter:(to,from,next) =&amp;gt;{}&lt;/li&gt;
   &lt;li&gt;组件内的导航钩子: 在组件内可以使用 beforeRouteEnter,beforeRouteUpdate,beforeRouteLeave(to,from,next){}&lt;/li&gt;
   &lt;li&gt;beforeRouteEnter 中没有 this 其他的是有 this 的&lt;/li&gt;
@@ -193,7 +220,103 @@ ViewModel 是一个同步 View 和 Model 的对象&lt;/p&gt;
 
 &lt;p&gt;具名插槽: 给插槽起个名字 &amp;lt;slot name=”girl”&amp;gt;&amp;lt;/slot&amp;gt;&lt;/p&gt;
 
-&lt;p&gt;作用域插槽: 就是组件上的属性,可以在组件元素内部使用(element 的 table) slot-scope=”a”&lt;/p&gt;</content><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><category term="mathjax" /><summary type="html">巩固 VUE 2.0 的知识点</summary></entry><entry><title type="html">前端工程化</title><link href="http://localhost:4000/2021/11/02/web-engineering/" rel="alternate" type="text/html" title="前端工程化" /><published>2021-11-02T12:00:00+08:00</published><updated>2021-11-02T12:00:00+08:00</updated><id>http://localhost:4000/2021/11/02/web-engineering</id><content type="html" xml:base="http://localhost:4000/2021/11/02/web-engineering/">&lt;p class=&quot;message&quot;&gt;学习 前端工程化 的历程&lt;/p&gt;
+&lt;p&gt;作用域插槽: 就是组件上的属性,可以在组件元素内部使用(element 的 table) slot-scope=”a”&lt;/p&gt;
+
+&lt;h2 id=&quot;自定义指令&quot;&gt;自定义指令&lt;/h2&gt;
+
+&lt;p&gt;directive 自定义指令池&lt;/p&gt;
+
+&lt;h2 id=&quot;history-和-hash-的区别&quot;&gt;history 和 hash 的区别&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;hash 带#,history 没有&lt;/li&gt;
+  &lt;li&gt;history 相对比较新,只能兼容 ie10, hash 能兼容 ie8&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;跳转的时候 hash 只能修改#后面的内容,而 history 只要是同源的就可以&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;原理:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;hash: 通过监听浏览器的 onhashchange()事件变化,查看对应的路由规则&lt;/li&gt;
+      &lt;li&gt;history: 利用 H5 的 history 中新增的两个 API pushState()和 replaceState()和一个事件 onpopstate 监听 URL 变化&lt;/li&gt;
+      &lt;li&gt;pushState()和 replaceState()可以用于浏览器的历史记录栈,通过 back、forward、go 可以对当前浏览器进行修改,当他们发生修改的时候,尽管 url 变化了,
+但是不会立即向后端服务器发送请求,除非点击刷新&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;总结:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;1.history 和 hash 一般来说都能用,history 更美观&lt;/li&gt;
+      &lt;li&gt;2.history 修改更自由&lt;/li&gt;
+      &lt;li&gt;3.两个原理差不多都是通过事件监听,一个是 onhashchange(),另一个是 onpopstate()&lt;/li&gt;
+      &lt;li&gt;4.history 必须要和后端保持一致,路由全覆盖,不然容易报 404&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;vue-组件通信之-bus&quot;&gt;Vue 组件通信之 Bus&lt;/h2&gt;
+
+&lt;p&gt;通过事件中心,允许组件自由交流,无论组件处于组件树的哪一层,由于 Vue 实例实现了一个事件分发接口,你可以通过实例话一个空的 Vue 实例来实现这个目的.这个集中式的事件中间件就是 Bus&lt;/p&gt;
+
+&lt;p&gt;将 bus 定义到全局:main.js&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;eventBus&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Vue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;Vue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prototype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$bus&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;vue&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;Vue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;eventBus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;在组件中,使用$emit,$on,$off 分别来分发,监听,取消监听事件:&lt;/p&gt;
+
+&lt;p&gt;分发事件的组件&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nx&quot;&gt;methods&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;todo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$bus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$emit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;todoSth&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//params 是传递的参数&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//...&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;监听的组件&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nx&quot;&gt;created&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$bus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;todoSth&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//获取传递的参数并进行操作&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//todo something&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// 最好在组件销毁前&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// 清除事件监听&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;beforeDestroy&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$bus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$off&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;todoSth&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><category term="mathjax" /><summary type="html">巩固 VUE 2.0 的知识点</summary></entry><entry><title type="html">前端工程化</title><link href="http://localhost:4000/2021/11/02/web-engineering/" rel="alternate" type="text/html" title="前端工程化" /><published>2021-11-02T12:00:00+08:00</published><updated>2021-11-02T12:00:00+08:00</updated><id>http://localhost:4000/2021/11/02/web-engineering</id><content type="html" xml:base="http://localhost:4000/2021/11/02/web-engineering/">&lt;p class=&quot;message&quot;&gt;学习 前端工程化 的历程&lt;/p&gt;
 
 &lt;h2 id=&quot;前端工程化是什么&quot;&gt;前端工程化是什么?&lt;/h2&gt;
 
