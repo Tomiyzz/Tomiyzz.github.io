@@ -51,79 +51,97 @@
 </div>
 
     <div class="content pure-u-1 pure-u-md-1-2"><main>
-  <div class="home-header pure-menu pure-menu-horizontal">
-  <div class="home-header-bar">
+  <article class="post">
+  <h1 class="post-title">地址栏输入URL后发生了什么</h1>
+  <div class="post-meta"><time datetime="2021-11-16T12:00:00+08:00" itemprop="datePublished">16 Nov 2021</time></div>
+
+  <p class="message">地址栏输入 URL 后发生了什么</p>
+
+<h2 id="地址栏输入-url-后发生了什么">地址栏输入 Url 后发生了什么?</h2>
+
+<p>有 URL 解析,DNS 查询,TCP 连接,HTTP 请求,响应请求和页面渲染</p>
+
+<ul>
+  <li>
+    <p>URL 解析: 先判断你输入的是一个合法的 URL,还是一个待搜索的关键字,进行对应操作</p>
+  </li>
+  <li>
+    <p>DNS 查询: 获取到域名对应服务器 IP 地址</p>
+
+    <ul>
+      <li>查询浏览器缓存</li>
+      <li>检查系统缓存(检查 host 文件)</li>
+      <li>检查路由器缓存</li>
+      <li>查询 ISP DNS 缓存(本地服务器缓存)</li>
+      <li>递归查询(根域名服务器 -&gt; 顶级域名服务器 -&gt; 极限域名服务器 依次搜索对应目标的 IP)</li>
+    </ul>
+  </li>
+  <li>
+    <p>TCP 连接: 三次握手建立 TCP 连接</p>
+
+    <ul>
+      <li>第一次握手: 客户端向服务端发送请求(SYN=1)等待服务器确认</li>
+      <li>第二次握手: 服务器收到请求并确认,回复一个指令(SYN=1,ACK=1)</li>
+      <li>第三次握手: 客户端收到服务器的回复指令并返回确认(ACK=1)</li>
+    </ul>
+  </li>
+  <li>
+    <p>请求和传输数据</p>
+  </li>
+  <li>
+    <p>浏览器渲染页面</p>
+    <ul>
+      <li>浏览器解析 html 源码,创建 DOM 树</li>
+      <li>浏览器解析 CSS 代码,计算出最终的样式数据,形成 css 对象模型 CSSOM</li>
+      <li>利用 DOM 和 CSSOM 构建一个渲染树,</li>
+      <li>浏览器根据渲染树直接把页面会知道屏幕上</li>
+    </ul>
+  </li>
+</ul>
+
+
+  
     
-    <!-- <ul class="home-header-menu pure-menu-list">
-      
-        <li class="pure-menu-item">
-          <a href="/dates/" class="pure-menu-link "">Dates</a>
-        </li>
-      
-        <li class="pure-menu-item">
-          <a href="/tags/" class="pure-menu-link current-item"">Tags</a>
-        </li>
-      
-    </ul> -->
+<!-- <div class="post-tags-section">
+  <i class="post-tags-icon fas fa-tags"></i>
+  <ul class="post-tags"><li>
+        <a class="post-tag" href="/tags/#mathjax">mathjax</a></li></ul>
+</div> -->
+
+  
+
+  
+</article>
+
+
+<aside class="related">
+  <h2>Related posts</h2>
+  <ul class="related-posts">
     
-  </div>
-</div>
+      <li>
+        <a href="/2021/11/16/vue3.0-study/">
+          VUE 3.0 的学习
+          <small><time datetime="2021-11-16T12:00:00+08:00">16 Nov 2021</time></small>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/2021/11/16/vue2.0-knowledge_point/">
+          VUE 2.0 知识点
+          <small><time datetime="2021-11-16T12:00:00+08:00">16 Nov 2021</time></small>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/2021/11/02/web-engineering/">
+          前端工程化
+          <small><time datetime="2021-11-02T12:00:00+08:00">02 Nov 2021</time></small>
+        </a>
+      </li>
+    
+  </ul>
+</aside>
 
-
-<h1>Tags</h1>
-
-<div class="taxonomies-wrapper">
-  <ul class="taxonomies"><li><a class="taxonomy" href="/tags/#mathjax">
-              <span>mathjax</span>
-              <span class="taxonomy-count">6</span>
-            </a>
-          </li><li><a class="taxonomy" href="/tags/#jekyll-theme">
-              <span>jekyll-theme</span>
-              <span class="taxonomy-count">1</span>
-            </a>
-          </li><li><a class="taxonomy" href="/tags/#jekyll">
-              <span>jekyll</span>
-              <span class="taxonomy-count">1</span>
-            </a>
-          </li><li><a class="taxonomy" href="/tags/#tutorial">
-              <span>tutorial</span>
-              <span class="taxonomy-count">1</span>
-            </a>
-          </li></ul>
-</div>
-
-<h2 id="mathjax">mathjax</h2>
-      <ul class="post-list-by-taxonomy"><li>
-            <time datetime="">2021-11-16</time> &raquo; <a href="/2021/11/16/vue3.0-study/">VUE 3.0 的学习</a>
-          </li><li>
-            <time datetime="">2021-11-16</time> &raquo; <a href="/2021/11/16/url/">地址栏输入URL后发生了什么</a>
-          </li><li>
-            <time datetime="">2021-11-16</time> &raquo; <a href="/2021/11/16/vue2.0-knowledge_point/">VUE 2.0 知识点</a>
-          </li><li>
-            <time datetime="">2021-11-02</time> &raquo; <a href="/2021/11/02/web-engineering/">前端工程化</a>
-          </li><li>
-            <time datetime="">2021-10-21</time> &raquo; <a href="/2021/10/21/webpack-study/">Webpack Study</a>
-          </li><li>
-            <time datetime="">2021-09-29</time> &raquo; <a href="/2021/09/29/uniapp-study/">Uniapp Study</a>
-          </li></ul>
-      <a href="#" onclick="backToTop()" class="back-to-top">Top &#8648;</a><h2 id="jekyll-theme">jekyll-theme</h2>
-      <ul class="post-list-by-taxonomy"><li>
-            <time datetime="">2020-09-29</time> &raquo; <a href="/2020/09/29/welcome-to-not-pure-poole/">Welcome to 记录学习历程</a>
-          </li></ul>
-      <a href="#" onclick="backToTop()" class="back-to-top">Top &#8648;</a><h2 id="jekyll">jekyll</h2>
-      <ul class="post-list-by-taxonomy"><li>
-            <time datetime="">2020-09-29</time> &raquo; <a href="/2020/09/29/welcome-to-not-pure-poole/">Welcome to 记录学习历程</a>
-          </li></ul>
-      <a href="#" onclick="backToTop()" class="back-to-top">Top &#8648;</a><h2 id="tutorial">tutorial</h2>
-      <ul class="post-list-by-taxonomy"><li>
-            <time datetime="">2020-09-29</time> &raquo; <a href="/2020/09/29/welcome-to-not-pure-poole/">Welcome to 记录学习历程</a>
-          </li></ul>
-      <a href="#" onclick="backToTop()" class="back-to-top">Top &#8648;</a><script>
-  function backToTop() {
-    const main = document.getElementById("site-main");
-    main.scrollTop = 0;
-  }
-</script>
 
 </main>
 
@@ -178,6 +196,8 @@
     }
   }
 </script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 
 </html>

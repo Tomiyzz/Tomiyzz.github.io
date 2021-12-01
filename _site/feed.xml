@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-11-19T14:43:50+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">记录学习历程 Tomiyzz</title><subtitle>记录每次学到的新知识,希望能有所收获!!!</subtitle><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><entry><title type="html">VUE 2.0 知识点</title><link href="http://localhost:4000/2021/11/16/vue2.0-knowledge_point/" rel="alternate" type="text/html" title="VUE 2.0 知识点" /><published>2021-11-16T12:00:00+08:00</published><updated>2021-11-16T12:00:00+08:00</updated><id>http://localhost:4000/2021/11/16/vue2.0-knowledge_point</id><content type="html" xml:base="http://localhost:4000/2021/11/16/vue2.0-knowledge_point/">&lt;p class=&quot;message&quot;&gt;巩固 VUE 2.0 的知识点&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-12-01T10:43:36+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">记录学习历程 Tomiyzz</title><subtitle>记录每次学到的新知识,希望能有所收获!!!</subtitle><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><entry><title type="html">VUE 2.0 知识点</title><link href="http://localhost:4000/2021/11/16/vue2.0-knowledge_point/" rel="alternate" type="text/html" title="VUE 2.0 知识点" /><published>2021-11-16T12:00:00+08:00</published><updated>2021-11-16T12:00:00+08:00</updated><id>http://localhost:4000/2021/11/16/vue2.0-knowledge_point</id><content type="html" xml:base="http://localhost:4000/2021/11/16/vue2.0-knowledge_point/">&lt;p class=&quot;message&quot;&gt;巩固 VUE 2.0 的知识点&lt;/p&gt;
 
 &lt;h2 id=&quot;什么是-mvvm&quot;&gt;什么是 MVVM&lt;/h2&gt;
 
@@ -316,7 +316,399 @@ ViewModel 是一个同步 View 和 Model 的对象&lt;/p&gt;
 &lt;span class=&quot;nx&quot;&gt;beforeDestroy&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 &lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$bus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$off&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;todoSth&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><category term="mathjax" /><summary type="html">巩固 VUE 2.0 的知识点</summary></entry><entry><title type="html">前端工程化</title><link href="http://localhost:4000/2021/11/02/web-engineering/" rel="alternate" type="text/html" title="前端工程化" /><published>2021-11-02T12:00:00+08:00</published><updated>2021-11-02T12:00:00+08:00</updated><id>http://localhost:4000/2021/11/02/web-engineering</id><content type="html" xml:base="http://localhost:4000/2021/11/02/web-engineering/">&lt;p class=&quot;message&quot;&gt;学习 前端工程化 的历程&lt;/p&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><category term="mathjax" /><summary type="html">巩固 VUE 2.0 的知识点</summary></entry><entry><title type="html">地址栏输入URL后发生了什么</title><link href="http://localhost:4000/2021/11/16/url/" rel="alternate" type="text/html" title="地址栏输入URL后发生了什么" /><published>2021-11-16T12:00:00+08:00</published><updated>2021-11-16T12:00:00+08:00</updated><id>http://localhost:4000/2021/11/16/url</id><content type="html" xml:base="http://localhost:4000/2021/11/16/url/">&lt;p class=&quot;message&quot;&gt;地址栏输入 URL 后发生了什么&lt;/p&gt;
+
+&lt;h2 id=&quot;地址栏输入-url-后发生了什么&quot;&gt;地址栏输入 Url 后发生了什么?&lt;/h2&gt;
+
+&lt;p&gt;有 URL 解析,DNS 查询,TCP 连接,HTTP 请求,响应请求和页面渲染&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;URL 解析: 先判断你输入的是一个合法的 URL,还是一个待搜索的关键字,进行对应操作&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;DNS 查询: 获取到域名对应服务器 IP 地址&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;查询浏览器缓存&lt;/li&gt;
+      &lt;li&gt;检查系统缓存(检查 host 文件)&lt;/li&gt;
+      &lt;li&gt;检查路由器缓存&lt;/li&gt;
+      &lt;li&gt;查询 ISP DNS 缓存(本地服务器缓存)&lt;/li&gt;
+      &lt;li&gt;递归查询(根域名服务器 -&amp;gt; 顶级域名服务器 -&amp;gt; 极限域名服务器 依次搜索对应目标的 IP)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;TCP 连接: 三次握手建立 TCP 连接&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;第一次握手: 客户端向服务端发送请求(SYN=1)等待服务器确认&lt;/li&gt;
+      &lt;li&gt;第二次握手: 服务器收到请求并确认,回复一个指令(SYN=1,ACK=1)&lt;/li&gt;
+      &lt;li&gt;第三次握手: 客户端收到服务器的回复指令并返回确认(ACK=1)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;请求和传输数据&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;浏览器渲染页面&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;浏览器解析 html 源码,创建 DOM 树&lt;/li&gt;
+      &lt;li&gt;浏览器解析 CSS 代码,计算出最终的样式数据,形成 css 对象模型 CSSOM&lt;/li&gt;
+      &lt;li&gt;利用 DOM 和 CSSOM 构建一个渲染树,&lt;/li&gt;
+      &lt;li&gt;浏览器根据渲染树直接把页面会知道屏幕上&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><category term="mathjax" /><summary type="html">地址栏输入 URL 后发生了什么</summary></entry><entry><title type="html">VUE 3.0 的学习</title><link href="http://localhost:4000/2021/11/16/vue3.0-study/" rel="alternate" type="text/html" title="VUE 3.0 的学习" /><published>2021-11-16T12:00:00+08:00</published><updated>2021-11-16T12:00:00+08:00</updated><id>http://localhost:4000/2021/11/16/vue3.0-study</id><content type="html" xml:base="http://localhost:4000/2021/11/16/vue3.0-study/">&lt;p class=&quot;message&quot;&gt;VUE 3.0 的学习&lt;/p&gt;
+
+&lt;h2 id=&quot;vue3-带来了什么&quot;&gt;Vue3 带来了什么?&lt;/h2&gt;
+
+&lt;h4 id=&quot;性能提升&quot;&gt;性能提升&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;打包大小减少 41%&lt;/li&gt;
+  &lt;li&gt;初次渲染快 55%,更新渲染快 133%&lt;/li&gt;
+  &lt;li&gt;内存减少 54%&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;源码升级&quot;&gt;源码升级&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;使用 Proxy 代替 defineProperty 实现响应式&lt;/li&gt;
+  &lt;li&gt;重写虚拟 DOM 的实现和 Tree-Shaking&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;拥抱-typescript&quot;&gt;拥抱 Typescript&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;vue3 可以更好的支持 Typescript&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;新的特性&quot;&gt;新的特性&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Composition(组合 API)&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;setup 配置&lt;/li&gt;
+      &lt;li&gt;ref 和 reactive&lt;/li&gt;
+      &lt;li&gt;watch 和 watchEffect&lt;/li&gt;
+      &lt;li&gt;provide 和 inject&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;初始-setup&quot;&gt;初始 setup&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;理解: vue3.0 中一个新的配置项,值为一个函数&lt;/li&gt;
+  &lt;li&gt;setup 是所有 Composition API(组合 API)“表演的舞台”&lt;/li&gt;
+  &lt;li&gt;组件中所用到的: 数据,方法等,均要配置在 setup 中.&lt;/li&gt;
+  &lt;li&gt;setup 函数的两种返回值:
+    &lt;ul&gt;
+      &lt;li&gt;若返回一个对象,则对象中的属性,方法,在模版中均可以直接使用&lt;/li&gt;
+      &lt;li&gt;若返回一个渲染函数: 则可以自定义渲染内容&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;vue2 和 vue3 不要混用,vue3 的优先级更高&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;ref-函数&quot;&gt;ref 函数&lt;/h2&gt;
+
+&lt;p&gt;引入 ref 函数&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;import {ref} from ‘vue’&lt;/li&gt;
+  &lt;li&gt;ref 引用对象 修改的时候需要 .value 进行修改&lt;/li&gt;
+  &lt;li&gt;作用: 定义一个响应式的数据&lt;/li&gt;
+  &lt;li&gt;语法: const xxx = ref(initValue)
+    &lt;ul&gt;
+      &lt;li&gt;创建一个包含响应式数据的引用对象 (reference 对象,简称 ref 对象)&lt;/li&gt;
+      &lt;li&gt;JS 中操作数据: xxx.value&lt;/li&gt;
+      &lt;li&gt;模版中读取数据: 不需要.value,直接: &amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;备注:
+    &lt;ul&gt;
+      &lt;li&gt;接收的数据可以是基本类型,也可以是对象类型&lt;/li&gt;
+      &lt;li&gt;基本类型的数据: 响应式依然是靠 Object.defineProperty()的 get 与 set 完成的&lt;/li&gt;
+      &lt;li&gt;对象类型的数据: 内部“求助”了 Vue3.0 中的一个新函数–reactive 函数&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;reactive-函数&quot;&gt;Reactive 函数&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;import {reactive} from ‘vue’&lt;/li&gt;
+  &lt;li&gt;作用: 定义一个&lt;strong&gt;对象类型&lt;/strong&gt;类型的响应式函数(基本类型不要用它,用 ref 函数)&lt;/li&gt;
+  &lt;li&gt;语法: &lt;strong&gt;const 代理对象=reactive(源对象)&lt;/strong&gt;接收一个对象(或数组),返回一个代理对象(proxy 的实例对象,简称 Proxy 对象)&lt;/li&gt;
+  &lt;li&gt;reactive 定义的响应式数据是“深层次的”&lt;/li&gt;
+  &lt;li&gt;内部基于 ES6 的 Proxy 实现,通过代理对象操作源对象内部数据进行操作&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;vue30-的响应式&quot;&gt;Vue3.0 的响应式&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;实现原理:
+    &lt;ul&gt;
+      &lt;li&gt;通过 Proxy(代理): 拦截对象中任意属性的变化, 包括: 属性值的读写,属性的添加,属性的删除等&lt;/li&gt;
+      &lt;li&gt;通过 Reflect(反射): 对源对象的属性进行操作&lt;/li&gt;
+      &lt;li&gt;MDN 文档中描述的 Proxy 与 Reflect&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Proxy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 拦截读取属性值&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Reflect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 拦截设置属性值或添加新属性值&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Reflect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;deleteProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Reflect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;deleteProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+    
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;reactive-和-ref-的对比&quot;&gt;reactive 和 ref 的对比&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;从定义数据角度对比&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;ref 用来定义: 基本类型数据&lt;/li&gt;
+      &lt;li&gt;reactive 用来定义: 对象(或数组)类型数据
+        &lt;blockquote&gt;
+          &lt;p&gt;备注: ref 也可以用来定义对象(或数组)类型数据,它内部会自动通过 reactive 转为代理对象&lt;/p&gt;
+        &lt;/blockquote&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;从原理角度对比:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;ref 通过 Object.defineProperty()的 get 与 set 来实现响应式(数据劫持)&lt;/li&gt;
+      &lt;li&gt;reactive 通过使用 Proxy 来实现响应式(数据劫持),并通过 Reflect 操作&lt;strong&gt;源对象&lt;/strong&gt;内部的数据&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;从使用角度对比&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;ref 定义的数据: 操作数据需要 .value, 读取数据时模版中直接读取不需要 .value&lt;/li&gt;
+      &lt;li&gt;reactive 定义的数据: 操作数据与读取数据:均不需要 .value&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;setup-的两个注意点&quot;&gt;setup 的两个注意点&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;setup 执行世纪&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;在 beforeCreate 之前执行一次,this 是 undefined&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;setup 的参数:&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;props: 值为对象, 包含:组件外部传递过来,且组件内部声明接收了的属性&lt;/li&gt;
+      &lt;li&gt;context:上下文对象
+        &lt;ul&gt;
+          &lt;li&gt;attrs: 值为对象, 包含:组件外部传递过来, 但没有在 props 配置中声明的属性,相当于&lt;strong&gt;this.$attrs&lt;/strong&gt;&lt;/li&gt;
+          &lt;li&gt;slots: 收到的插槽内容, 相当于&lt;strong&gt;this.$slots&lt;/strong&gt;&lt;/li&gt;
+          &lt;li&gt;emit: 分发自定义事件的函数,相当于&lt;strong&gt;this.$emit&lt;/strong&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;计算属性与监视&quot;&gt;计算属性与监视&lt;/h2&gt;
+
+&lt;h3 id=&quot;computed-函数&quot;&gt;computed 函数&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;与 vue2.0 中 computed 配置功能一致&lt;/li&gt;
+  &lt;li&gt;写法&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;  &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;computed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;vue&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;setup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// 简写&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fullName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;computed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;......&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// 完整&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fullName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;computed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;firstName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lastName&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;......&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;watch-函数&quot;&gt;watch 函数&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;与 vue2.0 中 watch 配置功能一致&lt;/li&gt;
+  &lt;li&gt;写法:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;  &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;watch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;vue&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// 情况一: 监视 ref 所定义的一个响应式数据&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;watch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;newVal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;oldVal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;sum 数据变了&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;newVal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;oldVal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;immediate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// 情况二: 监视 ref 所定义的多个响应式数据&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;watch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;newVal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;oldVal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 两个数组&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;sum 或 msg 数据变了&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;newVal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;oldVal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// 情况三: 监视 reactive 所定义的一个响应式数据的全部属性&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// 1. 注意: 此处无法正确的获取 pldValue&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// 2. 注意: 强制开启了深度监视(deep 配置无效)&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;watch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;newVal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;oldVal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;person 变化了&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// 情况四: 监视 reactive 所定义的一个响应式数据中的某个属性&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;watch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;newVal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;oldVal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;person 的 age 变化了&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// 情况五: 监视 reactive 所定义的一个响应式数据中的某些属性&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;watch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;newVal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;oldVal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;person 的 age 变化了&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// 特殊情况 此处由于监视的是 reactive 所定义的对象中的某个属性,所以 deep 配置有效&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;watch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;job&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;newVal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;oldVal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;person 的 job 变化了&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;deep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+
+  
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;watch-的-value-问题&quot;&gt;watch 的 .value 问题&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ref 存放基本类型的值, watch 监听不需要用 .value&lt;/li&gt;
+  &lt;li&gt;ref 存放对象类型,watch 监听不能进行深度监听
+    &lt;ul&gt;
+      &lt;li&gt;使用.value&lt;/li&gt;
+      &lt;li&gt;使用 {{deep:true}} 开启深度监听&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;watcheffect-函数&quot;&gt;watchEffect 函数&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;watch 的套路是: 既要指明监视的属性,也要指明监视的回调&lt;/li&gt;
+  &lt;li&gt;watchEffect 的套路是: 不用指明监视哪个属性,监视的回调中用到哪个属性,那就监视哪个属性&lt;/li&gt;
+  &lt;li&gt;watchEffect 有点像 computed:
+    &lt;ul&gt;
+      &lt;li&gt;但 computed 注重的计算出来的值(回调函数的返回值),所以必须要写回调&lt;/li&gt;
+      &lt;li&gt;而 watchEffect 更注重的是过程(回调函数的函数体),所以不能写返回值&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;用到什么就监视什么&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nx&quot;&gt;watchEffect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;job&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;salary&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>Tomiyzz Zhou</name><email>zzl180520@163.com</email></author><category term="mathjax" /><summary type="html">VUE 3.0 的学习</summary></entry><entry><title type="html">前端工程化</title><link href="http://localhost:4000/2021/11/02/web-engineering/" rel="alternate" type="text/html" title="前端工程化" /><published>2021-11-02T12:00:00+08:00</published><updated>2021-11-02T12:00:00+08:00</updated><id>http://localhost:4000/2021/11/02/web-engineering</id><content type="html" xml:base="http://localhost:4000/2021/11/02/web-engineering/">&lt;p class=&quot;message&quot;&gt;学习 前端工程化 的历程&lt;/p&gt;
 
 &lt;h2 id=&quot;前端工程化是什么&quot;&gt;前端工程化是什么?&lt;/h2&gt;
 
