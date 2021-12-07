@@ -31,15 +31,16 @@ layout: default
   {%- endif -%}
 </div>
 
-<!-- <div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ paginator.next_page_path | relative_url }}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
+<div class="pagination">
   {% if paginator.previous_page %}
-    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: relative_url }}">Newer</a>
+  <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: relative_url }}">上一页</a>
   {% else %}
-    <span class="pagination-item newer">Newer</span>
+  <span class="pagination-item newer">上一页</span>
   {% endif %}
-</div> -->
+  {% if paginator.next_page %}
+  <a class="pagination-item older" href="{{ paginator.next_page_path | relative_url }}">下一页</a>
+  {% else %}
+  <span class="pagination-item older">下一页</span>
+  {% endif %}
+
+</div>
